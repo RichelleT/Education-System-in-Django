@@ -1,4 +1,21 @@
-.alignCenter{
-    margin-left: auto;
-    margin-right: auto;
+.custRow {
+    display: flex;
+}
+  
+.custColumn {
+    flex: auto;
+}
+
+.leftCol {
+    width: 25%;
+}
+
+.rightCol {
+    width: 75%;
+}
+/* custom 2 columns */
+
+.custTopSpacing{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
