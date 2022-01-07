@@ -1,26 +1,54 @@
 {% include 'navbar.html' %}
+<link rel="stylesheet" href="/static/css/login.css">
 
 <section>
-    <div class="container p-5">
-        <div class="row col-12">
-            <div class="col-4"></div>
-            <div class="col-4 justify-content-between">
-                <label>
-                    Email: 
-                </label>
-                <input type="text" id="email" name="email"/>
-                <!-- <div class="custRow">
-                    <div class="custColumn leftCol align-content-center">
-                        <label class="custTopSpacing">Email:</label>
-                        <label class="custTopSpacing">Password:</label>
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+                <div class="card px-5 py-5" id="form1">
+                    <div class="form-data">
+                        <div class="forms-inputs mb-4"> <span>Email or username</span> <input autocomplete="off" type="text">
+                            <!-- <div class="invalid-feedback">A valid email is required!</div> -->
+                        </div>
+                        <div class="forms-inputs mb-4"> <span>Password</span> <input autocomplete="off" type="password">
+                            <!-- <div class="invalid-feedback">Password must be 8 character!</div> -->
+                        </div>
+                        <div class="mb-3"> <button class="btn btn-dark w-100">Login</button> </div>
                     </div>
-                    <div class="custColumn rightCol justify-content-center">
-                        <input class="custTopSpacing" type="text" id="email" name="email">
-                        <input class="custTopSpacing" type="text" id="password" name="password">
-                    </div>
-                </div> -->
+                </div>
             </div>
-            <div class="col-4"></div>
         </div>
     </div>
 </section>
+<!-- <section>
+    <div class="container p-5">
+            <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="mb-4">
+                                <h3>Sign In</h3>
+                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
+                            </div>
+                            <form action="#" method="post">
+                                <div class="form-group first">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" id="username"> </div>
+                                <div class="form-group last mb-4">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password"> </div>
+                                <div class="d-flex mb-5 align-items-center">
+                                    <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                                        <input type="checkbox" checked />
+                                        <div class="control__indicator"></div>
+                                </label> <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> </div>
+                                <input type="submit" value="Log In" class="btn btn-block btn-primary"> 
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
