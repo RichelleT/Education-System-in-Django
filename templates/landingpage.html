@@ -1,5 +1,7 @@
 {% load static %}
 <link href="{% static 'css/login.css'%}" rel="stylesheet">
+<link href="{% static 'css/custStyle1.css'%}" rel="stylesheet">
+
 {% include 'navbar.html' %}
 
 <section>
@@ -7,28 +9,85 @@
       <div class="row d-flex justify-content-center">
           <!-- left side; image  -->
           <div class="col-md-6">
-              <img src="{% static 'images/loginImg1.png' %}" width="700" height="450"/>                
+              <img src="{% static 'images/aboutUs.png' %}" width="700" height="450"/>                
           </div>
           <!-- right side; login card -->
           <div class="col-md-6">
               <div class="card px-5 py-5" id="form1">
-                  <div class="form-data">
-                      <p></p>
-                      <h3>Log In</h3>
-                      <br/>
-                      <div class="forms-inputs mb-4"> <span>Email</span> <input class="w-100" autocomplete="off" type="text">
-                          <!-- <div class="invalid-feedback">A valid email is required!</div> -->
-                      </div>
-                      <div class="forms-inputs mb-4"> <span>Password</span> <input class="w-100" autocomplete="off" type="password">
-                          <!-- <div class="invalid-feedback">Password must be 8 character!</div> -->
-                      </div>
-                     <div class="mb-3"> <button class="btn btn-outline-primary w-100">Login</button> </div>
-                      <div>
-                          </label> <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
-                      </div>
+                  <div>
+                    <h1 class="colH1">What is OAiES?</h1>
+                    <h2 class="custH2">add description add description</h2>
                   </div>
               </div>
           </div>
       </div>
   </div>
-</section>
+  <h1 class="text-center colH1">Main Features of OAiES</h1>
+  <div class="container mt-2">
+    <div class="row d-flex justify-content-center">
+        <!-- left side; image  -->
+        <div class="col-md-6">
+            <img src="{% static 'images/aboutUs.png' %}" width="700" height="450"/>                
+        </div>
+        <!-- right side; login card -->
+        <div class="col-md-6">
+            <div class="card px-5 py-5" id="form1">
+                <div>
+                  <h1 class="custH1">Title</h1>
+                  <h2 class="custH2">description</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+  <div class="row d-flex justify-content-center">
+      <!-- left side; image  -->
+      <div class="col-md-6">
+        <div class="card px-5 py-5" id="form1">
+          <div>
+            <h1 class="custH1">Title</h1>
+            <h2 class="custH2">description</h2>
+          </div>
+        </div>
+      </div>
+      <!-- right side; login card -->
+      <div class="col-md-6">
+        <img src="{% static 'images/aboutUs.png' %}" width="700" height="450"/>                
+      </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row d-flex justify-content-center">
+      <!-- left side; image  -->
+      <div class="col-md-6">
+          <img src="{% static 'images/aboutUs.png' %}" width="700" height="450"/>                
+      </div>
+      <!-- right side; login card -->
+      <div class="col-md-6">
+          <div class="card px-5 py-5" id="form1">
+              <div>
+                <h1 class="custH1">Title</h1>
+                <h2 class="custH2">description</h2>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container">
+<div class="row d-flex justify-content-center">
+    <!-- left side; image  -->
+    <div class="col-md-6">
+      <div class="card px-5 py-5" id="form1">
+        <div>
+          <h1 class="custH1">Title</h1>
+          <h2 class="custH2">description</h2>
+        </div>
+      </div>
+    </div>
+    <!-- right side; login card -->
+    <div class="col-md-6">
+      <img src="{% static 'images/aboutUs.png' %}" width="700" height="450"/>                
+    </div>
+</div>
+</div></section>
