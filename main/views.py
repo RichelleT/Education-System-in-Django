@@ -13,3 +13,6 @@ def redir_view(request, *args, **kwargs):
 
 def userProf_view(request, *args, **kwargs):
     return render(request, "userProfile.html", {})
+
+def dashboard_view(request, *args, **kwargs):
+    return render(request, "dashboard.html", {})

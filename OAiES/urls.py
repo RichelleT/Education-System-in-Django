@@ -19,6 +19,7 @@ from main.views import landing_view
 from main.views import login_view
 from main.views import redir_view
 from main.views import userProf_view
+from main.views import dashboard_view
 from registerAdmin.views import regisAdm_view
 from registerUser.views import regisUsr_view
 
@@ -27,6 +28,7 @@ urlpatterns = [
     path('landing/', landing_view),
     path('login/', login_view),
     path('userProf/', userProf_view),
+    path('dashboard/', dashboard_view),
     path('redir/', redir_view), #REMOVE LATER
     path('register/', regisAdm_view),
     path('registerUser/', regisUsr_view),
