@@ -4,7 +4,7 @@ from registerAdmin.forms import RegistrationForm
 
 # def regisAdm_view(request, *args, **kwargs):
 #     return render(request, "registerAdmin.html", {})
-def register(request):
+def registerAdm(request):
     if request.method =='POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
