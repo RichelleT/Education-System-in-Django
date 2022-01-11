@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from main.views import landing_view
 from main.views import login_view
+from registerAdmin.views import regisAdm_view
 
 urlpatterns = [
     # path('', landing_view, name='landing'),
     path('landing/', landing_view),
     path('login/', login_view),
+    path('register/', regisAdm_view),
     path('admin/', admin.site.urls),
 ]

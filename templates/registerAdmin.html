@@ -1,0 +1,35 @@
+{% load static %}
+{% include 'navbar.html' %}
+<link href="{% static 'css/login.css'%}" rel="stylesheet">
+
+<section>
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+            <!-- left side; image  -->
+            <div class="col-md-6">
+                <img src="{% static 'images/loginImg1.png' %}" width="700" height="450"/>                
+            </div>
+            <!-- right side; login card -->
+            <div class="col-md-6">
+                <div class="card " id="form1">
+                    <div class="form-data">
+                        <h3>Register</h3>
+                        {% comment %} <br/> {% endcomment %}
+                        <p>Note: Only For Administrators. <br/>For Educator and Student Account Registration, Please Contact Respective Administrator.</p>
+                        <br/>
+                        <div class="forms-inputs mb-4"> <span>Name</span> <input class="w-100" autocomplete="off" type="text"></div>
+                        {% comment %} <div class="forms-inputs mb-4"> <span>Last Name</span> <input class="w-100" autocomplete="off" type="text"></div> {% endcomment %}
+                        {% comment %} change edu instit to dropdown list {% endcomment %}
+                        <div class="forms-inputs mb-4"> <span>Educational Institution</span> <input class="w-100" autocomplete="off" type="text"></div>
+                        <div class="forms-inputs mb-4"> <span>Email</span> <input class="w-100" autocomplete="off" type="text"></div>
+                        <div class="forms-inputs mb-4"> <span>Password</span> <input class="w-100" autocomplete="off" type="password"></div>
+                       <div class="mb-3"> <button class="btn btn-outline-primary w-100">Register</button> </div>
+                        <div>
+                            </label> <span class="ml-auto"><a href="/login/" class="forgot-pass">Already Have An Account? Click Here to Login</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
