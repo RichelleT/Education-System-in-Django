@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from main.views import landing_view
 from main.views import login_view
+from main.views import redir_view
+from main.views import userProf_view
 from registerAdmin.views import regisAdm_view
 from registerUser.views import regisUsr_view
 
@@ -24,6 +26,8 @@ urlpatterns = [
     # path('', landing_view, name='landing'),
     path('landing/', landing_view),
     path('login/', login_view),
+    path('userProf/', userProf_view),
+    path('redir/', redir_view), #REMOVE LATER
     path('register/', regisAdm_view),
     path('registerUser/', regisUsr_view),
     path('admin/', admin.site.urls),
