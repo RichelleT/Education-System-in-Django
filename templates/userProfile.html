@@ -17,19 +17,22 @@
                     <h3>User Profile</h3>
                     <br/>
                     <div class="forms-inputs mb-4"> <span>Name</span> 
-                        <input class="w-100" autocomplete="off" type="text" placeholder="Richelle Tan">
+                        <input class="w-100" autocomplete="off" type="text" value="{{user.first_name}}&nbsp;{{user.last_name}}" readonly>
+                    </div>
+                    <div class="forms-inputs mb-4"> <span>Email</span> 
+                        <input class="w-100" autocomplete="off" type="text" value="{{user.email}}" readonly>
                     </div>
                     <div class="forms-inputs mb-4"> <span>Gender</span> 
-                        <input class="w-100" autocomplete="off" type="text"placeholder="Female">
+                        <input class="w-100" autocomplete="off" type="text" placeholder="Female" readonly>
                     </div>
                     <div class="forms-inputs mb-4"> <span>School/Faculty</span> 
-                        <input class="w-100" autocomplete="off" type="text" placeholder="School of Computer Science and Engineering">
+                        <input class="w-100" autocomplete="off" type="text" placeholder="School of Computer Science and Engineering" readonly>
                     </div>
                     <div class="forms-inputs mb-4"> <span>Programme Name</span>
-                        <input class="w-100" autocomplete="off" type="text" placeholder="Bachelors of Software Engineering">
+                        <input class="w-100" autocomplete="off" type="text" placeholder="Bachelors of Software Engineering" readonly>
                     </div>
                     <div class="forms-inputs mb-4"> <span>Role</span>
-                        <input class="w-100" autocomplete="off" type="text" placeholder="Student">
+                        <input class="w-100" autocomplete="off" type="text" placeholder="Student" readonly>
                     </div>
                 </div>
             </div>
