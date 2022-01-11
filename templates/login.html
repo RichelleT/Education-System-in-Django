@@ -15,16 +15,21 @@
                     <p></p>
                     <h3>Log In</h3>
                     <br/>
-                    <div class="forms-inputs mb-4"> <span>Email</span> <input class="w-100" autocomplete="off" type="text">
-                        <!-- <div class="invalid-feedback">A valid email is required!</div> -->
+                </div>
+                <form method="post" autocomplete="off">
+                    {% csrf_token %}
+                    <div class="forms-inputs mb-4">
+                        <label for="id_username">Username:</label>
+                        <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username">
                     </div>
-                    <div class="forms-inputs mb-4"> <span>Password</span> <input class="w-100" autocomplete="off" type="password">
-                        <!-- <div class="invalid-feedback">Password must be 8 character!</div> -->
+                    <div class="forms-inputs mb-4">
+                        <label for="id_password">Password:</label>
+                        <input type="password" name="password" autocomplete="current-password" required id="id_password">
                     </div>
-                    <div class="mb-3"> <button class="btn btn-outline-primary w-100">Login</button> </div>
-                    <div>
-                        </label> <span class="ml-auto"><a href="/register/" class="forgot-pass">No account? Click Register Here</a></span>
-                    </div>
+                    <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Login</button> </div>
+                </form>
+                <div>
+                    </label> <span class="ml-auto"><a href="/register/" class="forgot-pass">No account? Click Register Here</a></span>
                 </div>
             </div>
         </div>
