@@ -58,3 +58,7 @@ body {
 .w50{
     width: 50%;
 }
+
+input {
+    text-indent: 10px;
+}
