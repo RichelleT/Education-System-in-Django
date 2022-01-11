@@ -32,8 +32,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('landing/', landing_view, name="landingP"),
     path('login/', auth_views.LoginView.as_view(template_name='login.html')),
-    path('accounts/profile/', userProf_view, name="userProf"),
-    #path('login/', login_view, name="login"),
     path('userProf/', userProf_view, name="userProf"),
     path('dashboard/', dashboard_view, name="Dash"),
     path('redir/', redir_view), #REMOVE LATER
