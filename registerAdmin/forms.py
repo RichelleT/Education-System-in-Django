@@ -26,3 +26,5 @@ class RegistrationForm(UserCreationForm):
             user.save()
 
         return user
+
+#edu instit

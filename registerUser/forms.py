@@ -27,4 +27,4 @@ class RegistrationForm(UserCreationForm):
 
         return user
 
-#add roles, edu instit
+#add roles
