@@ -1,3 +1,38 @@
 {% load static %}
 {% include 'navbar.html' %}
+<link href="{% static 'css/login.css'%}" rel="stylesheet">
 
+<div class="container mt-5 pt-5">
+    <div class="row d-flex justify-content-center">
+        <!-- left side; image  -->
+        <div class="col-md-6">
+            <img src="{% static 'images/profileImg.png' %}" width="700" height="450"/>                
+        </div>
+        <!-- right side; card -->
+        <div class="col-md-6">
+            <div class="card " id="form1">
+                <div class="form-data">
+                    <p></p>
+                    <br/>
+                    <h3>User Profile</h3>
+                    <br/>
+                    <div class="forms-inputs mb-4"> <span>Name</span> 
+                        <input class="w-100" autocomplete="off" type="text" placeholder="Richelle Tan">
+                    </div>
+                    <div class="forms-inputs mb-4"> <span>Gender</span> 
+                        <input class="w-100" autocomplete="off" type="text"placeholder="Female">
+                    </div>
+                    <div class="forms-inputs mb-4"> <span>School/Faculty</span> 
+                        <input class="w-100" autocomplete="off" type="text" placeholder="School of Computer Science and Engineering">
+                    </div>
+                    <div class="forms-inputs mb-4"> <span>Programme Name</span>
+                        <input class="w-100" autocomplete="off" type="text" placeholder="Bachelors of Software Engineering">
+                    </div>
+                    <div class="forms-inputs mb-4"> <span>Role</span>
+                        <input class="w-100" autocomplete="off" type="text" placeholder="Student">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
