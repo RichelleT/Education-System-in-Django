@@ -17,9 +17,60 @@
                 <h3>Register</h3>
                 <p>Note: Only For Administrators. <br/>For educator and student account registration,<br/>please contact respective administrator.</p>
                 <br/>
+            </div>
+            <form method="post" autocomplete="off">
+                {% csrf_token %}
+                    <div class="forms-inputs mb-4">
+                        <label for="id_username">Username:</label> 
+                        <input type="text" name="username" maxlength="150" autofocus required id="id_username"> 
+                        <span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span>
+                    </div>
+                    <div class="forms-inputs mb-4">
+                        <label for="id_first_name">First name:</label> 
+                        <input type="text" name="first_name" maxlength="150" id="id_first_name">
+                    </div>
+                    <div class="forms-inputs mb-4">
+                        <label for="id_last_name">Last name:</label> 
+                        <input type="text" name="last_name" maxlength="150" id="id_last_name">
+                    </div>
+                    <div class="forms-inputs mb-4">
+                        <label for="id_email">Email:</label> 
+                        <input type="email" name="email" required id="id_email">
+                    </div>
+                    <div class="forms-inputs mb-4">
+                        <label for="id_password1">Password:</label> 
+                        <input type="password" name="password1" autocomplete="new-password" required id="id_password1"> 
+                        <span class="helptext"><ul><li>Your password can’t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can’t be a commonly used password.</li><li>Your password can’t be entirely numeric.</li></ul></span>
+                    </div>
+                    <div class="forms-inputs mb-4">
+                        <label for="id_password2">Password confirmation:</label> 
+                        <input type="password" name="password2" autocomplete="new-password" required id="id_password2"> 
+                        <span class="helptext">Enter the same password as before, for verification.</span>
+                    </div>
+                {% comment %} <div class="forms-inputs mb-4"> <label for="id_username">Username</label> 
+                    <input class="w-100" autocomplete="off" type="text" id="id_username">
+                </div>
+                <div class="forms-inputs mb-4"> <label for="id_email">Email</label> 
+                    <input class="w-100" autocomplete="off" type="email" id="id_email">
+                </div>
+                <div class="forms-inputs mb-4"> <label for="id_password1">Password</label> 
+                    <input class="w-100" autocomplete="off" type="password" id="id_password1">
+                </div>
+                <div class="forms-inputs mb-4"> <label for="id_password2">Password Confirmation</label> 
+                    <input class="w-100" autocomplete="off" type="password" id="id_password2">
+                </div> {% endcomment %}
+                <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Register</button> </div>
+            </form>
+            <div>
+                </label> <span class="ml-auto"><a href="/login/" class="forgot-pass">Already Have An Account? Click Here to Login</a></span>
+            </div>
+            {% comment %} <div class="form-data">
+                <p></p>
+                <br/>
+                <h3>Register</h3>
+                <p>Note: Only For Administrators. <br/>For educator and student account registration,<br/>please contact respective administrator.</p>
+                <br/>
                 <div class="forms-inputs mb-4"> <span>Name</span> <input class="w-100" autocomplete="off" type="text"></div>
-                {% comment %} <div class="forms-inputs mb-4"> <span>Last Name</span> <input class="w-100" autocomplete="off" type="text"></div> {% endcomment %}
-                {% comment %} change edu instit to dropdown list {% endcomment %}
                 <div class="forms-inputs mb-4"> <span>Educational Institution</span>
                     <select class="w-100" name="institution">
                         <option value="" selected>&nbsp;Taylor's University</option>
@@ -39,7 +90,7 @@
                 <div>
                     </label> <span class="ml-auto"><a href="/login/" class="forgot-pass">Already Have An Account? Click Here to Login</a></span>
                 </div>
-            </div>
+            </div> {% endcomment %}
         </div>
     </div>
 </div>

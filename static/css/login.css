@@ -11,7 +11,16 @@ body {
     position: relative;
 }
 
-.forms-inputs span {
+/* .forms-inputs span {
+    position: absolute;
+    top: -18px;
+    left: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 15px
+} */
+
+.forms-inputs label {
     position: absolute;
     top: -18px;
     left: 10px;
@@ -22,7 +31,8 @@ body {
 
 .forms-inputs input {
     height: 50px;
-    border: 2px solid #eee
+    border: 2px solid #eee;
+    width: 100%;
 }
 
 .forms-inputs input:focus {
