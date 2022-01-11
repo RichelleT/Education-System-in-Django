@@ -2,31 +2,36 @@
 {% include 'navbar.html' %}
 <link href="{% static 'css/login.css'%}" rel="stylesheet">
 
-<section>
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <!-- left side; image  -->
-            <div class="col-md-6">
-                <img src="{% static 'images/Form.png' %}" width="700" height="450"/>                
-            </div>
-            <!-- right side; login card -->
-            <div class="col-md-6">
-                <div class="card " id="form1">
-                    <div class="form-data">
-                        <h3>Register User Account</h3>
-                        <br/>
-                        <div class="forms-inputs mb-4"> <span>Name</span> <input class="w-100" autocomplete="off" type="text"></div>
-                        <div class="forms-inputs mb-4"> <span>Gender</span> <input class="w-100" autocomplete="off" type="text"></div>
-                        <div class="forms-inputs mb-4"> <span>School/Faculty</span> <input class="w-100" autocomplete="off" type="text"></div>
-                        <div class="forms-inputs mb-4"> <span>Programme Name</span> <input class="w-100" autocomplete="off" type="text"></div>
-                        {% comment %} change Roleto dropdown list {% endcomment %}
-                        <div class="forms-inputs mb-4"> <span>Role</span> <input class="w-100" autocomplete="off" type="text"></div>
-                        <div class="forms-inputs mb-4"> <span>Email</span> <input class="w-100" autocomplete="off" type="text"></div>
-                        <div class="forms-inputs mb-4"> <span>Password</span> <input class="w-100" autocomplete="off" type="password"></div>
-                       <div class="mb-3"> <button class="btn btn-outline-primary w-100">Register</button> </div>
+<div class="container mt-5 pt-5">
+    <div class="row d-flex justify-content-center">
+        <!-- left side; image  -->
+        <div class="col-md-6">
+            <img src="{% static 'images/Form.png' %}" width="700" height="450"/>                
+        </div>
+        <!-- right side; login card -->
+        <div class="col-md-6">
+            <div class="card " id="form1">
+                <div class="form-data">
+                    <p></p>
+                    <p></p>
+                    <h3>Register User Account</h3>
+                    <br/>
+                    <div class="forms-inputs mb-4"> <span>Name</span> <input class="w-100" autocomplete="off" type="text"></div>
+                    <div class="forms-inputs mb-4"> <span>Gender</span> <input class="w-100" autocomplete="off" type="text"></div>
+                    <div class="forms-inputs mb-4"> <span>School/Faculty</span> <input class="w-100" autocomplete="off" type="text"></div>
+                    <div class="forms-inputs mb-4"> <span>Programme Name</span> <input class="w-100" autocomplete="off" type="text"></div>
+                    <div class="forms-inputs mb-4"> <span>Role</span>
+                    <select class="w-100" name="role">
+                        <option value="" selected>Student</option>
+                        <option value ="">Educator</option>
+                        <option value="">Administrator</option>
+                     </select>
                     </div>
+                    <div class="forms-inputs mb-4"> <span>Email</span> <input class="w-100" autocomplete="off" type="text"></div>
+                    <div class="forms-inputs mb-4"> <span>Password</span> <input class="w-100" autocomplete="off" type="password"></div>
+                    <div class="mb-3"> <button class="btn btn-outline-primary w-100">Register</button> </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
