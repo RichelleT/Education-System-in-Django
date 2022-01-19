@@ -14,4 +14,4 @@ def registerAdm(request):
         form = RegistrationForm()
 
         args = {'form': form}
-        return render(request, 'registerAdmin.html', args)
+        return render(request, 'registerAdmin.html', {})
