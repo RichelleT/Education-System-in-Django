@@ -16,8 +16,19 @@ def addMod(request):
         args = {'form': form}
         return render(request, 'addModule.html', args)
 
-
-
 def modSel(request, *args, **kwargs):
     modlist = Modules.objects.all()
     return render(request, "moduleSelect.html", {'modlist':modlist})
+
+# def addQuestion(request):    
+#     if request.user.is_staff:
+#         form=addQuestionform()
+#         if(request.method=='POST'):
+#             form=addQuestionform(request.POST)
+#             if(form.is_valid()):
+#                 form.save()
+#                 return redirect('/')
+#         context={'form':form}
+#         return render(request,'addQuestion.html',context)
+#     else: 
+#         return redirect('/') 
