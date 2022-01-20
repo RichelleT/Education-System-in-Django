@@ -1,5 +1,5 @@
 from django import forms
-from testBuilder.models import Modules, Tests
+from testBuilder.models import Modules, Tests, QuestionsMod
 
 class addModule(forms.ModelForm):
     class Meta:
@@ -26,3 +26,8 @@ class addTest(forms.Form):
     class Meta:
         model = Tests
         fields = "__all__" 
+
+class addQuestionform(forms.ModelForm):
+    class Meta:
+        model=QuestionsMod
+        fields="__all__"
