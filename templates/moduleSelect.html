@@ -1,2 +1,11 @@
 {% load static %}
 {% include 'navbar.html' %}
+
+<div class="p-5 m-5">
+    {% for module in modlist%}
+    <div>
+        <p>{{module.module_name}}</p>
+        <p>{{module.module_desc}}</p>
+    </div>
+    {% endfor %}
+</div>

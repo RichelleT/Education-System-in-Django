@@ -25,6 +25,7 @@ from main.views import userProf_view
 from main.views import dashboard_view
 from registerAdmin.views import registerAdm
 from registerUser.views import regisUsr_view
+from testBuilder.views import addMod, modSel
 
 #url route
 urlpatterns = [
@@ -34,6 +35,8 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='login.html')),
     path('userProf/', userProf_view, name="userProf"),
     path('dashboard/', dashboard_view, name="Dash"),
+    path('moduleAdd/', addMod, name="addModule"),
+    path('moduleSel/', modSel, name="selModule"),
     path('redir/', redir_view), #REMOVE LATER
     path('register/', registerAdm, name="Register"),
     path('registerUser/', regisUsr_view, name="RegisterUser"),
