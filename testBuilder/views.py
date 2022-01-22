@@ -47,7 +47,7 @@ def addQuiz(request):
         form = addQuestions(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/success/')
+            return redirect('/sucess/')
             #add page redir
     else:
         form = addQuestions()
