@@ -1,33 +1,17 @@
 from django import forms
-from testBuilder.models import Modules, Tests, QuestionsMod
+from testBuilder.models import Module, Test, Quiz
 
 class addModule(forms.ModelForm):
     class Meta:
-        model = Modules
+        model = Module
         fields = "__all__"
 
-# class addModule(forms.Form):
-#     class Meta:
-#         model = Modules()
-#         fields = ('module_name',
-#         'module_desc')
-
-#     def save(self, commit=True):
-#         mod = super(addModule(), self).save(commit=False)
-#         mod.module_name = self.cleaned_data['module_name']
-#         mod.module_desc = self.cleaned_data['module_desc']
-
-#         if commit:
-#             mod.save()
-
-#         return mod
-
-class addTest(forms.Form):
+class addTest(forms.ModelForm):
     class Meta:
-        model = Tests
+        model = Test
         fields = "__all__" 
 
-class addQuestionform(forms.ModelForm):
+class addQuestions(forms.ModelForm):
     class Meta:
-        model=QuestionsMod
-        fields="__all__"
+        model = Quiz
+        fields = "__all__" 

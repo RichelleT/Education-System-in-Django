@@ -18,16 +18,11 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 
 #import views
-from main.views import landing_view
-from main.views import login_view
-from main.views import redir_view
-from main.views import userProf_view
-from main.views import dashboard_view
+from main.views import landing_view, login_view, redir_view, userProf_view, dashboard_view
+from testBuilder.views import addMod, modSel, addTests
 from registerAdmin.views import registerAdm
 from registerUser.views import regisUsr_view
-from testBuilder.views import addMod, modSel
 
-#url route
 urlpatterns = [
     path('', landing_view, name='landing'),
     path('accounts/', include('django.contrib.auth.urls')),
@@ -36,6 +31,7 @@ urlpatterns = [
     path('userProf/', userProf_view, name="userProf"),
     path('dashboard/', dashboard_view, name="Dash"),
     path('moduleAdd/', addMod, name="addModule"),
+    path('addTests/', addTests, name="addTest"),
     path('moduleSel/', modSel, name="selModule"),
     path('redir/', redir_view), #REMOVE LATER
     path('register/', registerAdm, name="Register"),

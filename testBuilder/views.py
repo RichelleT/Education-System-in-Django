@@ -1,9 +1,8 @@
 from django.shortcuts import  render, redirect
 from django.http import HttpResponse
-from testBuilder.forms import addModule, addTest
-from testBuilder.models import Modules, Tests
+from testBuilder.forms import addModule, addTest, addQuestions
+from testBuilder.models import Module, Test, Quiz
 
-# Create your views here.
 def addMod(request):
     if request.method =='POST':
         form = addModule(request.POST)
@@ -17,18 +16,17 @@ def addMod(request):
         return render(request, 'addModule.html', args)
 
 def modSel(request, *args, **kwargs):
-    modlist = Modules.objects.all()
+    modlist = Module.objects.all()
     return render(request, "moduleSelect.html", {'modlist':modlist})
 
-# def addQuestion(request):    
-#     if request.user.is_staff:
-#         form=addQuestionform()
-#         if(request.method=='POST'):
-#             form=addQuestionform(request.POST)
-#             if(form.is_valid()):
-#                 form.save()
-#                 return redirect('/')
-#         context={'form':form}
-#         return render(request,'addQuestion.html',context)
-#     else: 
-#         return redirect('/') 
+def addTests(request):
+    if request.method =='POST':
+        form = addTest(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/moduleSel/')
+    else:
+        form = addTest()
+
+        context = {'form': form}
+        return render(request, 'addTest.html', context)
