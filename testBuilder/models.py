@@ -23,3 +23,6 @@ class Quiz(models.Model):
     op3 = models.CharField(max_length=300)
     op4 = models.CharField(max_length=300)
     answ = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.quest    
