@@ -1,5 +1,7 @@
 from django.shortcuts import  render, redirect
 from django.http import HttpResponse
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from testBuilder.forms import addModule, addTest, addQuestions
 from testBuilder.models import Module, Test, Quiz
 
@@ -30,3 +32,24 @@ def addTests(request):
 
         context = {'form': form}
         return render(request, 'addTest.html', context)
+
+def modulePage(request, pk):
+    modPage = Module.objects.filter(id=pk)
+    mtLst = Test.objects.filter(module_sel=pk)
+    context = {'modPage':modPage, 'mtLst':mtLst}
+    return render(request, "modulePage.html", context)
+    #filter() returns a queryset (which is iterable)
+    #get() returns a single object (which is not iterable)
+
+def addQuiz(request):
+    if request.method == 'POST':
+        form = addQuestions(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/moduleSel/')
+            #add page redir
+    else:
+        form = addQuestions()
+
+        context = {'form': form}
+        return render(request, "addQuiz.html", context)

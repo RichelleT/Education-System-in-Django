@@ -17,9 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
 
-#import views
+#import views from main component
 from main.views import landing_view, login_view, redir_view, userProf_view, dashboard_view
-from testBuilder.views import addMod, modSel, addTests
+
+#import views from testBuilder component
+from testBuilder.views import addMod, modSel, addTests, modulePage, addQuiz
+
+#import views from other components
 from registerAdmin.views import registerAdm
 from registerUser.views import regisUsr_view
 
@@ -32,7 +36,9 @@ urlpatterns = [
     path('dashboard/', dashboard_view, name="Dash"),
     path('moduleAdd/', addMod, name="addModule"),
     path('addTests/', addTests, name="addTest"),
+    path('addQuizQ/', addQuiz, name="addQuiz"),
     path('moduleSel/', modSel, name="selModule"),
+    path('modulePage/<str:pk>/', modulePage, name="modulePage"),
     path('redir/', redir_view), #REMOVE LATER
     path('register/', registerAdm, name="Register"),
     path('registerUser/', regisUsr_view, name="RegisterUser"),

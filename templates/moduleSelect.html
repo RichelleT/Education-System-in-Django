@@ -2,10 +2,11 @@
 {% include 'navbar.html' %}
 
 <div class="p-5 m-5">
-    {% for module in modlist%}
+    {% for module in modlist %}
     <div>
         <p>{{module.module_name}}</p>
         <p>{{module.module_desc}}</p>
+        <button class="btn btn-outline-primary w-100"><a href="{% url 'modulePage' module.id %}">Select</a></button>
     </div>
     {% endfor %}
 </div>

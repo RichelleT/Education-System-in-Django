@@ -1,2 +1,17 @@
 {% load static %}
 {% include 'navbar.html' %}
+
+<div class="p-5 m-5">
+    {% for m in modPage %}
+    <div>
+        <p>{{m.module_name}}</p>
+        <p>{{m.module_desc}}</p>
+    </div>
+    {% endfor %}
+    {% for mt in mtLst %}
+    <div>
+        <p>{{mt.test_name}}</p>
+        <p>{{mt.test_date}}</p>
+    </div>
+    {% endfor %}
+</div>
