@@ -1,0 +1,14 @@
+{% load static %}
+{% include 'navbar.html' %}
+
+<div class="p-5 m-5">
+    {% for qp in quizPg %}
+    <div class="card">
+        <p>{{qp.quest}}</p>
+        <p>{{qp.op1}}</p>
+        <p>{{qp.op2}}</p>
+        <p>{{qp.op3}}</p>
+        <p>{{qp.op4}}</p>
+    </div>
+    {% endfor %}
+</div>

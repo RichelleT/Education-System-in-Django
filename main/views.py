@@ -16,3 +16,6 @@ def userProf_view(request, *args, **kwargs):
 
 def dashboard_view(request, *args, **kwargs):
     return render(request, "dashboard.html", {})
+
+def sucess_view(request, *args, **kwargs):
+    return render(request, "sucessPage.html", {})

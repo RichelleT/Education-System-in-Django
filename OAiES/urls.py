@@ -18,10 +18,10 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 
 #import views from main component
-from main.views import landing_view, login_view, redir_view, userProf_view, dashboard_view
+from main.views import landing_view, login_view, redir_view, userProf_view, dashboard_view, sucess_view
 
 #import views from testBuilder component
-from testBuilder.views import addMod, modSel, addTests, modulePage, addQuiz
+from testBuilder.views import addMod, modSel, addTests, modulePage, addQuiz, quizPage
 
 #import views from other components
 from registerAdmin.views import registerAdm
@@ -39,7 +39,9 @@ urlpatterns = [
     path('addQuizQ/', addQuiz, name="addQuiz"),
     path('moduleSel/', modSel, name="selModule"),
     path('modulePage/<str:pk>/', modulePage, name="modulePage"),
+    path('quizPage/<str:pk>/', quizPage, name="quizPage"),
     path('redir/', redir_view), #REMOVE LATER
+    path('sucess/', sucess_view),
     path('register/', registerAdm, name="Register"),
     path('registerUser/', regisUsr_view, name="RegisterUser"),
     path('admin/', admin.site.urls),

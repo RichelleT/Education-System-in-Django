@@ -10,7 +10,7 @@ def addMod(request):
         form = addModule(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/moduleSel/')
+            return redirect('/sucess/')
     else:
         form = addModule()
 
@@ -26,7 +26,7 @@ def addTests(request):
         form = addTest(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/moduleSel/')
+            return redirect('/sucess/')
     else:
         form = addTest()
 
@@ -36,6 +36,7 @@ def addTests(request):
 def modulePage(request, pk):
     modPage = Module.objects.filter(id=pk)
     mtLst = Test.objects.filter(module_sel=pk)
+
     context = {'modPage':modPage, 'mtLst':mtLst}
     return render(request, "modulePage.html", context)
     #filter() returns a queryset (which is iterable)
@@ -46,10 +47,16 @@ def addQuiz(request):
         form = addQuestions(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/moduleSel/')
+            return redirect('/success/')
             #add page redir
     else:
         form = addQuestions()
 
         context = {'form': form}
         return render(request, "addQuiz.html", context)
+
+def quizPage(request, pk):
+    quizPg = Quiz.objects.filter(test_sel=pk)
+
+    context = {'quizPg': quizPg}
+    return render(request, "quizPage.html", context)

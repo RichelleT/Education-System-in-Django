@@ -12,6 +12,7 @@
     <div>
         <p>{{mt.test_name}}</p>
         <p>{{mt.test_date}}</p>
+        <button class="btn btn-outline-primary w-100"><a href="{% url 'quizPage' mt.id %}">Select</a></button>
     </div>
     {% endfor %}
 </div>
