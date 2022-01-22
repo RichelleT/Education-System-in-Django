@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from registerUser.forms import RegistrationForm
+from registerUser.forms import addUserForm
 
 # Create your views here.
 def regisUsr_view(request, *args, **kwargs):
@@ -8,12 +8,12 @@ def regisUsr_view(request, *args, **kwargs):
 
 def registerUsr(request):
     if request.method =='POST':
-        form = RegistrationForm(request.POST)
+        form = addUserForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('/userProf/')
     else:
-        form = RegistrationForm()
+        form = addUserForm()
 
         args = {'form': form}
         return render(request, 'registerUser.html', args)

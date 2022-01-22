@@ -11,7 +11,12 @@
         <!-- right side; card -->
         <div class="col-md-6">
             <div class="card " id="form1">
-                <div class="form-data">
+                <form method="post" autocomplete="off">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add User</button> </div>
+                </form>
+                {% comment %} <div class="form-data">
                     <p></p>
                     <p></p>
                     <h3>Register User Account</h3>
@@ -30,7 +35,7 @@
                     <div class="forms-inputs mb-4"> <span>Email</span> <input class="w-100" autocomplete="off" type="text"></div>
                     <div class="forms-inputs mb-4"> <span>Password</span> <input class="w-100" autocomplete="off" type="password"></div>
                     <div class="mb-3"> <button class="btn btn-outline-primary w-100">Register</button> </div>
-                </div>
+                </div> {% endcomment %}
             </div>
         </div>
     </div>

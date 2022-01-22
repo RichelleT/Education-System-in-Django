@@ -2,8 +2,28 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
-class RegistrationForm(UserCreationForm):
+GENDER_SELECT = [
+    ('female', 'Female'),
+    ('male', 'Male'),
+]
+
+ROLE_SELECT = [
+    ('administrator', 'Administrator'),
+    ('educator', 'Educator'),
+    ('student', 'Student'),
+]
+
+class addUserForm(UserCreationForm):
     email = forms.EmailField(required=True)
+    gender = forms.CharField(
+        required=True,
+        widget=forms.Select(choices=GENDER_SELECT)
+    )
+    role = forms.CharField(
+        required=True,
+        widget=forms.Select(choices=ROLE_SELECT)        
+    )
+
 
     class Meta:
         model = User
