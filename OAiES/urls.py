@@ -25,7 +25,7 @@ from testBuilder.views import addMod, modSel, addTests, modulePage, addQuiz, qui
 
 #import views from other components
 from registerAdmin.views import registerAdm
-from registerUser.views import regisUsr_view, registerUsr
+from registerUser.views import regisUsr_view#, registerUsr
 
 urlpatterns = [
     path('', landing_view, name='landing'),
