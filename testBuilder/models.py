@@ -17,14 +17,15 @@ class Test(models.Model):
 
 class Quiz(models.Model):
     test_sel = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True)
-    quest = models.CharField(max_length=500)
-    op1 = models.CharField(max_length=300)
-    op2 = models.CharField(max_length=300)
-    op3 = models.CharField(max_length=300)
-    op4 = models.CharField(max_length=300)
+    quest = models.CharField(max_length=500, default="")
+    op1 = models.CharField(max_length=300, default="")
+    op2 = models.CharField(max_length=300, default="")
+    op3 = models.CharField(max_length=300, default="")
+    op4 = models.CharField(max_length=300, default="")
     answ = models.CharField(
         max_length=300, 
-        help_text="Input option1 for the first option, option2 for the second option"
+        help_text="Input option1 for the first option, option2 for the second option",
+        default=""
     )
 
     def __str__(self):
@@ -32,12 +33,13 @@ class Quiz(models.Model):
 
 class quizResult(models.Model):
     linked_test = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True) #linking result to test paper
-    linked_user = models.ForeignKey(User, on_delete=models.SET_NULL,null=True) #link to person attempting test/quiz
+    #linked_user = models.ForeignKey(User, on_delete=models.SET_NULL,null=True) #link to person attempting test/quiz
     linked_quiz = models.ForeignKey(Quiz, on_delete=models.SET_NULL, null=True) #linking result to quiz questions model
-    correct = models.IntegerField()
-    wrong = models.IntegerField()
-    percentage = models.IntegerField()
-    total = models.IntegerField()
+    correct = models.IntegerField(default=0)
+    score = models.IntegerField(default=0)
+    wrong = models.IntegerField(default=0)
+    percentage = models.IntegerField(default=0)
+    total = models.IntegerField(default=0)
 """
 class quizAttempt(models.Model):
     linked_test = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True)

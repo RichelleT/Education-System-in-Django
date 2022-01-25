@@ -1,0 +1,13 @@
+{% load static %}
+{% include 'navbar.html' %}
+
+<div class="p-5 m-5">
+    <div class="card">
+        <h5 class="card-title">Score: {{scr}}</h5>
+
+        <p class="card-text">Percentage: {{percent}}%</p>
+        <p class="card-text">Correct answers: {{cor}}</p>
+        <p class="card-text">Incorrect answers: {{wrg}}</p>
+        <p class="card-text">Total questions: {{ttl}}</p>
+    </div>
+</div>

@@ -3,7 +3,9 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from testBuilder.forms import addModule, addTest, addQuestions
-from testBuilder.models import Module, Test, Quiz
+from testBuilder.models import Module, Test, Quiz, quizResult
+from django.db.models import F
+from django.contrib.auth.models import User
 
 def addMod(request):
     if request.method =='POST':
@@ -64,10 +66,81 @@ def addQuiz(request):
         }
         return render(request, "addQuiz.html", context)
 
-def quizPage(request, pk):
-    quizPg = Quiz.objects.filter(test_sel=pk)
+def qrPage(request, pk):
+    if request.method == 'POST': #render results page
+        print(request.POST)
+        questions = Quiz.objects.filter(test_sel=pk)
+        user = quizResult.objects.filter(id=pk)
+        #quizID = quizResult.objects.filter(id=pk)
+        """score=0
+        wrong=0
+        correct=0
+        total=0
+        for q in questions:
+            total+=1
+            print(request.POST.get(q.question))
+            print(q.ans)
+            print()
+            if q.ans ==  request.POST.get(q.question):
+                score+=10
+                correct+=1
+            else:
+                wrong+=1
+        percent = score/(total*10) *100
+        context = {
+            'score':score,
+            'correct':correct,
+            'wrong':wrong,
+            'percent':percent,
+            'total':total
+        }"""
+        scr = quizResult.objects.get(score)
+        cor = quizResult.objects.get(correct)
+        wrg = quizResult.objects.get(wrong)
+        ttl = quizResult.objects.get(total)
+        percent = quizResult.objects.get(percentage)
+        for q in questions:
+            ttl.total += 1
+            ttl.save()
+            print(request.POST.get(q.quest))
+            print(q.answ)
+            if q.answ ==  request.POST.get(q.quest):
+                cor.correct += 1
+                scr.score += 1
+                cor.save() 
+                scr.save()               
+            else:
+                wrg.wrong += 1
+                wrg.save()
+        percent.percentage = scr/(ttl*10) *100
 
-    context = {
-        'quizPg': quizPg
-    }
-    return render(request, "quizPage.html", context)
+        context = {
+            'scr': scr,
+            'cor': cor,
+            'wrg': wrg,
+            'ttl': ttl,
+            'percent': percent
+        }
+        return render(request,'resultPage.html',context)
+
+    else: #render quiz page
+        questions = Quiz.objects.filter(test_sel=pk)
+
+        context = {
+            'questions': questions
+        }
+        return render(request, "quizPage.html", context)
+
+"""
+get linked test - pk
+get linked user - pk
+
+"""
+"""
+if q.answ ==  request.POST.get(q.quest):
+    correct = quizResult.objects.update(correct=+1)
+    score = quizResult.objects.update(score=+10)
+else:
+    wrong = quizResult.objects.update(wrong=+1)
+percent = quizResult.objects.update(percentage=+1) 
+"""
