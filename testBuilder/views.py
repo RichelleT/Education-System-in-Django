@@ -96,11 +96,6 @@ def qrPage(request, pk):
         else:
             grade = "Fail"
 
-        form = submitResult(request.POST)   
-        if form.is_valid():
-            form.save()
-            return
-
         context = {
             'score':score,
             'correct':correct,
@@ -108,7 +103,6 @@ def qrPage(request, pk):
             'percent':percent,
             'total':total,
             'grade': grade,
-            'form': form,
             'user': user
         }
         return render(request,'resultPage.html',context)
@@ -120,3 +114,20 @@ def qrPage(request, pk):
             'questions': questions
         }
         return render(request, "quizPage.html", context)
+
+@login_required(login_url='/login/')
+def submitRes(request):
+    if request.method =='POST':
+        form = submitResult(request.POST)   
+        if form.is_valid():
+            form.save()
+            return redirect('/sucess/')
+        else:
+            print("submit results failed")
+    else:
+        form = submitResult()
+
+        context = {
+            'form': form
+        }
+        return render(request, "resultPage.html", context)
