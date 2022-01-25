@@ -22,7 +22,39 @@ class Quiz(models.Model):
     op2 = models.CharField(max_length=300)
     op3 = models.CharField(max_length=300)
     op4 = models.CharField(max_length=300)
-    answ = models.CharField(max_length=300)
+    answ = models.CharField(
+        max_length=300, 
+        help_text="Input option1 for the first option, option2 for the second option"
+    )
 
     def __str__(self):
-        return self.quest    
+        return self.quest
+
+class quizResult(models.Model):
+    linked_test = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True) #linking result to test paper
+    linked_user = models.ForeignKey(User, on_delete=models.SET_NULL,null=True) #link to person attempting test/quiz
+    linked_quiz = models.ForeignKey(Quiz, on_delete=models.SET_NULL, null=True) #linking result to quiz questions model
+    correct = models.IntegerField()
+    wrong = models.IntegerField()
+    percentage = models.IntegerField()
+    total = models.IntegerField()
+"""
+class quizAttempt(models.Model):
+    linked_test = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True)
+    results_test = models.IntegerField()
+    user_attempted = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    nums_test_attempted = models.IntegerField()
+    nums_test_passed = models.IntegerField()
+    #numbers_correct = models.IntegerField()
+    #test_percentage = models.IntegerField()
+
+    def __str__(self):
+        return self.user_attempted
+"""
+
+"""
+class dashboard(models.Model):
+    class_students #get all students in user list
+    class_pass_rates #calculate pass rate
+    module_num_test #number of tests for the module
+"""

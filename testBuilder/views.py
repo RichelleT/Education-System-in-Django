@@ -14,7 +14,9 @@ def addMod(request):
     else:
         form = addModule()
 
-        args = {'form': form}
+        args = {
+            'form': form
+        }
         return render(request, 'addModule.html', args)
 
 def modSel(request, *args, **kwargs):
@@ -30,14 +32,19 @@ def addTests(request):
     else:
         form = addTest()
 
-        context = {'form': form}
+        context = {
+            'form': form
+        }
         return render(request, 'addTest.html', context)
 
 def modulePage(request, pk):
     modPage = Module.objects.filter(id=pk)
     mtLst = Test.objects.filter(module_sel=pk)
 
-    context = {'modPage':modPage, 'mtLst':mtLst}
+    context = {
+        'modPage':modPage,
+        'mtLst':mtLst
+    }
     return render(request, "modulePage.html", context)
     #filter() returns a queryset (which is iterable)
     #get() returns a single object (which is not iterable)
@@ -52,11 +59,15 @@ def addQuiz(request):
     else:
         form = addQuestions()
 
-        context = {'form': form}
+        context = {
+            'form': form
+        }
         return render(request, "addQuiz.html", context)
 
 def quizPage(request, pk):
     quizPg = Quiz.objects.filter(test_sel=pk)
 
-    context = {'quizPg': quizPg}
+    context = {
+        'quizPg': quizPg
+    }
     return render(request, "quizPage.html", context)
