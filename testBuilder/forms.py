@@ -1,5 +1,5 @@
 from django import forms
-from testBuilder.models import Module, Test, Quiz
+from testBuilder.models import Module, Test, Quiz, quizResult
 
 class addModule(forms.ModelForm):
     class Meta:
@@ -15,3 +15,8 @@ class addQuestions(forms.ModelForm):
     class Meta:
         model = Quiz
         fields = "__all__" 
+
+class submitResult(forms.ModelForm):
+    class Meta:
+        model = quizResult
+        fields = "__all__"

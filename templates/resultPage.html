@@ -3,11 +3,15 @@
 
 <div class="p-5 m-5">
     <div class="card">
-        <h5 class="card-title">Score: {{scr}}</h5>
-
-        <p class="card-text">Percentage: {{percent}}%</p>
-        <p class="card-text">Correct answers: {{cor}}</p>
-        <p class="card-text">Incorrect answers: {{wrg}}</p>
-        <p class="card-text">Total questions: {{ttl}}</p>
+        <form method='post' action=''>
+            {% csrf_token %}
+            <p><label for="id_correct">Correct Answer(s):</label> <input type="text" name="correct" maxlength="10" required id="id_correct" disabled value="{{correct}}"></p>
+            <p><label for="id_wrong">Wrong Answer(s):</label> <input type="text" name="wrong" maxlength="10" required id="id_wrong" disabled value="{{wrong}}"></p>
+            <p><label for="id_percentage">Percentage:</label> <input type="text" name="percentage" maxlength="10" required id="id_percentage" disabled value="{{percent}}%"></p>
+            <p><label for="id_total">Total:</label> <input type="text" name="total" maxlength="10" required id="id_total" disabled value="{{total}}"></p>
+            <p><label for="id_grade">Grade:</label> <input type="text" name="grade" maxlength="10" required id="id_grade" disabled value="{{grade}}"></p>
+            <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Submit Results</button> </div>
+        </form>
     </div>
 </div>
+

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Module(models.Model):
     module_name = models.CharField(max_length=120, default="")
@@ -32,14 +33,16 @@ class Quiz(models.Model):
         return self.quest
 
 class quizResult(models.Model):
-    linked_test = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True) #linking result to test paper
+    #linked_test = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True) #linking result to test paper
     #linked_user = models.ForeignKey(User, on_delete=models.SET_NULL,null=True) #link to person attempting test/quiz
-    linked_quiz = models.ForeignKey(Quiz, on_delete=models.SET_NULL, null=True) #linking result to quiz questions model
-    correct = models.IntegerField(default=0)
-    score = models.IntegerField(default=0)
-    wrong = models.IntegerField(default=0)
-    percentage = models.IntegerField(default=0)
-    total = models.IntegerField(default=0)
+    #linked_quiz = models.ForeignKey(Quiz, on_delete=models.SET_NULL, null=True) #linking result to quiz questions model
+    #attempted_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    correct = models.CharField(max_length=10)
+    wrong = models.CharField(max_length=10,default="")
+    percentage = models.CharField(max_length=10,default="")
+    total = models.CharField(max_length=10,default="")
+    grade = models.CharField(max_length=10, default="")
+
 """
 class quizAttempt(models.Model):
     linked_test = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True)
