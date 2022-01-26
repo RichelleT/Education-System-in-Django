@@ -2,7 +2,7 @@ from django.shortcuts import  render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from testBuilder.forms import addModule, addTest, addQuestions, submitResult
+from testBuilder.forms import addModule, addTest, addQuestions
 from testBuilder.models import Module, Test, Quiz, quizResult
 from django.db.models import F
 from django.contrib.auth.models import User
@@ -80,7 +80,7 @@ def qrPage(request, pk):
         wrong=0
         correct=0
         total=0
-        user = User.objects.get(username=request.user.username)
+        user = request.user
         for q in questions:
             total+=1
             print(request.POST.get(q.quest))
@@ -96,6 +96,17 @@ def qrPage(request, pk):
         else:
             grade = "Fail"
 
+        insert_to_db = quizResult.objects.create(
+            correct=correct, 
+            wrong=wrong, 
+            percentage=percent, 
+            total=total,
+            grade=grade,
+            #linked_module=module,
+            #linked_test=test,
+            attempted_by=user
+        )
+
         context = {
             'score':score,
             'correct':correct,
@@ -103,9 +114,11 @@ def qrPage(request, pk):
             'percent':percent,
             'total':total,
             'grade': grade,
-            'user': user
+            'user': user,
+            #'form':form
         }
-        return render(request,'resultPage.html',context)
+        return render(request,'generateResult.html',context)
+        #return render(request, "resultPage.html", context)
 
     else: #render quiz page
         questions = Quiz.objects.filter(test_sel=pk)
@@ -114,20 +127,3 @@ def qrPage(request, pk):
             'questions': questions
         }
         return render(request, "quizPage.html", context)
-
-@login_required(login_url='/login/')
-def submitRes(request):
-    if request.method =='POST':
-        form = submitResult(request.POST)   
-        if form.is_valid():
-            form.save()
-            return redirect('/sucess/')
-        else:
-            print("submit results failed")
-    else:
-        form = submitResult()
-
-        context = {
-            'form': form
-        }
-        return render(request, "resultPage.html", context)
