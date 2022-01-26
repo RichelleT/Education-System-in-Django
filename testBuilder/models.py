@@ -33,16 +33,18 @@ class Quiz(models.Model):
         return self.quest
 
 class quizResult(models.Model):
-    #linked_test = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True) #linking result to test paper
-    #linked_user = models.ForeignKey(User, on_delete=models.SET_NULL,null=True) #link to person attempting test/quiz
-    #linked_quiz = models.ForeignKey(Quiz, on_delete=models.SET_NULL, null=True) #linking result to quiz questions model
-    #attempted_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    correct = models.CharField(max_length=10)
-    wrong = models.CharField(max_length=10,default="")
-    percentage = models.CharField(max_length=10,default="")
-    total = models.CharField(max_length=10,default="")
+    linked_test = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True) #linking result to test paper
+    linked_module = models.ForeignKey(Module, on_delete=models.SET_NULL, null=True) #linking result to quiz questions model
+    attempted_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    correct = models.IntegerField(default=0)
+    wrong = models.IntegerField(default=0)
+    percentage = models.IntegerField(default=0)
+    total = models.IntegerField(default=0)
     grade = models.CharField(max_length=10, default="")
+    attempted_time = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return str(self.attempted_by)
 """
 class quizAttempt(models.Model):
     linked_test = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True)

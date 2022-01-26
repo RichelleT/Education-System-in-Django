@@ -15,8 +15,3 @@ class addQuestions(forms.ModelForm):
     class Meta:
         model = Quiz
         fields = "__all__" 
-
-class submitResult(forms.ModelForm):
-    class Meta:
-        model = quizResult
-        fields = "__all__"
