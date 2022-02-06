@@ -6,8 +6,10 @@ from testBuilder.forms import addModule, addTest, addQuestions
 from testBuilder.models import Module, Test, Quiz, quizResult
 from django.db.models import F
 from django.contrib.auth.models import User, Group
+from main.decorators import group_required
 
 @login_required(login_url='/login/')
+@group_required('Educator', login_url='/login/')
 def addMod(request):
     if request.method =='POST':
         form = addModule(request.POST)
@@ -28,6 +30,7 @@ def modSel(request, *args, **kwargs):
     return render(request, "moduleSelect.html", {'modlist':modlist})
 
 @login_required(login_url='/login/')
+@group_required('Educator', login_url='/login/')
 def addTests(request):
     if request.method =='POST':
         form = addTest(request.POST)
@@ -56,7 +59,7 @@ def modulePage(request, pk):
     #get() returns a single object (which is not iterable)
     
 @login_required(login_url='/login/')
-#@group_required('Educator')
+@group_required('Educator', login_url='/login/')
 def addQuiz(request):
     if request.method == 'POST':
         form = addQuestions(request.POST)

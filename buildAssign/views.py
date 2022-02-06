@@ -5,9 +5,10 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User, Group
 from buildAssign.models import Assignment
 from buildAssign.forms import addAssignment
+from main.decorators import group_required
 
 @login_required(login_url='/login/')
-#@group_required('Educator')
+@group_required('Educator', login_url='/login/')
 def addAssign(request):
     if request.method =='POST':
         form = addAssignment(request.POST)
