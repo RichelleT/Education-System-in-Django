@@ -22,8 +22,13 @@ def addAssign(request):
             'form': form
         }
         return render(request, 'addAssignment.html', args)
-
 """
 @login_required(login_url='/login/')
-def atPage(request):
+def atPage(request, pk):
+    if request.method == 'POST':
+        question = Assignment.objects.filter(linked_module=pk)
+        score = 0
+        correct = 0
+        total = 0
+        user = request.user
 """

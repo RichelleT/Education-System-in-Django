@@ -34,18 +34,31 @@
       <a href="/landing/">OAiES</a>
       </h1>
       {% if user.is_authenticated %}
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto" href="/redir/">REMOVE LATER</a></li>
-          <li><a class="nav-link scrollto" href="/userProf/">Profile</a></li>
-          <li><a class="getstarted scrollto" href="{% url 'logout' %}">Log Out</a></li>
-        </ul>
-      </nav>
+        {% for group_for in request.user.groups.all %}
+          {% if group_for.name == 'Educator' %}
+            <nav id="navbar" class="navbar">
+              <ul>
+                <li><a class="nav-link scrollto" href="/moduleAdd/">Add Module</a></li>
+                <li><a class="nav-link scrollto" href="/addQuizQ/">Add Quiz</a></li>
+                <li><a class="nav-link scrollto" href="/addTests/">Add Test</a></li>
+                <li><a class="nav-link scrollto" href="/addAssignment/">Add Assignment</a></li>
+                <li><a class="getstarted scrollto" href="{% url 'logout' %}">Log Out</a></li>
+              </ul>
+            </nav>
+            {% elif group_for.name == 'Student' %}
+            <nav id="navbar" class="navbar">
+              <ul>
+                <li><a class="nav-link scrollto" href="/moduleSel/">Modules</a></li>
+                <li><a class="nav-link scrollto" href="/userProf/">Profile</a></li>
+                <li><a class="getstarted scrollto" href="{% url 'logout' %}">Log Out</a></li>
+              </ul>
+            </nav>
+          {% endif %}
+        {% endfor %}
       {% else %}
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="/redir/">REMOVE LATER</a></li>
-          <li><a class="nav-link scrollto" href="/register/">Register</a></li>
+          <!-- <li><a class="nav-link scrollto" href="/register/">Register</a></li> -->
           <li><a class="getstarted scrollto" href="/login/">Login</a></li>
         </ul>
       </nav>
