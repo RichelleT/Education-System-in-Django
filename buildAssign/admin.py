@@ -1,3 +1,4 @@
 from django.contrib import admin
+from buildAssign.models import Assignment
 
-# Register your models here.
+admin.site.register(Assignment)

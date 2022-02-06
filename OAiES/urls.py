@@ -8,12 +8,16 @@ from main.views import landing_view, login_view, redir_view, userProf_view, dash
 #import views from testBuilder component
 from testBuilder.views import addMod, modSel, addTests, modulePage, addQuiz, qrPage
 
+from buildAssign.views import addAssign
+
 #import views from other components
 from registerAdmin.views import registerAdm
 from registerUser.views import regisUsr_view#, registerUsr
 
 urlpatterns = [
+    #main page
     path('', landing_view, name='landing'),
+
     path('accounts/', include('django.contrib.auth.urls')),
     path('landing/', landing_view, name="landingP"),
     path('login/', auth_views.LoginView.as_view(template_name='login.html')),
@@ -22,6 +26,7 @@ urlpatterns = [
     path('moduleAdd/', addMod, name="addModule"),
     path('addTests/', addTests, name="addTest"),
     path('addQuizQ/', addQuiz, name="addQuiz"),
+    path('addAssignment/', addAssign, name="addAssign"),
     path('moduleSel/', modSel, name="selModule"),
     path('modulePage/<str:pk>/', modulePage, name="modulePage"),
     path('quizPage/<str:pk>/', qrPage, name="quizPage"),
