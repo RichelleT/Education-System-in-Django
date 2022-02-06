@@ -83,6 +83,7 @@ def qrPage(request, pk):
         user = request.user
         for q in questions:
             total+=1
+            #print(request.POST.get(q.test_sel.test_name))
             print(request.POST.get(q.quest))
             print(q.answ)
             if q.answ ==  request.POST.get(q.quest):
@@ -90,7 +91,7 @@ def qrPage(request, pk):
                 correct+=1
             else:
                 wrong+=1
-        percent = round(score/(total*10) * 100, 2)
+        percent = round(score/(total*10) * 100)
         if percent > 40:
             grade = "Pass"
         else:

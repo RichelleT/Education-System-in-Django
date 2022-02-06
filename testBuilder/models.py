@@ -41,10 +41,12 @@ class quizResult(models.Model):
     percentage = models.IntegerField(default=0)
     total = models.IntegerField(default=0)
     grade = models.CharField(max_length=10, default="")
-    attempted_time = models.DateTimeField(auto_now=True)
+    a_time = models.DateTimeField(auto_now=True)
+    attempted_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return str(self.attempted_by)
+
 """
 class quizAttempt(models.Model):
     linked_test = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True)
