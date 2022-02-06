@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from testBuilder.forms import addModule, addTest, addQuestions
 from testBuilder.models import Module, Test, Quiz, quizResult
 from django.db.models import F
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 
 @login_required(login_url='/login/')
 def addMod(request):
