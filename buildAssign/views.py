@@ -7,7 +7,7 @@ from buildAssign.models import Assignment
 from buildAssign.forms import addAssignment
 
 @login_required(login_url='/login/')
-@group_required('Educator')
+#@group_required('Educator')
 def addAssign(request):
     if request.method =='POST':
         form = addAssignment(request.POST)
