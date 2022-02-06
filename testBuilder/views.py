@@ -56,6 +56,7 @@ def modulePage(request, pk):
     #get() returns a single object (which is not iterable)
     
 @login_required(login_url='/login/')
+#@group_required('Educator')
 def addQuiz(request):
     if request.method == 'POST':
         form = addQuestions(request.POST)
