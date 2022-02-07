@@ -18,7 +18,7 @@ class User(AbstractUser):
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True, blank=False)
     #use default='M' if gender field has default issues
     #role = models.ForeignKey(Group, on_delete=models.SET_NULL, null=True, blank=False)
-    role = models.ForeignKey('auth.Group', related_name='group', on_delete=models.SET_NULL, null=True)
+    #role = models.ForeignKey('auth.Group', related_name='group', on_delete=models.SET_NULL, null=True)
     programme_name = models.CharField(max_length=50, default="", blank=False, null=True)
     school_faculty = models.CharField(max_length=50, default="", blank=False, null=True)
     

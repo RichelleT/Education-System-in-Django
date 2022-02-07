@@ -5,16 +5,17 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 from registerUser.models import User
 from registerUser.forms import RegistrationForm
+from registerUser.serializers import UserSerializer
 
 class UserAdmin(BaseUserAdmin):
-  form = RegistrationForm
+  #form = RegistrationForm
   fieldsets = (
-      (None, {'fields': ('username', 'password', )}),
+      (None, {'fields': ('username', 'password', 'email' )}),
       (_('Personal info'), {'fields': ('first_name', 'last_name')}),
       (_('Permissions'), {'fields': ('is_active', 'is_staff', 'is_superuser',
                                      'groups', 'user_permissions')}),
       #(_('Important dates'), {'fields': ('last_login', 'date_joined')}),
-        (_('user_info'), {'fields': ('programme_name', 'school_faculty', 'gender')}),
+        (_('user_info'), {'fields': ('programme_name', 'school_faculty', 'gender',)}),
   )
   """add_fieldsets = (
       (None, {
@@ -22,7 +23,7 @@ class UserAdmin(BaseUserAdmin):
           'fields': ('email', 'password1', 'password2'),
       }),
   )"""
-  list_display = ['username', 'first_name', 'last_name', 'programme_name', 'school_faculty']
+  list_display = ['username', 'first_name', 'last_name', 'email', 'programme_name', 'school_faculty']
   search_fields = ('username', 'first_name', 'last_name')
   ordering = ('username', )
 admin.site.register(User, UserAdmin)

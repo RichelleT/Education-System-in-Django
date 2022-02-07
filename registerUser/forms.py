@@ -18,7 +18,7 @@ class RegistrationForm(UserCreationForm):
             'programme_name',
             'school_faculty',
             'gender',    
-            'role',        
+                   
         )
 
     def save(self, commit=True):

@@ -502,3 +502,1777 @@ Traceback (most recent call last):
   File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
     _mysql.connection.query(self, query)
 django.db.utils.OperationalError: (1054, "Unknown column 'registerUser_user.role_id' in 'field list'")
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 27, in registerUser
+    print(role)
+NameError: name 'role' is not defined
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 26, in registerUser
+    qform = User.object.all()
+NameError: name 'User' is not defined
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 27, in registerUser
+    qform = User.object.all()
+AttributeError: type object 'User' has no attribute 'object'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 29, in registerUser
+    print(qform.role)
+AttributeError: 'QuerySet' object has no attribute 'role'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 29, in registerUser
+    if role == 1:
+NameError: name 'role' is not defined
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: registerUser() missing 1 required positional argument: 'pk'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: registerUser() missing 1 required positional argument: 'pk'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: registerUser() missing 1 required positional argument: 'pk'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 27, in registerUser
+    role_sel = User.objects.get(role)
+NameError: name 'role' is not defined
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1823, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 27, in registerUser
+    role_sel = User.objects.get(role="")
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1396, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1415, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1350, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1196, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1825, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1823, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'builtin_function_or_method'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 27, in registerUser
+    role_sel = User.objects.get(role=id)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1396, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1415, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1350, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1196, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1825, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <built-in function id>.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1823, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 27, in registerUser
+    role_sel = User.objects.get(role='id')
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1396, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1415, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1350, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1196, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1825, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'id'.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 35, in registerUser
+    user.groups.add(3)
+NameError: name 'user' is not defined
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 35, in registerUser
+    User.groups.add(3)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 35, in registerUser
+    User.groups.add(3)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 35, in registerUser
+    User.groups.add(3)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 35, in registerUser
+    User(role).groups.add(3)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/related_descriptors.py", line 950, in add
+    self._add_items(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/related_descriptors.py", line 1130, in _add_items
+    self.through._default_manager.using(db).bulk_create([
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 514, in bulk_create
+    returned_columns = self._batched_insert(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 1293, in _batched_insert
+    self._insert(item, fields=fields, using=self.db, ignore_conflicts=ignore_conflicts)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1409, in execute_sql
+    for sql, params in self.as_sql():
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1352, in as_sql
+    value_rows = [
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1353, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1353, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1294, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/related.py", line 971, in get_db_prep_save
+    return self.target_field.get_db_prep_save(value, connection=connection)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 842, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 2487, in get_db_prep_value
+    value = connection.ops.validate_autopk_value(value)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/operations.py", line 233, in validate_autopk_value
+    raise ValueError('The database backend does not accept 0 as a '
+ValueError: The database backend does not accept 0 as a value for AutoField.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 30, in registerUser
+    if role == 1:
+NameError: name 'role' is not defined
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 35, in registerUser
+    User.groups.add(3)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 28, in registerUser
+    a = Group.objects.get(name='Admin')
+NameError: name 'Group' is not defined
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 41, in registerUser
+    User.groups.add(a)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 41, in registerUser
+    User.groups.set(a)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'set'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 41, in registerUser
+    User.groups.set(a)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'set'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 41, in registerUser
+    User.groups.set(a)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'set'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 43, in registerUser
+    UserSerializer.role.set(a)
+AttributeError: type object 'UserSerializer' has no attribute 'role'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes 1 positional argument but 2 were given
+Unauthorized: /registerUser/
+Unauthorized: /registerUser/
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'pk'
+Method Not Allowed: /registerUser/
+Method Not Allowed: /registerUser/
+Method Not Allowed: /registerUser/
+Method Not Allowed: /registerUser/
+Method Not Allowed: /registerUser/
+Method Not Allowed: /registerUser/
+Method Not Allowed: /registerUser/
+Method Not Allowed: /registerUser/
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+AssertionError: 'UserRegis' should either include a `queryset` attribute, or override the `get_queryset()` method.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'User' object has no attribute 'roles'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `roles` on serializer `UserSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `User` instance.
+Original exception text was: 'User' object has no attribute 'roles'.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+TypeError: 'Group' object is not iterable
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/renderers.py", line 167, in render
+    return template.render(context, request=request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/backends/django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than ReturnList.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/renderers.py", line 167, in render
+    return template.render(context, request=request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/backends/django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than ReturnList.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/renderers.py", line 167, in render
+    return template.render(context, request=request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/backends/django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than ReturnList.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/renderers.py", line 167, in render
+    return template.render(context, request=request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/backends/django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than ReturnList.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+TypeError: 'Group' object is not iterable
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/renderers.py", line 167, in render
+    return template.render(context, request=request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/backends/django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than ReturnList.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 22, in get
+    return Response({'serializer':serializer})
+NameError: name 'Response' is not defined
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 22, in get
+    return Response({'serializer':serializer})
+NameError: name 'Response' is not defined
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/renderers.py", line 167, in render
+    return template.render(context, request=request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/templatetags/rest_framework.py", line 81, in render_form
+    return renderer.render(serializer.data, None, {'style': style})
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'password' was declared on serializer UserSerializer, but has not been included in the 'fields' option.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/renderers.py", line 167, in render
+    return template.render(context, request=request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/templatetags/rest_framework.py", line 81, in render_form
+    return renderer.render(serializer.data, None, {'style': style})
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 1057, in get_fields
+    extra_kwargs, hidden_fields = self.get_uniqueness_extra_kwargs(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 1411, in get_uniqueness_extra_kwargs
+    model_fields = self._get_model_fields(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 1484, in _get_model_fields
+    if field_name in declared_fields:
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 538, in __hash__
+    raise TypeError("Model instances without primary key value are unhashable")
+TypeError: Model instances without primary key value are unhashable
+Unauthorized: /registerUser/
+Unauthorized: /registerUser/
+Unauthorized: /registerUser/
+Unauthorized: /registerUser/
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/renderers.py", line 167, in render
+    return template.render(context, request=request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/template/library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/templatetags/rest_framework.py", line 81, in render_form
+    return renderer.render(serializer.data, None, {'style': style})
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `password1` is not valid for model `User`.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 29, in post
+    serializer.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 42, in create
+    user.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1410, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 29, in post
+    serializer.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 42, in create
+    user.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1410, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 29, in post
+    serializer.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 42, in create
+    user.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1410, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 29, in post
+    serializer.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 42, in create
+    user.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1410, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 29, in post
+    serializer.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 42, in create
+    user.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1410, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 29, in post
+    serializer.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 42, in create
+    user.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1410, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 29, in post
+    serializer.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 40, in create
+    user.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1410, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 29, in post
+    serializer.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 40, in create
+    user.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1410, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 29, in post
+    serializer.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 40, in create
+    user.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1410, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 29, in post
+    serializer.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 40, in create
+    user.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1410, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'registeruser_user.email'")
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: post() missing 1 required positional argument: 'validated_data'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: post() missing 1 required positional argument: 'validated_data'
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 26, in post
+    data = JSONParser().parse(request)
+NameError: name 'JSONParser' is not defined
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 27, in post
+    if not serializer.is_valid():
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 429, in run_validation
+    value = self.validate(value)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 38, in validate
+    user = User(**data)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 498, in __init__
+    _setattr(self, prop, kwargs[prop])
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/fields/related_descriptors.py", line 545, in __set__
+    raise TypeError(
+TypeError: Direct assignment to the forward side of a many-to-many set is prohibited. Use groups.set() instead.
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 38, in validate_password
+    validate_password(value)
+NameError: name 'validate_password' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 27, in post
+    if not serializer.is_valid():
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 39, in validate_password
+    except ValidationError as exc:
+NameError: name 'ValidationError' is not defined
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 27, in post
+    if not serializer.is_valid():
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 39, in validate_password
+    validate_password(value)
+NameError: name 'validate_password' is not defined
+Internal Server Error: /registerUser/
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry 'testing' for key 'registeruser_user.username'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/views.py", line 29, in post
+    serializer.save()
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/richellekyj/Documents/FYP/OAiES/registerUser/serializers.py", line 45, in create
+    user = super().create(validated_data)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1410, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/richellekyj/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry 'testing' for key 'registeruser_user.username'")
