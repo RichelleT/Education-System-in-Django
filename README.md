@@ -57,6 +57,10 @@
 ## MUST-DOs
 | Step | Description |
 |----------|-------------|
+|1| Enter `python manage.py runserver`|
+|2| Open a browser and enter http://127.0.0.1:8000/admin/ |
+|3| Login with the superuser login created |
+|4| Click on ![Guide1](/static/images/guide1.png)|
 ||![Screenshot](/static/images/formFe.png)|
 
 
