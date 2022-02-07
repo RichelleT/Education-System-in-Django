@@ -39,8 +39,8 @@
 |5| Enter `sudo easy_install pip`|
 |6| Enter `sudo pip install virtualenv`|
 |7| Enter `virtualenv foldername`|
-|8| Enter `cd foldername`| MUST CD INTO THE FOLDER |
-|9| Enter `source bin/activate`| ONLY DO THIS IN THE VIRTUAL ENV FOLDER CREATED |
+|8| Enter `cd foldername`| **MUST CD INTO THE FOLDER** |
+|9| Enter `source bin/activate`| **ONLY DO THIS IN THE VIRTUAL ENV FOLDER CREATED** |
 |10| Enter `python -m pip install Django`|
 |11| Enter `pip install mysqlclient` |
 |12| Enter `pip install django-utils-six` |
@@ -52,7 +52,7 @@
 |18| Enter `python manage.py migrate` |
 |19| Enter `python manage.py createsuperuser`|
 |20| Enter username and password for superuser account |
-|21| Enter `python manage.py runserver` | Run this each time to use the web application |
+|21| Enter `python manage.py runserver` | **Run this each time to use the web application** |
 
 ## MUST-DOs
 | Step | Description | Screenshot |
@@ -61,10 +61,10 @@
 |2| Open a browser and enter http://127.0.0.1:8000/admin/ |
 |3| Login with the superuser login created |
 |4| Select |![Guide1](/static/images/guide1.png)|
-|4| Add these groups |![Guide11](/static/images/guide11.png)|
-|6| Add these permissions to the Admin group |![Guide2](/static/images/guide2.png)|
-|7| Add these permissions to the Student group |![Guide3](/static/images/guide3.png)|
-|8| Add these permissions to the Educator group; all `except admin, auth, contenttypes, sessions` permissions|![Guide4](/static/images/guide4.png)|
+|4| Add these **groups**|![Guide11](/static/images/guide11.png)|
+|6| Add these permissions to the **Admin** group |![Guide2](/static/images/guide2.png)|
+|7| Add these permissions to the **Student** group |![Guide3](/static/images/guide3.png)|
+|8| Add these permissions to the **Educator** group; **all except** `admin, auth, contenttypes, sessions` **permissions**|![Guide4](/static/images/guide4.png)|
 
 
 
