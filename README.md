@@ -54,6 +54,13 @@
 |20| Enter username and password for superuser account |
 |21| Enter `python manage.py runserver` | Run this each time to use the web application |
 
+## MUST-DOs
+![Screenshot](/Users/richellekyj/Documents/FYP/OAiES/static/images/formFe.png)
+
+
+
+
+
 
 <!-- ## Dependencies
 
