@@ -47,7 +47,7 @@
 |13| Enter `pip install pdfplumber` |
 |14| Download project zip |
 |15| Extract downloaded zip to virtual env folder created |
-|16| Open the folder containing the manage.py file and right click on the folder name on the folder path and select `open in terminal`|
+|16| Open the folder containing the manage.py file and right click on the folder name on the folder path and select `open in terminal`| Or just cd into the folder containing the manage.py file in terminal |
 |17| Enter `python manage.py makemigrations` |
 |18| Enter `python manage.py migrate` |
 |19| Enter `python manage.py createsuperuser`|
