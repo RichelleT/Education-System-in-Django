@@ -55,7 +55,7 @@
 |21| Enter `python manage.py runserver` | Run this each time to use the web application |
 
 ## MUST-DOs
-![Screenshot](/Users/richellekyj/Documents/FYP/OAiES/static/images/formFe.png)
+![Screenshot](/static/images/formFe.png)
 
 
 
