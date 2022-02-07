@@ -55,7 +55,9 @@
 |21| Enter `python manage.py runserver` | Run this each time to use the web application |
 
 ## MUST-DOs
-![Screenshot](/static/images/formFe.png)
+| Step | Description |
+|----------|-------------|
+||![Screenshot](/static/images/formFe.png)|
 
 
 
