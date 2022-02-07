@@ -54,6 +54,14 @@
                 <li><a class="getstarted scrollto" href="{% url 'logout' %}">Log Out</a></li>
               </ul>
             </nav>
+            {% elif group_for.name == 'Admin' %}
+            <nav id="navbar" class="navbar">
+              <ul>
+                <li><a class="nav-link scrollto" href="/registerUser/">Add Users</a></li>
+                <li><a class="nav-link scrollto" href="/userProf/">Profile</a></li>
+                <li><a class="getstarted scrollto" href="{% url 'logout' %}">Log Out</a></li>
+              </ul>
+            </nav>
           {% endif %}
         {% endfor %}
       {% else %}
