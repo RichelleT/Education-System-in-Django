@@ -31,17 +31,31 @@
 
 | Step | Description | Note |
 |----------|-------------|------------|
-|1-1|| Enter `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"` | Only for users running macOS High Sierra, Sierra, El Capitan, or earlier |
-|1-2| Enter `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` | Only for users running Catalina, Mojave, or Big Sur, or later |
-|2| Enter `brew install mysql`|
+|1| Open a terminal |
+|2-1| Enter `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"` | Install homebrew only for users running `macOS High Sierra, Sierra, El Capitan, or earlier` |
+|2-2| Enter `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` | Install homebrew only for users running `macOs Catalina, Mojave, or Big Sur, or later` |
+|3| Enter `brew install mysql`| mysql server needed |
+|4| Enter `brew install python3`|
+|5| Enter `sudo easy_install pip`|
+|6| Enter `sudo pip install virtualenv`|
+|7| Enter `virtualenv foldername`|
+|8| Enter `cd foldername`| MUST CD INTO THE FOLDER |
+|9| Enter `source bin/activate`| ONLY DO THIS IN THE VIRTUAL ENV FOLDER CREATED |
+|10| Enter `python -m pip install Django`|
+|11| Enter `pip install mysqlclient` |
+|12| Enter `pip install django-utils-six` |
+|13| Enter `pip install pdfplumber` |
+|14| Download project zip |
+|15| Extract downloaded zip to virtual env folder created |
+|16| Open the folder containing the manage.py file and right click on the folder name on the folder path and select `open in terminal`|
+|17| Enter `python manage.py makemigrations` |
+|18| Enter `python manage.py migrate` |
+|19| Enter `python manage.py createsuperuser`|
+|20| Enter username and password for superuser account |
+|21| Enter `python manage.py runserver` | Run this each time to use the web application |
 
 
-
-
-|NUMBER| (In MacOS) Open the folder and right click on the folder name and select `open in terminal`|
-
-
-## Dependencies
+<!-- ## Dependencies
 
 ```sh
 pip install django-utils-six
@@ -51,4 +65,4 @@ pip install mysqlclient
 ```
 ```sh
 pip install pdfplumber
-```
+``` -->
