@@ -18,14 +18,15 @@
 |14| Enter `pip install pdfplumber` |
 |15| Enter `pip install virtualenv` |
 |16| Enter `pip install virtualenvwrapper-win`|
-|17|Enter `mkvirtualenv foldername`|
-|18| Unzip downloaded project files into the created virtual env folder |
-|19| Open the folder containing `manage.py`, enter cmd in the folder path to open a command prompt with the path | **Always Do This before running the server or performing step 24** |
-|20| Enter `python manage.py makemigrations` |
-|21| Enter `python manage.py migrate` |
-|22| Enter `python manage.py createsuperuser`|
-|23| Enter username and password for superuser account |
-|24| Enter `python manage.py runserver` | Run this each time to use the web application |
+|17| Enter `pip install djangorestframework`|
+|18|Enter `mkvirtualenv foldername`|
+|19| Unzip downloaded project files into the created virtual env folder |
+|20| Open the folder containing `manage.py`, enter cmd in the folder path to open a command prompt with the path | **Always Do This before running the server or performing step 25** |
+|21| Enter `python manage.py makemigrations` |
+|22| Enter `python manage.py migrate` |
+|23| Enter `python manage.py createsuperuser`|
+|24| Enter username and password for superuser account |
+|25| Enter `python manage.py runserver` | Run this each time to use the web application |
 
 ## MacOS Setup Manual
 
@@ -44,15 +45,16 @@
 |10| Enter `python -m pip install Django`|
 |11| Enter `pip install mysqlclient` |
 |12| Enter `pip install django-utils-six` |
-|13| Enter `pip install pdfplumber` |
-|14| Download project zip |
-|15| Extract downloaded zip to virtual env folder created |
-|16| Open the folder containing the manage.py file and right click on the folder name on the folder path and select `open in terminal`; Or just cd into the folder containing the manage.py file in terminal| **Always Do This before running the server or performing step 21** |
-|17| Enter `python manage.py makemigrations` |
-|18| Enter `python manage.py migrate` |
-|19| Enter `python manage.py createsuperuser`|
-|20| Enter username and password for superuser account |
-|21| Enter `python manage.py runserver` | **Run this each time to use the web application** |
+|13| Enter `pip install djangorestframework`|
+|14| Enter `pip install pdfplumber` |
+|15| Download project zip |
+|16| Extract downloaded zip to virtual env folder created |
+|17| Open the folder containing the manage.py file and right click on the folder name on the folder path and select `open in terminal`; Or just cd into the folder containing the manage.py file in terminal| **Always Do This before running the server or performing step 22** |
+|18| Enter `python manage.py makemigrations` |
+|19| Enter `python manage.py migrate` |
+|20| Enter `python manage.py createsuperuser`|
+|21| Enter username and password for superuser account |
+|22| Enter `python manage.py runserver` | **Run this each time to use the web application** |
 
 ## MUST-DOs
 | Step | Description | Screenshot |
