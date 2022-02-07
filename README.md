@@ -20,7 +20,7 @@
 |16| Enter `pip install virtualenvwrapper-win`|
 |17|Enter `mkvirtualenv foldername`|
 |18| Unzip downloaded project files into the created virtual env folder |
-|19| Open the folder containing `manage.py`, enter cmd in the folder path to open a command prompt with the path |
+|19| Open the folder containing `manage.py`, enter cmd in the folder path to open a command prompt with the path | **Always Do This before running the server or performing step 24** |
 |20| Enter `python manage.py makemigrations` |
 |21| Enter `python manage.py migrate` |
 |22| Enter `python manage.py createsuperuser`|
@@ -47,7 +47,7 @@
 |13| Enter `pip install pdfplumber` |
 |14| Download project zip |
 |15| Extract downloaded zip to virtual env folder created |
-|16| Open the folder containing the manage.py file and right click on the folder name on the folder path and select `open in terminal`| Or just cd into the folder containing the manage.py file in terminal |
+|16| Open the folder containing the manage.py file and right click on the folder name on the folder path and select `open in terminal`; Or just cd into the folder containing the manage.py file in terminal| **Always Do This before running the server or performing step 21** |
 |17| Enter `python manage.py makemigrations` |
 |18| Enter `python manage.py migrate` |
 |19| Enter `python manage.py createsuperuser`|
@@ -57,7 +57,7 @@
 ## MUST-DOs
 | Step | Description | Screenshot |
 |----------|-------------|---------|
-|1| Enter `python manage.py runserver`|
+|1| Run the server/web app with `python manage.py runserver`|
 |2| Open a browser and enter http://127.0.0.1:8000/admin/ |
 |3| Login with the superuser login created |
 |4| Select |![Guide1](/static/images/guide1.png)|
