@@ -17,7 +17,8 @@ class RegistrationForm(UserCreationForm):
             'password2',
             'programme_name',
             'school_faculty',
-            'gender',            
+            'gender',    
+            'role',        
         )
 
     def save(self, commit=True):
