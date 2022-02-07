@@ -13,19 +13,19 @@
 |9| Enter `CREATE DATABASE oaies;` |
 |10| Download the zip to this project |
 |11| Open scripts folder (in the python folder in appdata/program) where pip is located in cmd |
-|12| Enter `pip install virtualenv` |
-|13| Enter `pip install virtualenvwrapper-win`|
-|14|Enter `mkvirtualenv foldername`|
-|15| Unzip downloaded project files into the created virtual env folder |
-|16| Enter `pip install mysqlclient` |
-|17| Enter `pip install django-utils-six` |
-|18| Enter `pip install pdfplumber` |
+|12| Enter `pip install mysqlclient` |
+|13| Enter `pip install django-utils-six` |
+|14| Enter `pip install pdfplumber` |
+|15| Enter `pip install virtualenv` |
+|16| Enter `pip install virtualenvwrapper-win`|
+|17|Enter `mkvirtualenv foldername`|
+|18| Unzip downloaded project files into the created virtual env folder |
 |19| Open the folder containing `manage.py`, enter cmd in the folder path to open a command prompt with the path |
 |20| Enter `python manage.py makemigrations` |
 |21| Enter `python manage.py migrate` |
 |22| Enter `python manage.py createsuperuser`|
 |23| Enter username and password for superuser account |
-|24| Enter `python manage.py runserver`
+|24| Enter `python manage.py runserver` | Run this each time to use the web application |
 
 ## MacOS Setup Manual
 
