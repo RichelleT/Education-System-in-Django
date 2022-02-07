@@ -1,3 +1,10 @@
+## Manual
+
+| Step | Description |
+|----------|-------------|
+|1| Download the mySQL installer for windows at https://dev.mysql.com/downloads/installer/ |
+|2| Select Custom Setup Type |
+
 ## Dependencies
 
 ```sh
