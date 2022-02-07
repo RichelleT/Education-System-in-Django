@@ -6,6 +6,7 @@ from django.contrib.auth.models import User, Group
 from buildAssign.models import Assignment
 from buildAssign.forms import addAssignment
 from main.decorators import group_required
+import pdfplumber
 
 @login_required(login_url='/login/')
 @group_required('Educator', login_url='/login/')
@@ -22,13 +23,16 @@ def addAssign(request):
             'form': form
         }
         return render(request, 'addAssignment.html', args)
-"""
+
 @login_required(login_url='/login/')
 def atPage(request, pk):
     if request.method == 'POST':
         question = Assignment.objects.filter(linked_module=pk)
-        score = 0
-        correct = 0
-        total = 0
         user = request.user
-"""
+    else: 
+        questions = Assignment.objects.filter(linked_module=pk)
+
+        context = {
+            'questions': questions
+        }
+        return render(request, "assignPage.html", context)

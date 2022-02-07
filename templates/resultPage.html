@@ -1,8 +1,8 @@
-{% load static %}
-{% include 'navbar.html' %}
 
 <div class="p-5 m-5">
     <div class="card">
+        {% load static %}
+        {% include 'navbar.html' %}
         <form method='post' action=''>
             {% csrf_token %}
             <p>

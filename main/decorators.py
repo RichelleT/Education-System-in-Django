@@ -4,12 +4,6 @@ from django.contrib.auth.decorators import user_passes_test
 
 
 def group_required(group, login_url=None, raise_exception=False):
-    """
-    Decorator for views that checks whether a user has a group permission,
-    redirecting to the log-in page if necessary.
-    If the raise_exception parameter is given the PermissionDenied exception
-    is raised.
-    """
     def check_perms(user):
         if isinstance(group, six.string_types):
             groups = (group, )
