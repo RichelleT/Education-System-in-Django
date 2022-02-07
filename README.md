@@ -4,7 +4,7 @@
 |----------|-------------|
 |1| Download the mySQL installer for windows at https://dev.mysql.com/downloads/installer/ |
 |2| Select Custom Setup Type |
-|3| Select MySQL Server, MySQL Workbench, and Connector/ODBC from available products |
+|3| Select `MySQL Server`, `MySQL Workbench`, and `Connector/ODBC` from available products |
 |4| Execute and proceed until adding password to root account |
 |5| Proceed until install is done |
 |6| Open a terminal window/command prompt |
@@ -17,7 +17,7 @@
 |13| Enter `pip install virtualenvwrapper-win`|
 |14|Enter `mkvirtualenv foldername`|
 |15| Unzip downloaded project files into the created virtual env folder |
-|16| Open the folder containing manage.py, enter cmd in the folder path to open a command prompt with the path |
+|16| Open the folder containing `manage.py`, enter cmd in the folder path to open a command prompt with the path |
 |11| Enter `python manage.py makemigrations` |
 |12| Enter `python manage.py migrate` |
 |13| Enter `python manage.py createsuperuser`|
