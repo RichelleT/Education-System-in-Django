@@ -11,7 +11,7 @@ pip install pdfplumber
 ```
 ## Manual
 
-| Step | Command | Description |
-|----------|-------------|-------------|
-|1| A dictionary of metadata key/value pairs, drawn from the PDF's `Info` trailers. Typically includes "CreationDate," "ModDate," "Producer," et cetera.|
-|2| A list containing one `pdfplumber.Page` instance per page loaded.| test |
+| Step | Description |
+|----------|-------------|
+|1| Download the mySQL installer for windows at https://dev.mysql.com/downloads/installer/ |
+|2| Select Custom Setup Type |
