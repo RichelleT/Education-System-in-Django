@@ -1,7 +1,7 @@
 ## Windows Setup Manual
 
-| Step | Description |
-|----------|-------------|
+| Step | Description | Note |
+|----------|-------------|------------|
 |1| Download the mySQL installer for windows at https://dev.mysql.com/downloads/installer/ |
 |2| Select Custom Setup Type |
 |3| Select `MySQL Server`, `MySQL Workbench`, and `Connector/ODBC` from available products |
@@ -17,17 +17,27 @@
 |13| Enter `pip install virtualenvwrapper-win`|
 |14|Enter `mkvirtualenv foldername`|
 |15| Unzip downloaded project files into the created virtual env folder |
-|16| Open the folder containing `manage.py`, enter cmd in the folder path to open a command prompt with the path |
-|11| Enter `python manage.py makemigrations` |
-|12| Enter `python manage.py migrate` |
-|13| Enter `python manage.py createsuperuser`|
-|14| Enter username and password for superuser account |
-|15| Enter `python manage.py runserver`
+|16| Enter `pip install mysqlclient` |
+|17| Enter `pip install django-utils-six` |
+|18| Enter `pip install pdfplumber` |
+|19| Open the folder containing `manage.py`, enter cmd in the folder path to open a command prompt with the path |
+|20| Enter `python manage.py makemigrations` |
+|21| Enter `python manage.py migrate` |
+|22| Enter `python manage.py createsuperuser`|
+|23| Enter username and password for superuser account |
+|24| Enter `python manage.py runserver`
 
 ## MacOS Setup Manual
 
-| Step | Description |
-|----------|-------------|
+| Step | Description | Note |
+|----------|-------------|------------|
+|1-1|| Enter `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"` | Only for users running macOS High Sierra, Sierra, El Capitan, or earlier |
+|1-2| Enter `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` | Only for users running Catalina, Mojave, or Big Sur, or later |
+|2| Enter `brew install mysql`|
+
+
+
+
 |NUMBER| (In MacOS) Open the folder and right click on the folder name and select `open in terminal`|
 
 
