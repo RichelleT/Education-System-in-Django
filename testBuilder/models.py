@@ -20,7 +20,7 @@ class addUserModule(models.Model):
 
 class Test(models.Model):
     test_name = models.CharField(max_length=100, default="")
-    test_date = models.DateTimeField(auto_now_add=True)
+    test_date = models.DateTimeField()
     module_sel = models.ForeignKey(Module, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
@@ -58,8 +58,8 @@ class quizResult(models.Model):
     percentage = models.IntegerField(default=0)
     total = models.IntegerField(default=0)
     grade = models.CharField(max_length=10, default="")
-    a_time = models.DateTimeField(auto_now=True)
-    attempted_time = models.DateTimeField(auto_now_add=True)
+    #a_time = models.DateTimeField()
+    attempted_time = models.DateTimeField()
 
     def __str__(self):
         return str(self.attempted_by)

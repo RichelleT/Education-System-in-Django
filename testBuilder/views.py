@@ -7,6 +7,7 @@ from testBuilder.models import Module, Test, Quiz, quizResult, addUserModule
 from django.db.models import F
 from django.contrib.auth.models import User, Group
 from main.decorators import group_required
+import datetime
 
 @login_required(login_url='/login/')
 @group_required('Educator', login_url='/login/')
@@ -35,6 +36,18 @@ def addMod(request):
         }
         return render(request, 'addModule.html', args)
 
+"""
+@login_required(login_url='/login/')
+@group_required('Educator', login_url='/login/')
+def addUserToMod(request):
+    if request.method =='POST':
+        add_form = addUserModule(request.POST)
+
+        if add_form.is_valid():
+            add_form.save()
+        return
+"""
+
 @login_required(login_url='/login/')
 def modSel(request, *args, **kwargs):
     modlist = Module.objects.all()
@@ -55,6 +68,33 @@ def addTests(request):
             'form': form
         }
         return render(request, 'addTest.html', context)
+
+"""
+@login_required(login_url='/login/')
+@group_required('Educator', login_url='/login/')
+def addTests(request):
+    if request.method =='POST':
+        current_datetime = datetime.datetime.now() 
+
+        old_form = addTest(request.POST)
+
+        if old_form.is_valid():
+            old_form.save()
+            #form = old_form.save(commit=False)
+            
+            #if form.test_date is None:
+                ##form.save()
+            
+            return redirect('/addQuizQ/')
+    else:
+        old_form = addTest()
+
+        context = {
+            'old_form': old_form
+        }
+        
+        return render(request, "addTest.html", context)
+"""
 
 @login_required(login_url='/login/')
 def modulePage(request, pk):
@@ -90,12 +130,14 @@ def addQuiz(request):
 def qrPage(request, pk):
     if request.method == 'POST': #render results page
         print(request.POST)
+        results = quizResult.objects.filter(attempted_by=pk)
         questions = Quiz.objects.filter(test_sel=pk)
         score=0
         wrong=0
         correct=0
         total=0
         user = request.user
+        current_datetime = datetime.datetime.now()  
         for q in questions:
             total+=1
             #print(request.POST.get(q.test_sel.test_name))
@@ -119,8 +161,8 @@ def qrPage(request, pk):
             total=total,
             grade=grade,
             #linked_module=module,
-            #linked_test=test,
-            attempted_by=user
+            attempted_time=current_datetime,
+            attempted_by=user,
         )
 
         context = {
@@ -131,7 +173,7 @@ def qrPage(request, pk):
             'total':total,
             'grade': grade,
             'user': user,
-            #'form':form
+            'results':results,
         }
         return render(request,'generateResult.html',context)
         #return render(request, "resultPage.html", context)
