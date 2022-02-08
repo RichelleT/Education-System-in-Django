@@ -15,7 +15,7 @@ def addMod(request):
         form = addModule(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/sucess/')
+            return redirect('/addTests/')
     else:
         form = addModule()
 
@@ -36,7 +36,7 @@ def addTests(request):
         form = addTest(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/sucess/')
+            return redirect('/addQuizQ/')
     else:
         form = addTest()
 
@@ -65,7 +65,7 @@ def addQuiz(request):
         form = addQuestions(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/sucess/')
+            return redirect('/addQuizQ/')
             #add page redir
     else:
         form = addQuestions()
