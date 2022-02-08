@@ -54,17 +54,20 @@
 | Enter username and password for superuser account |
 | Enter `python manage.py runserver` | **Run this each time to use the web application** |
 
-## MUST-DOs
-| Step | Description | Screenshot |
-|----------|-------------|---------|
-|1| Run the server/web app with `python manage.py runserver`|
-|2| Open a browser and enter http://127.0.0.1:8000/admin/ |
-|3| Login with the superuser login created |
-|4| Select |![Guide1](/static/images/guide1.png)|
-|4| Add these **groups**|![Guide11](/static/images/guide11.png)|
-|6| Add these permissions to the **Admin** group |![Guide2](/static/images/guide2.png)|
-|7| Add these permissions to the **Student** group |![Guide3](/static/images/guide3.png)|
-|8| Add these permissions to the **Educator** group; **all except** `admin, auth, contenttypes, sessions` **permissions**|![Guide4](/static/images/guide4.png)|
+## Step-by-Step MUST-DOs
+| Description | Screenshot |
+|-------------|---------|
+| Run the server/web app with `python manage.py runserver`|
+|If ^ step does not work, then comment out the `@login_required` and `@group_required` in `register/views.py`.|![Guide5](/static/images/guide5.png)|
+| Then, in `register/forms.py` uncomment highlighted |![Guide6](/static/images/guide6.png)|
+| Go to http://127.0.0.1:8000/registerUser/|
+| Open a browser and enter http://127.0.0.1:8000/admin/ |
+| Login with the superuser login created |
+| Select |![Guide1](/static/images/guide1.png)|
+| Add these **groups**|![Guide11](/static/images/guide11.png)|
+| Add these permissions to the **Admin** group |![Guide2](/static/images/guide2.png)|
+| Add these permissions to the **Student** group |![Guide3](/static/images/guide3.png)|
+| Add these permissions to the **Educator** group; **all except** `admin, auth, contenttypes, sessions` **permissions**|![Guide4](/static/images/guide4.png)|
 
 
 
