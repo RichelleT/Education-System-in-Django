@@ -14,6 +14,7 @@ def redir_view(request, *args, **kwargs):
     return render(request, "adminButtons.html", {})
 
 def userProf_view(request):
+    #users = User.objects.all().select_related('profile')
     prof = Profile.objects.filter(user=request.user)
     context = {
         "prof": prof,

@@ -24,6 +24,8 @@ def registerAdm(request):
 """
 
 @transaction.atomic
+@login_required(login_url='/login/')
+@group_required('Admin', login_url='/login/')
 def registerUsr(request):
     if request.method == 'POST':
         user_form = RegistrationForm(request.POST)
