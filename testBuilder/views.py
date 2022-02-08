@@ -116,9 +116,9 @@ def qrPage(request, pk):
         print(request.POST)
         questions = Quiz.objects.filter(test_sel=pk)
         test = Test.objects.get(pk=pk)
-        
+        module = Module.objects.get(pk=pk)
         print(test)
-        #print(test.id)
+        print(module)
         score=0
         wrong=0
         correct=0
@@ -142,6 +142,7 @@ def qrPage(request, pk):
             grade = "Fail"
 
         insert_to_db = quizResult.objects.create(
+            linked_module=module,
             linked_test=test,
             correct=correct, 
             wrong=wrong, 
@@ -173,3 +174,11 @@ def qrPage(request, pk):
             'questions': questions
         }
         return render(request, "quizPage.html", context)
+
+def resultPg(request, pk):
+    resList = quizResult.objects.filter(linked_module=pk)
+
+    context = {
+        'resList':resList,
+    }
+    return render(request, "viewResultsPage.html", context)

@@ -1,0 +1,71 @@
+{% load static %}
+{% include 'navbar.html' %}
+<link href="{% static 'css/login.css'%}" rel="stylesheet">
+
+
+<div class="p-5 m-5">
+    <table>
+        <tr>
+            <th>
+                Module
+            </th>
+            <th>
+                Test
+            </th>
+            <th>
+                Attempted by
+            </th>
+            <th>
+                Time attempted
+            </th>
+            <th>
+                Percentage
+            </th>
+            <th>
+                Grade
+            </th>
+            <th>
+                No. of correct answers
+            </th>
+            <th>
+                No. of wrong answers
+            </th>
+        </tr>
+        {% for r in resList %}
+        <tr>
+            <th>
+                {{r.linked_module}}
+            </th>
+            <th>
+                {{r.linked_test}}
+            </th>
+            <th>
+                {{r.attempted_by}}
+            </th>
+            <th>
+                {{r.attempted_time}}
+            </th>
+            <th>
+                {{r.percentage}}
+            </th>
+            <th>
+                {{r.grade}}
+            </th>
+            <th>
+                {{r.correct}}
+            </th>
+            <th>
+                {{r.wrong}}
+            </th>
+        </tr>
+        {% endfor %}
+    </table>
+    {% comment %} <p>Module: {{r.linked_module}}</p>
+    <p>Test: {{r.linked_test}}</p>
+    <p>Attempted by: {{r.attempted_by}}</p>
+    <p>Time attempted: {{r.attempted_time}}</p>
+    <p>Percentage: {{r.percentage}}</p>
+    <p>Grade: {{r.grade}}</p>
+    <p>Number of correct answers: {{r.correct}}</p>
+    <p>Number of wrong answers: {{r.wrong}}</p> {% endcomment %}
+</div>
