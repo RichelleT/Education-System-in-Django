@@ -11,23 +11,30 @@ class Module(models.Model):
 class Test(models.Model):
     test_name = models.CharField(max_length=100, default="")
     test_date = models.DateTimeField(auto_now_add=True)
-    module_sel = models.ForeignKey(Module, on_delete=models.SET_NULL, null=True)
+    module_sel = models.ForeignKey(Module, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.test_name
 
 class Quiz(models.Model):
-    test_sel = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True)
+    ANSWER_CHOICES = (
+            ('option1', 'option1'),
+            ('option2', 'option2'),
+            ('option3', 'option3'),
+            ('option4', 'option4'),
+        )
+    test_sel = models.ForeignKey(Test, on_delete=models.CASCADE, null=True)
     quest = models.CharField(max_length=500, default="")
     op1 = models.CharField(max_length=300, default="")
     op2 = models.CharField(max_length=300, default="")
     op3 = models.CharField(max_length=300, default="")
     op4 = models.CharField(max_length=300, default="")
-    answ = models.CharField(
-        max_length=300, 
-        help_text="Input option1 for the first option, option2 for the second option",
-        default=""
-    )
+    answ = models.CharField(max_length=7, choices=ANSWER_CHOICES, blank=False, default='')
+    # answ = models.CharField(
+    #     max_length=300, 
+    #     help_text="Input option1 for the first option, option2 for the second option",
+    #     default=""
+    # )
 
     def __str__(self):
         return self.quest

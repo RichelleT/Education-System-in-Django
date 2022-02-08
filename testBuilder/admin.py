@@ -22,4 +22,4 @@ class ModuleLinkTest(admin.ModelAdmin):
 admin.site.register(Module, ModuleLinkTest)
 admin.site.register(Test, TestLinkQuiz)
 #admin.site.register(Quiz)
-#admin.site.register(quizResult)
+admin.site.register(quizResult)
