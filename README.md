@@ -1,6 +1,8 @@
 ## Table of Contents
 
 - [Windows Setup Guide](#Windows-Step-by-Step-Setup-Manual)
+- [MacOS Setup Guide](#MacOS-Step-by-Step-Setup-Manual)
+- [Configuration](#Step-by-Step-Configuration)
 
 ## Windows Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
@@ -61,7 +63,8 @@
 | Enter username and password for superuser account |
 | Enter `python manage.py runserver` | **Run this each time to use the web application** |
 
-## Step-by-Step MUST-DOs
+## Step-by-Step Configuration
+### This is required, if not you cannot use the system/application
 ### Warning: Please do not skip any steps, unless it is an optional steps marked with `+`
 |Step| Description | Screenshot/Note |
 |-----|-------------|---------|
