@@ -30,9 +30,8 @@
 | Open the folder containing `manage.py`, enter cmd in the folder path to open a command prompt with the path | **Always Do This before running the server or performing runserver** |
 | Enter `python manage.py makemigrations` |
 | Enter `python manage.py migrate` |
-| Enter `python manage.py createsuperuser`|
-| Enter username and password for superuser account |
 | Enter `python manage.py runserver` | **Run this each time to use the web application** |
+| Perform these steps next - [Configuration (Must Do)](#Step-by-Step-Configuration) |
 
 ## MacOS Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
