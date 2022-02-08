@@ -16,7 +16,7 @@ def addMod(request):
         host = request.user
 
         mod_form = addModule(request.POST)
-        add_form = addUserModule(request.POST)
+        #add_form = addUserModule(request.POST)
 
         if mod_form.is_valid(): #and add_form.is_valid():
             form = mod_form.save(commit=False)
@@ -27,11 +27,11 @@ def addMod(request):
             return redirect('/addTests/')
     else:
         mod_form = addModule()
-        add_form = addUserModule()
+        #add_form = addUserModule()
 
         args = {
             'mod_form': mod_form,
-            'add_form': add_form,
+            #'add_form': add_form,
         }
         return render(request, 'addModule.html', args)
 
