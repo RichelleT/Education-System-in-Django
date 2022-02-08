@@ -22,6 +22,7 @@ def registerUsr(request):
         adm_group = Group.objects.get(id=1) 
         edu_group = Group.objects.get(id=2) 
         stu_group = Group.objects.get(id=3) 
+
         print("Assigned Role:", role_assign)
 
         if user_form.is_valid() and profile_form.is_valid():
