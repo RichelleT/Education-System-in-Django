@@ -2,7 +2,7 @@ from django.shortcuts import  render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from testBuilder.forms import addModule, addTest, addQuestions
+from testBuilder.forms import addModule, addTest, addQuestions, addUser
 from testBuilder.models import Module, Test, Quiz, quizResult, addUserModule
 from django.db.models import F
 from django.contrib.auth.models import User, Group
@@ -18,7 +18,7 @@ def addMod(request):
         host = request.user
 
         mod_form = addModule(request.POST)
-        #add_form = addUserModule(request.POST)
+        #add_form = addUser(request.POST)
 
         if mod_form.is_valid(): #and add_form.is_valid():
             form = mod_form.save(commit=False)
@@ -29,7 +29,7 @@ def addMod(request):
             return redirect('/addTests/')
     else:
         mod_form = addModule()
-        #add_form = addUserModule()
+        #add_form = addUser()
 
         args = {
             'mod_form': mod_form,

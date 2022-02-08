@@ -12,7 +12,9 @@ class addModule(forms.ModelForm):
 class addUser(forms.ModelForm):
     class Meta:
         model = addUserModule
-        fields = "__all__"
+        fields = (
+            'participants',
+        )
 
 class addTest(forms.ModelForm):
     class Meta:
