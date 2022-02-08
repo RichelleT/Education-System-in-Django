@@ -28,11 +28,6 @@ def registerUsr(request):
             if profile.user_id is None:
                 profile.user_id = new_user.id
                 profile.save()
-            #profile_form.save()
-            #userF = user_form.save()
-            #profile = profile_form.save(commit=False)
-            #profile.user = userF
-            #profile.save()
             return redirect('/userProf/')
         else:
             print("Error. Try Again.")
