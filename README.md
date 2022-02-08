@@ -1,3 +1,7 @@
+## Table of Contents
+
+- [Windows Setup Guide](#Windows-Step-by-Step-Setup-Manual)
+
 ## Windows Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
 
