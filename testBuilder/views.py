@@ -57,9 +57,17 @@ def modSel(request, *args, **kwargs):
 @group_required('Educator', login_url='/login/')
 def addTests(request):
     if request.method =='POST':
+        current_datetime = datetime.datetime.now() 
+
         form = addTest(request.POST)
+
         if form.is_valid():
-            form.save()
+            #old_form.save()
+            old_form = form.save(commit=False)
+            
+            if old_form.test_date is None:
+                old_form.test_date = current_datetime
+                old_form.save()
             return redirect('/addQuizQ/')
     else:
         form = addTest()
@@ -67,34 +75,9 @@ def addTests(request):
         context = {
             'form': form
         }
-        return render(request, 'addTest.html', context)
-
-"""
-@login_required(login_url='/login/')
-@group_required('Educator', login_url='/login/')
-def addTests(request):
-    if request.method =='POST':
-        current_datetime = datetime.datetime.now() 
-
-        old_form = addTest(request.POST)
-
-        if old_form.is_valid():
-            old_form.save()
-            #form = old_form.save(commit=False)
-            
-            #if form.test_date is None:
-                ##form.save()
-            
-            return redirect('/addQuizQ/')
-    else:
-        old_form = addTest()
-
-        context = {
-            'old_form': old_form
-        }
         
         return render(request, "addTest.html", context)
-"""
+
 
 @login_required(login_url='/login/')
 def modulePage(request, pk):

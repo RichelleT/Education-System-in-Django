@@ -17,7 +17,10 @@ class addUser(forms.ModelForm):
 class addTest(forms.ModelForm):
     class Meta:
         model = Test
-        fields = "__all__" 
+        fields = (
+            'test_name',
+            'module_sel'
+        )
 
 class addQuestions(forms.ModelForm):
     class Meta:
