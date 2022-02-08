@@ -59,9 +59,8 @@
 | Open the folder containing the manage.py file and right click on the folder name on the folder path and select `open in terminal`<br/><br/> Or just manually cd into the folder containing the manage.py file in terminal| **Always Do This before running the server or performing runserver** |
 | Enter `python manage.py makemigrations` |
 | Enter `python manage.py migrate` |
-| Enter `python manage.py createsuperuser`|
-| Enter username and password for superuser account |
 | Enter `python manage.py runserver` | **Run this each time to use the web application** |
+| Perform these steps next - [Configuration (Must Do)](#Step-by-Step-Configuration) |
 
 ## Step-by-Step Configuration
 ### Warning: This is required, if not you cannot use the system/application
