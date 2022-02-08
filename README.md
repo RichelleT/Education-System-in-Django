@@ -70,7 +70,7 @@
 |4| Open a browser and enter http://127.0.0.1:8000/admin/ |
 |5| Login with the superuser login created |
 |+| **If used `step 1.+` to create superuser, and is able to login to admin panel, UNDO all `step 1.+`**| **Note: VERY IMPORTANT STEP** |
-|+| If no admin account, comment out `group_required` only (like in the above step), create admin account, then uncomment `group_required` again.** Otherwise, any user can create users | **Note: This is important to add users for the application/system** |
+|+| If no admin account, **comment out `group_required` only** (like in the above step), create admin account, then uncomment `group_required` again.** Otherwise, any user can create users | **Note: This is important to add users for the application/system** |
 |6| Select |![Guide1](/static/images/guide1.png)|
 |7| Add these **groups**|![Guide11](/static/images/guide11.png)|
 |8| Add these permissions to the **Admin** group |![Guide2](/static/images/guide2.png)|
