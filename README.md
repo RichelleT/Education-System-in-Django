@@ -2,7 +2,7 @@
 
 - [Windows Setup Guide](#Windows-Step-by-Step-Setup-Manual)
 - [MacOS Setup Guide](#MacOS-Step-by-Step-Setup-Manual)
-- [Configuration](#Step-by-Step-Configuration)
+- [Configuration (Must Do)](#Step-by-Step-Configuration)
 
 ## Windows Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
@@ -64,8 +64,9 @@
 | Enter `python manage.py runserver` | **Run this each time to use the web application** |
 
 ## Step-by-Step Configuration
-### This is required, if not you cannot use the system/application
+### Warning: This is required, if not you cannot use the system/application
 ### Warning: Please do not skip any steps, unless it is an optional steps marked with `+`
+
 |Step| Description | Screenshot/Note |
 |-----|-------------|---------|
 |1| Create a superuser with `python manage.py createsuperuser`| **Note: If this step fails, or is unable to login, Use `step 1.+`** |
