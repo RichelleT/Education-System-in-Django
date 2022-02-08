@@ -70,11 +70,12 @@
 |Step| Description | Screenshot/Note |
 |-----|-------------|---------|
 |1| Create a superuser with `python manage.py createsuperuser`| **Note: If this step fails, or is unable to login, Use `step 1.+`** |
-|1.+| First, Comment out the `@login_required` and `@group_required` in `register/views.py`.|![Guide5](/static/images/guide5.png)|
+|1.+| First, Comment out the following in `register/views.py`.|![Guide5](/static/images/guide5.png)|
 |1.+| Then, in `register/forms.py` uncomment highlighted |![Guide6](/static/images/guide6.png)|
 |1.+| Then, in `register/forms.py` comment out the highlighted <br/><br/> (**Note: role field is neccessary to assign user to group**) <br/><br/> (**Warning: role field will interfere with creating superuser if present**)|![Guide7](/static/images/guide7.png)|
 |2| CD into folder w/ manage.py then enter `python manage.py runserver` to run server|
 |3| Go to http://127.0.0.1:8000/registerUser/ and create superuser| Note: Tick **both** `staff` and `superuser` when registering |
+|+| This error will appear, **ignore it**|![Guide8](/static/images/guide8.png)|
 |4| Open a browser and enter http://127.0.0.1:8000/admin/ |
 |5| Login with the superuser login created |
 |+| **If used `step 1.+` to create superuser, and is able to login to admin panel, UNDO all `step 1.+`**| **Note: VERY IMPORTANT STEP** |
