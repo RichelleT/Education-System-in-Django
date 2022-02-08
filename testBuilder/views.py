@@ -113,7 +113,7 @@ def addQuiz(request):
 def qrPage(request, pk):
     if request.method == 'POST': #render results page
         print(request.POST)
-        results = quizResult.objects.filter(attempted_by=pk)
+        #results = quizResult.objects.filter(attempted_by=pk)
         questions = Quiz.objects.filter(test_sel=pk)
         score=0
         wrong=0
@@ -156,7 +156,7 @@ def qrPage(request, pk):
             'total':total,
             'grade': grade,
             'user': user,
-            'results':results,
+            #'results':results,
         }
         return render(request,'generateResult.html',context)
         #return render(request, "resultPage.html", context)
