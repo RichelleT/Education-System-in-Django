@@ -12,7 +12,7 @@ from buildAssign.views import addAssign
 
 #import views from other components
 from registerAdmin.views import registerAdm
-from registerUser.views import regisUsr_view#, registerUsr
+#from registerUser.views import regisUsr_view#, registerUsr
 
 urlpatterns = [
     #main page
@@ -34,7 +34,7 @@ urlpatterns = [
     path('redir/', redir_view), #REMOVE LATER
     path('sucess/', sucess_view),
     path('register/', registerAdm, name="Register"),
-    path('registerUser/', regisUsr_view, name="RegisterUser"),
+    #path('registerUser/', regisUsr_view, name="RegisterUser"),
     #path('registerUser/', registerUsr, name="RegisterUser"),
     path('admin/', admin.site.urls),
 ]
