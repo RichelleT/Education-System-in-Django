@@ -9,20 +9,6 @@ from django.db import transaction
 from django.contrib.auth.models import Group, User
 from register.models import Profile
 
-"""
-def registerAdm(request):
-    if request.method =='POST':
-        form = RegistrationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('/userProf/')
-    else:
-        form = RegistrationForm()
-
-        args = {'form': form}
-        return render(request, 'registerAdmin.html', {})
-"""
-
 @transaction.atomic
 @login_required(login_url='/login/')
 @group_required('Admin', login_url='/login/')
@@ -36,9 +22,6 @@ def registerUsr(request):
         adm_group = Group.objects.get(id=1) 
         edu_group = Group.objects.get(id=2) 
         stu_group = Group.objects.get(id=3) 
-        print(adm_group)
-        print(edu_group)
-        print(stu_group)
         print("Assigned Role:", role_assign)
 
         if user_form.is_valid() and profile_form.is_valid():

@@ -12,9 +12,9 @@ from main.decorators import group_required
 @group_required('Educator', login_url='/login/')
 def addMod(request):
     if request.method =='POST':
-        form = addModule(request.POST)
-        if form.is_valid():
-            form.save()
+        modForm = addModule(request.POST)
+        if modForm.is_valid():
+            modForm.save()
             return redirect('/addTests/')
     else:
         form = addModule()

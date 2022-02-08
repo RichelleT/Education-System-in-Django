@@ -7,7 +7,11 @@ class Module(models.Model):
 
     def __str__(self):
         return self.module_name
-
+"""
+class addUserModule(models.Model):
+    module_linked = models.ForeignKey(Module, on_delete=models.SET_NULL, null=True)
+    add_user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+"""
 class Test(models.Model):
     test_name = models.CharField(max_length=100, default="")
     test_date = models.DateTimeField(auto_now_add=True)
