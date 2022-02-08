@@ -1,34 +1,31 @@
-## Windows Setup Manual
+## Windows Step-by-Step Setup Manual
 
-| Step | Description | Note |
-|----------|-------------|------------|
-|1| Download the mySQL installer for windows at https://dev.mysql.com/downloads/installer/ |
-|2| Select Custom Setup Type |
-|3| Select `MySQL Server`, `MySQL Workbench`, and `Connector/ODBC` from available products |
-|4| Execute and proceed until adding password to root account |
-|5| Proceed until install is done |
-|6| Open a terminal window/command prompt |
-|7| Enter `mysql -u root -p` and enter password |
-|8| Enter `SET PASSWORD FOR root@localhost='';` |
-|9| Enter `CREATE DATABASE oaies;` |
-|10| Download the zip to this project |
-|11| Open scripts folder (in the python folder in appdata/program) where pip is located in cmd |
-|12| Enter `pip install mysqlclient` |
-|13| Enter `pip install django-utils-six` |
-|14| Enter `pip install pdfplumber` |
-|15| Enter `pip install virtualenv` |
-|16| Enter `pip install virtualenvwrapper-win`|
-|17| Enter `pip install djangorestframework`|
-|18| Enter `pip install django-rest-auth`|
-|19| Enter `pip install djangorestframework-jwt`|
-|20|Enter `mkvirtualenv foldername`|
-|21| Unzip downloaded project files into the created virtual env folder |
-|22| Open the folder containing `manage.py`, enter cmd in the folder path to open a command prompt with the path | **Always Do This before running the server or performing step 27** |
-|23| Enter `python manage.py makemigrations` |
-|24| Enter `python manage.py migrate` |
-|25| Enter `python manage.py createsuperuser`|
-|26| Enter username and password for superuser account |
-|27| Enter `python manage.py runserver` | Run this each time to use the web application |
+|Description | Note |
+|-------------|------------|
+| Download the mySQL installer for windows at https://dev.mysql.com/downloads/installer/ |
+| Select Custom Setup Type |
+| Select `MySQL Server`, `MySQL Workbench`, and `Connector/ODBC` from available products |
+| Execute and proceed until adding password to root account |
+| Proceed until install is done |
+| Open a terminal window/command prompt |
+| Enter `mysql -u root -p` and enter password |
+| Enter `SET PASSWORD FOR root@localhost='';` |
+| Enter `CREATE DATABASE oaies;` |
+| Download the zip to this project |
+| Open scripts folder (in the python folder in appdata/program) where pip is located in cmd |
+| Enter `pip install mysqlclient` |
+| Enter `pip install django-utils-six` |
+| Enter `pip install pdfplumber` |
+| Enter `pip install virtualenv` |
+| Enter `pip install virtualenvwrapper-win`|
+|Enter `mkvirtualenv foldername`|
+| Unzip downloaded project files into the created virtual env folder |
+| Open the folder containing `manage.py`, enter cmd in the folder path to open a command prompt with the path | **Always Do This before running the server or performing runserver** |
+| Enter `python manage.py makemigrations` |
+| Enter `python manage.py migrate` |
+| Enter `python manage.py createsuperuser`|
+| Enter username and password for superuser account |
+| Enter `python manage.py runserver` | Run this each time to use the web application |
 
 ## MacOS Setup Manual
 
