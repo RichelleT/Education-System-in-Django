@@ -79,13 +79,14 @@
 |5| Login with the superuser login created |
 |+| **If used `step 1.+` to create superuser, and is able to login to admin panel, UNDO all `step 1.+`**| **Note: VERY IMPORTANT STEP** |
 |6| To create admin account **comment out `group_required` only** (like in the above step), **create admin account, then uncomment `group_required` again.** <br/><br/> (**Note: Do this while logged into the superuser account**)| **(Note: This is important to add users for the application/system)** <br/><br/>**(Warning1: Must uncomment `group_required` Otherwise, any user can create users)**|
-|7| Select |![Guide1](/static/images/guide1.png)|
-|8| Add these **groups**|![Guide11](/static/images/guide11.png)|
-|9| Add these permissions to the **Admin** group |![Guide2](/static/images/guide2.png)|
-|10| Add these permissions to the **Student** group |![Guide3](/static/images/guide3.png)|
-|11| Add these permissions to the **Educator** group; **all except** `admin, auth, contenttypes, sessions` **permissions**|![Guide4](/static/images/guide4.png)|
-|12| **Log out of superuser** and **login to created admin account**| 
-|13|**(While Logged into the Admin Account)** <br/><br/> Create Educator account(s) and Student account(s)| Note: <br/><br/> Educator accounts can create test/quizes/modules and etc. <br/><br/> Student accounts can attempt created tests/quizes |
+|7| Once accounts are created (most importanly the admin account), <br/><br/> log back into the superuser account|
+|8| Go to http://127.0.0.1:8000/admin/, and select `add` to add groups |![Guide1](/static/images/guide1.png)|
+|9| These are the total `groups` to add|![Guide11](/static/images/guide11.png)|
+|10| Add these permissions to the **Admin** group |![Guide2](/static/images/guide2.png)|
+|11| Add these permissions to the **Student** group |![Guide3](/static/images/guide3.png)|
+|12| Add these permissions to the **Educator** group; **all except** `admin, auth, contenttypes, sessions` **permissions**|![Guide4](/static/images/guide4.png)|
+|13| **Log out of superuser** and **login to created admin account**| 
+|14|**(While Logged into the Admin Account)** <br/><br/> Create Educator account(s) and Student account(s)| Note: <br/><br/> Educator accounts can create test/quizes/modules and etc. <br/><br/> Student accounts can attempt created tests/quizes |
 
 
 
