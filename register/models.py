@@ -21,6 +21,9 @@ class Profile(models.Model):
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, blank=False, default='M')
     role = models.CharField(max_length=1, choices=ROLE_CHOICES, blank=False, default='S')
     #birth_date = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return str(self.user)
 """
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
