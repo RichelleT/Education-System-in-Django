@@ -34,6 +34,12 @@
       <a href="/landing/">OAiES</a>
       </h1>
       {% if user.is_authenticated %}
+      <nav id="navbar" class="navbar">
+        <ul>
+          <!-- <li><a class="nav-link scrollto" href="/register/">Register</a></li> -->
+          <li><a class="getstarted scrollto" href="{% url 'logout' %}">Log Out</a></li>
+        </ul>
+      </nav>
         {% for group_for in request.user.groups.all %}
           {% if group_for.name == 'Educator' %}
             <nav id="navbar" class="navbar">
@@ -57,7 +63,7 @@
             {% elif group_for.name == 'Admin' %}
             <nav id="navbar" class="navbar">
               <ul>
-                <li><a class="nav-link scrollto" href="/registerUser/">Add Users</a></li>
+                <li><a class="nav-link scrollto" href="/register/">Add Users</a></li>
                 <li><a class="nav-link scrollto" href="/userProf/">Profile</a></li>
                 <li><a class="getstarted scrollto" href="{% url 'logout' %}">Log Out</a></li>
               </ul>

@@ -13,7 +13,8 @@
             <div class="card " id="form1">
                 <form method="post" autocomplete="off">
                     {% csrf_token %}
-                    {{ form.as_p }}
+                    {{ user_form.as_p }}
+                    {{ profile_form.as_p }}
                     <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add User</button> </div>
                 </form>
                 {% comment %} <div class="form-data">

@@ -1,6 +1,7 @@
 from django import forms
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.contrib.auth.forms import UserCreationForm
+from register.models import Profile
 
 class RegistrationForm(UserCreationForm):
     email = forms.EmailField(required=True)
@@ -13,7 +14,10 @@ class RegistrationForm(UserCreationForm):
             'last_name',
             'email',
             'password1',
-            'password2'
+            'password2',
+            #'is_staff',
+            #'is_superuser',
+            'groups'
         )
 
     def save(self, commit=True):
@@ -27,4 +31,12 @@ class RegistrationForm(UserCreationForm):
 
         return user
 
-#edu instit
+class ExtendedForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = (
+            'school_faculty',
+            'programme',
+            #'birth_date',
+            'gender',
+        )

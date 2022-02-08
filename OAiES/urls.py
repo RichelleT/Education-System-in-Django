@@ -11,8 +11,8 @@ from testBuilder.views import addMod, modSel, addTests, modulePage, addQuiz, qrP
 from buildAssign.views import addAssign
 
 #import views from other components
-from registerAdmin.views import registerAdm
-#from registerUser.views import regisUsr_view#, registerUsr
+#from registerAdmin.views import registerAdm
+from register.views import registerUsr
 
 urlpatterns = [
     #main page
@@ -33,8 +33,8 @@ urlpatterns = [
     #path('resultPage/', qrPage, name="resultPage"),
     path('redir/', redir_view), #REMOVE LATER
     path('sucess/', sucess_view),
-    path('register/', registerAdm, name="Register"),
+    #path('register/', registerAdm, name="Register"),
     #path('registerUser/', regisUsr_view, name="RegisterUser"),
-    #path('registerUser/', registerUsr, name="RegisterUser"),
+    path('registerUser/', registerUsr, name="RegisterUser"),
     path('admin/', admin.site.urls),
 ]
