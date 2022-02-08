@@ -56,7 +56,7 @@
 | Enter `pip install pdfplumber` |
 | Download project zip |
 | Extract downloaded zip to virtual env folder created |
-| Open the folder containing the manage.py file, <br/>then, right click on the folder name on the folder path and select `open in terminal`<br/><br/> Or just manually cd into the folder containing the manage.py file in terminal| **Always Do This before running the server or performing runserver** |
+| Open the folder containing the manage.py file, <br/>then, right click on the folder name on the folder path, <br/>then select `open in terminal`<br/><br/> Or just manually cd into the folder containing the manage.py file in terminal| **Always Do This before running the server or performing runserver** |
 | Enter `python manage.py makemigrations` |
 | Enter `python manage.py migrate` |
 | Enter `python manage.py runserver` | This step is only to confirm it works. <br/><br/> **Run this command every time to run server** |
