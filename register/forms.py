@@ -17,7 +17,7 @@ class RegistrationForm(UserCreationForm):
             'password2',
             #'is_staff',
             #'is_superuser',
-            'groups'
+            #'groups'
         )
 
     def save(self, commit=True):
@@ -39,4 +39,5 @@ class ExtendedForm(forms.ModelForm):
             'programme',
             #'birth_date',
             'gender',
+            'role',
         )
