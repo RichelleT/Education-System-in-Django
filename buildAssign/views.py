@@ -2,9 +2,7 @@ from django.shortcuts import  render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-#from django.contrib.auth.models import User
-from django.contrib.auth.models import Group
-from registerUser.models import User
+from django.contrib.auth.models import User, Group
 from buildAssign.models import Assignment
 from buildAssign.forms import addAssignment
 from main.decorators import group_required

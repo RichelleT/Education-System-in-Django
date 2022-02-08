@@ -1,8 +1,6 @@
 from django.db import models
 from testBuilder.models import Module
-#from django.contrib.auth.models import User
-from django.contrib.auth.models import Group
-from registerUser.models import User
+from django.contrib.auth.models import User
 
 class Assignment(models.Model):
     linked_module = models.ForeignKey(Module, on_delete=models.SET_NULL, null=True)

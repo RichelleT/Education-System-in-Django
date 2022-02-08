@@ -1,7 +1,5 @@
 from django.db import models
-#from django.contrib.auth.models import User, Group
-from django.contrib.auth.models import Group
-from registerUser.models import User
+from django.contrib.auth.models import User, Group
 
 class Module(models.Model):
     module_name = models.CharField(max_length=120, default="")

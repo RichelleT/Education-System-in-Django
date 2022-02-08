@@ -1,5 +1,4 @@
 {% load static %}
-{% load rest_framework %}
 {% include 'navbar.html' %}
 <link href="{% static 'css/login.css'%}" rel="stylesheet">
 
@@ -14,7 +13,6 @@
             <div class="card " id="form1">
                 <form method="post" autocomplete="off">
                     {% csrf_token %}
-                    {% render_form serializer %}
                     {{ form.as_p }}
                     <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add User</button> </div>
                 </form>
