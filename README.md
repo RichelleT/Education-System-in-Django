@@ -61,7 +61,7 @@
 ### Warning: Please do not skip any steps, unless it is an optional steps marked with `+`
 |Step| Description | Screenshot/Note |
 |-----|-------------|---------|
-|1| Create a superuser with `python manage.py createsuperuser`| **Note: If this step fails, or is unable to login, Use `step 1.2.1, 1.2.2, 1.2.3`** |
+|1| Create a superuser with `python manage.py createsuperuser`| **Note: If this step fails, or is unable to login, Use `step 1.+`** |
 |1.+| First, Comment out the `@login_required` and `@group_required` in `register/views.py`.|![Guide5](/static/images/guide5.png)|
 |1.+| Then, in `register/forms.py` uncomment highlighted |![Guide6](/static/images/guide6.png)|
 |1.+| Then, in `register/forms.py` comment highlighted|![Guide7](/static/images/guide7.png)|
