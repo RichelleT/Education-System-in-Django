@@ -8,6 +8,7 @@ from django.db.models import F
 from django.contrib.auth.models import User, Group
 from main.decorators import group_required
 import datetime
+from django.utils import timezone
 
 @login_required(login_url='/login/')
 @group_required('Educator', login_url='/login/')
@@ -57,7 +58,7 @@ def modSel(request, *args, **kwargs):
 @group_required('Educator', login_url='/login/')
 def addTests(request):
     if request.method =='POST':
-        current_datetime = datetime.datetime.now() 
+        current_datetime = datetime.datetime.now(tz=timezone.utc) 
 
         form = addTest(request.POST)
 
@@ -123,7 +124,7 @@ def qrPage(request, pk):
         correct=0
         total=0
         user = request.user
-        current_datetime = datetime.datetime.now()  
+        current_datetime = datetime.datetime.now(tz=timezone.utc)  
         for q in questions:
             total+=1
             #print(request.POST.get(q.test_sel.test_name))
