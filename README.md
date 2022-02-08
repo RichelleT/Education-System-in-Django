@@ -1,4 +1,5 @@
 ## Windows Step-by-Step Setup Manual
+### Please do not skip any steps
 
 |Description | Note |
 |-------------|------------|
@@ -11,14 +12,14 @@
 | Enter `mysql -u root -p` and enter password |
 | Enter `SET PASSWORD FOR root@localhost='';` |
 | Enter `CREATE DATABASE oaies;` |
-| Download the zip to this project |
 | Open scripts folder (in the python folder in appdata/program) where pip is located in cmd |
 | Enter `pip install mysqlclient` |
 | Enter `pip install django-utils-six` |
 | Enter `pip install pdfplumber` |
 | Enter `pip install virtualenv` |
 | Enter `pip install virtualenvwrapper-win`|
-|Enter `mkvirtualenv foldername`|
+| Enter `mkvirtualenv foldername`|
+| Download project zip |
 | Unzip downloaded project files into the created virtual env folder |
 | Open the folder containing `manage.py`, enter cmd in the folder path to open a command prompt with the path | **Always Do This before running the server or performing runserver** |
 | Enter `python manage.py makemigrations` |
@@ -28,12 +29,14 @@
 | Enter `python manage.py runserver` | **Run this each time to use the web application** |
 
 ## MacOS Step-by-Step Setup Manual
+### Please do not skip any steps
+### Please install homebrew for your specific OS
 
 | Description | Note |
 |-------------|------------|
 | Open a terminal |
-| Enter `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"` | Install homebrew only for users running `macOS High Sierra, Sierra, El Capitan, or earlier` |
-| Enter `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` | Install homebrew only for users running `macOs Catalina, Mojave, or Big Sur, or later` |
+| Enter `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"` | Note: Install homebrew **only for users running `macOS High Sierra, Sierra, El Capitan, or earlier`** |
+| Enter `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` | Note: Install homebrew **only for users running `macOs Catalina, Mojave, or Big Sur, or later`** |
 | Enter `brew install mysql`| mysql server needed |
 | Enter `brew install python3`|
 | Enter `sudo easy_install pip`|
