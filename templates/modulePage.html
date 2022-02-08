@@ -2,12 +2,15 @@
 {% include 'navbar.html' %}
 
 <div class="p-5 m-5">
+    <h1>Module</h1>
     {% for m in modPage %}
     <div>
         <p>{{m.module_name}}</p>
         <p>{{m.module_desc}}</p>
+        <p>{{m.host}}</p>
     </div>
     {% endfor %}
+    <h1>Tests</h1>
     {% for mt in mtLst %}
     <div>
         <p>{{mt.test_name}}</p>

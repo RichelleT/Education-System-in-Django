@@ -4,7 +4,8 @@
 <div class="p-5 m-5">
     <form method="post" autocomplete="off">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ mod_form.as_p }}
+        {{ add_form.as_p }}
         <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Module</button> </div>
     </form>
 </div>

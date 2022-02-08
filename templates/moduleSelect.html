@@ -6,6 +6,7 @@
     <div>
         <p>{{module.module_name}}</p>
         <p>{{module.module_desc}}</p>
+        <p>{{module.host}}</p>
         <button class="btn btn-outline-primary w-100"><a href="{% url 'modulePage' module.id %}">Select</a></button>
     </div>
     {% endfor %}

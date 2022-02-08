@@ -1,9 +1,17 @@
 from django import forms
-from testBuilder.models import Module, Test, Quiz, quizResult
+from testBuilder.models import Module, Test, Quiz, quizResult, addUserModule
 
 class addModule(forms.ModelForm):
     class Meta:
         model = Module
+        fields = (
+            'module_name',
+            'module_desc'
+        )
+
+class addUser(forms.ModelForm):
+    class Meta:
+        model = addUserModule
         fields = "__all__"
 
 class addTest(forms.ModelForm):

@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from testBuilder.forms import addModule, addTest, addQuestions
-from testBuilder.models import Module, Test, Quiz, quizResult
+from testBuilder.models import Module, Test, Quiz, quizResult, addUserModule
 from django.db.models import F
 from django.contrib.auth.models import User, Group
 from main.decorators import group_required
@@ -12,15 +12,26 @@ from main.decorators import group_required
 @group_required('Educator', login_url='/login/')
 def addMod(request):
     if request.method =='POST':
-        modForm = addModule(request.POST)
-        if modForm.is_valid():
-            modForm.save()
+
+        host = request.user
+
+        mod_form = addModule(request.POST)
+        add_form = addUserModule(request.POST)
+
+        if mod_form.is_valid(): #and add_form.is_valid():
+            form = mod_form.save(commit=False)
+            if form.host is None:
+                form.host = host
+                form.save()
+            #add_form.save()
             return redirect('/addTests/')
     else:
-        form = addModule()
+        mod_form = addModule()
+        add_form = addUserModule()
 
         args = {
-            'form': form
+            'mod_form': mod_form,
+            'add_form': add_form,
         }
         return render(request, 'addModule.html', args)
 
