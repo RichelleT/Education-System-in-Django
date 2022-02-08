@@ -30,8 +30,9 @@
 | Open the folder containing `manage.py`, enter cmd in the folder path to open a command prompt with the path | **Always Do This before running the server or performing runserver** |
 | Enter `python manage.py makemigrations` |
 | Enter `python manage.py migrate` |
-| Enter `python manage.py runserver` | **Run this each time to use the web application** |
-| Perform these steps next - [Configuration (Must Do)](#Step-by-Step-Configuration) |
+| Enter `python manage.py runserver` | This step is only to confirm it works. <br/><br/> Run this command every time to run server |
+| Close cmd to stop server from running |
+| Perform these steps next - [Configuration](#Step-by-Step-Configuration) | **Must be done before using system/application** |
 
 ## MacOS Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
@@ -58,8 +59,9 @@
 | Open the folder containing the manage.py file and right click on the folder name on the folder path and select `open in terminal`<br/><br/> Or just manually cd into the folder containing the manage.py file in terminal| **Always Do This before running the server or performing runserver** |
 | Enter `python manage.py makemigrations` |
 | Enter `python manage.py migrate` |
-| Enter `python manage.py runserver` | **Run this each time to use the web application** |
-| Perform these steps next - [Configuration (Must Do)](#Step-by-Step-Configuration) |
+| Enter `python manage.py runserver` | This step is only to confirm it works. <br/><br/> **Run this command every time to run server** |
+| Press ctrl+C to stop server from running |
+| Perform these steps next - [Configuration](#Step-by-Step-Configuration) |
 
 ## Step-by-Step Configuration
 ### Warning: This is required, if not you cannot use the system/application
