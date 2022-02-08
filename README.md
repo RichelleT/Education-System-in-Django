@@ -69,7 +69,7 @@
 |3| Go to http://127.0.0.1:8000/registerUser/ and create superuser| Note: Tick **both** `staff` and `superuser` when registering |
 |4| Open a browser and enter http://127.0.0.1:8000/admin/ |
 |5| Login with the superuser login created |
-|+| **If used `step 1.+` to create superuser, and is able to login to admin panel, UNDO all `step 1.+`**| **Note: VERY IMPORTANT STEP** |
+|+| **If used `step 1.+` to create superuser, and is able to login to admin panel, UNDO all `step 1.+`**| **Note: VERY IMPORTANT STEP** **Note2: If no admin account, comment out `group_required` only as in above step, create admin account, then uncomment `group_required` again** |
 |6| Select |![Guide1](/static/images/guide1.png)|
 |7| Add these **groups**|![Guide11](/static/images/guide11.png)|
 |8| Add these permissions to the **Admin** group |![Guide2](/static/images/guide2.png)|
