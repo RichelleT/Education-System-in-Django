@@ -59,7 +59,8 @@
 |-------------|---------|
 | Run the server/web app with `python manage.py runserver`|
 |If ^ step does not work, then comment out the `@login_required` and `@group_required` in `register/views.py`.|![Guide5](/static/images/guide5.png)|
-| Then, in `register/forms.py` uncomment highlighted |![Guide6](/static/images/guide6.png)![Guide7](/static/images/guide7.png)|
+| Then, in `register/forms.py` uncomment highlighted |![Guide6](/static/images/guide6.png)|
+| Then, in `register/forms.py` comment highlighted|![Guide7](/static/images/guide7.png)|
 | Go to http://127.0.0.1:8000/registerUser/|
 | Open a browser and enter http://127.0.0.1:8000/admin/ |
 | Login with the superuser login created |
