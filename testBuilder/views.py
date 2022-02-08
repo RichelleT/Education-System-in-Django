@@ -113,8 +113,11 @@ def addQuiz(request):
 def qrPage(request, pk):
     if request.method == 'POST': #render results page
         print(request.POST)
-        #results = quizResult.objects.filter(attempted_by=pk)
         questions = Quiz.objects.filter(test_sel=pk)
+        test = Test.objects.get(pk=pk)
+        
+        print(test)
+        #print(test.id)
         score=0
         wrong=0
         correct=0
@@ -138,6 +141,7 @@ def qrPage(request, pk):
             grade = "Fail"
 
         insert_to_db = quizResult.objects.create(
+            linked_test=test,
             correct=correct, 
             wrong=wrong, 
             percentage=percent, 

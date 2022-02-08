@@ -51,7 +51,7 @@ class Quiz(models.Model):
 
 class quizResult(models.Model):
     linked_test = models.ForeignKey(Test, on_delete=models.SET_NULL, null=True) #linking result to test paper
-    linked_module = models.ForeignKey(Module, on_delete=models.SET_NULL, null=True) #linking result to quiz questions model
+    #linked_module = models.ForeignKey(Module, on_delete=models.SET_NULL, null=True) #linking result to quiz questions model
     attempted_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     correct = models.IntegerField(default=0)
     wrong = models.IntegerField(default=0)
