@@ -47,16 +47,7 @@ class UserSerializer(serializers.ModelSerializer):
     return value"""
 
   def create(self, validated_data):
-      user = super().create(validated_data)
-      userN = User(
-          username=validated_data['username'],
-      )
-      email = User(email=validated_data['email'])
-      user.set_password(validated_data['password'])
-
-      user.is_active = False
-      user.save()
-      return user
+    return User.objects.create(**validated_data)
 
   def update(self, instance, validated_data):
       user = super().update(instance, validated_data)
@@ -79,6 +70,19 @@ TRY
         return instance
 """
 
+"""
+  def create(self, validated_data):
+      user = super().create(validated_data)
+      userN = User(
+          username=validated_data['username'],
+      )
+      email = User(email=validated_data['email'])
+      user.set_password(validated_data['password'])
+
+      user.is_active = False
+      user.save()
+      return user
+  """
 
 """
   def create(self, validated_data):
