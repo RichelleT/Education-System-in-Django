@@ -78,8 +78,8 @@
 |4| Open a browser and enter http://127.0.0.1:8000/admin/ |
 |5| Login with the superuser login created |
 |+| **If used `step 1.+` to create superuser, and is able to login to admin panel, UNDO all `step 1.+`**| **Note: VERY IMPORTANT STEP** |
-|6| To create admin account **comment out `group_required` only** (like in the above step), **create admin account, then uncomment `group_required` again.** <br/><br/> (**Note: Do this while logged into the superuser account**)| **(Note: This is important to add users for the application/system)** <br/><br/>**(Warning1: Must uncomment `group_required` Otherwise, any user can create users)**|
-|7| Once accounts are created (most importanly the admin account), <br/><br/> log back into the superuser account|
+|6| To create admin account **comment out `group_required` only** (like in the above step), **create admin account, then uncomment `group_required` again.** <br/><br/> (**Note: Do this while logged into the superuser account**)| **(Note: This is important to add users for the application/system)** <br/><br/>**(Warning: Must uncomment `group_required` Otherwise, any user can create users)**|
+|7| Once accounts are created (most importanly the admin account), **log back into the superuser account**|
 |8| Go to http://127.0.0.1:8000/admin/, and select `add` to add groups |![Guide1](/static/images/guide1.png)|
 |9| These are the total `groups` to add|![Guide11](/static/images/guide11.png)|
 |10| Add these permissions to the **Admin** group |![Guide2](/static/images/guide2.png)|
