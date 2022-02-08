@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from testBuilder.forms import addModule, addTest, addQuestions, addUser
-from testBuilder.models import Module, Test, Quiz, quizResult, addUserModule
+from testBuilder.models import Module, Test, Quiz, quizResult, UserToModule
 from django.db.models import F
 from django.contrib.auth.models import User, Group
 from main.decorators import group_required

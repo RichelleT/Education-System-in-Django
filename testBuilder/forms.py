@@ -1,5 +1,5 @@
 from django import forms
-from testBuilder.models import Module, Test, Quiz, quizResult, addUserModule
+from testBuilder.models import Module, Test, Quiz, quizResult, UserToModule
 
 class addModule(forms.ModelForm):
     class Meta:
@@ -11,7 +11,7 @@ class addModule(forms.ModelForm):
 
 class addUser(forms.ModelForm):
     class Meta:
-        model = addUserModule
+        model = UserToModule
         fields = (
             'participants',
         )

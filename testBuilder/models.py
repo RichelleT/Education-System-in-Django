@@ -10,7 +10,7 @@ class Module(models.Model):
     def __str__(self):
         return self.module_name
 
-class addUserModule(models.Model):
+class UserToModule(models.Model):
     module_linked = models.ForeignKey(Module, on_delete=models.SET_NULL, null=True)
     participants = models.ManyToManyField(User, related_name='participants', blank=True)
 

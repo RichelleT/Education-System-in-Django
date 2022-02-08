@@ -1,5 +1,5 @@
 from django.contrib import admin
-from testBuilder.models import Module, Test, Quiz, quizResult, addUserModule
+from testBuilder.models import Module, Test, Quiz, quizResult, UserToModule
 
 class QuizInline(admin.StackedInline):
     model = Quiz
@@ -15,7 +15,7 @@ class TestInline(admin.StackedInline):
     extra = 0
 
 class UserInline(admin.StackedInline):
-    model = addUserModule
+    model = UserToModule
     extra = 0
     
 class ModuleLinkTest(admin.ModelAdmin):
