@@ -1,5 +1,5 @@
 ## Windows Step-by-Step Setup Manual
-### Please do not skip any steps
+### Warning: Please do not skip any steps
 
 |Description | Note |
 |-------------|------------|
@@ -29,8 +29,8 @@
 | Enter `python manage.py runserver` | **Run this each time to use the web application** |
 
 ## MacOS Step-by-Step Setup Manual
-### Please do not skip any steps
-### Please install homebrew for your specific OS
+### Warning: Please do not skip any steps
+### Warning: Please install homebrew for your specific OS
 
 | Description | Note |
 |-------------|------------|
@@ -58,6 +58,7 @@
 | Enter `python manage.py runserver` | **Run this each time to use the web application** |
 
 ## Step-by-Step MUST-DOs
+### Warning: Please do not skip any steps, unless it is an optional step `1.2.1, 1.2.2, 1.2.3, 5-2`
 |Step| Description | Screenshot/Note |
 |-----|-------------|---------|
 |1| Run the server/web app with `python manage.py runserver`| **Note: If this step fails, or is unable to login, Use `step 1.2.1, 1.2.2, 1.2.3`** |
