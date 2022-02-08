@@ -55,13 +55,13 @@
 | Enter `python manage.py runserver` | **Run this each time to use the web application** |
 
 ## Step-by-Step MUST-DOs
-| Description | Screenshot |
+| Description | Screenshot/Note |
 |-------------|---------|
 | Run the server/web app with `python manage.py runserver`|
 |If ^ step does not work, then comment out the `@login_required` and `@group_required` in `register/views.py`.|![Guide5](/static/images/guide5.png)|
 | Then, in `register/forms.py` uncomment highlighted |![Guide6](/static/images/guide6.png)|
 | Then, in `register/forms.py` comment highlighted|![Guide7](/static/images/guide7.png)|
-| Go to http://127.0.0.1:8000/registerUser/|
+| Go to http://127.0.0.1:8000/registerUser/ and create superuser| Note: Tick **both** `staff` and `superuser` when registering |
 | Open a browser and enter http://127.0.0.1:8000/admin/ |
 | Login with the superuser login created |
 | Select |![Guide1](/static/images/guide1.png)|
