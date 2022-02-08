@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.models import Group, User
+from register.models import Profile
 
 # Create your views here.
 def landing_view(request, *args, **kwargs):
@@ -11,8 +13,12 @@ def login_view(request, *args, **kwargs):
 def redir_view(request, *args, **kwargs):
     return render(request, "adminButtons.html", {})
 
-def userProf_view(request, *args, **kwargs):
-    return render(request, "userProfile.html", {})
+def userProf_view(request):
+    prof = Profile.objects.filter(user=request.user)
+    context = {
+        "prof": prof,
+    }
+    return render(request, "userProfile.html", context)
 
 def dashboard_view(request, *args, **kwargs):
     return render(request, "dashboard.html", {})

@@ -12,28 +12,30 @@
         <div class="col-md-6">
             <div class="card " id="form1">
                 <div class="form-data">
+                    {% for p in prof %}
                     <p></p>
                     <br/>
                     <h3>User Profile</h3>
                     <br/>
-                    <div class="forms-inputs mb-4"> <span>Name</span> 
+                    <div class="forms-inputs mb-4"> <label>Name</label> 
                         <input class="w-100" autocomplete="off" type="text" value="{{user.first_name}}&nbsp;{{user.last_name}}" readonly>
                     </div>
-                    <div class="forms-inputs mb-4"> <span>Email</span> 
+                    <div class="forms-inputs mb-4"> <label>Email</label> 
                         <input class="w-100" autocomplete="off" type="text" value="{{user.email}}" readonly>
                     </div>
-                    <div class="forms-inputs mb-4"> <span>Gender</span> 
-                        <input class="w-100" autocomplete="off" type="text" placeholder="Female" readonly>
+                    <div class="forms-inputs mb-4"> <label>Gender</label> 
+                        <input class="w-100" autocomplete="off" type="text" value={{p.get_gender_display}} readonly>
                     </div>
-                    <div class="forms-inputs mb-4"> <span>School/Faculty</span> 
-                        <input class="w-100" autocomplete="off" type="text" placeholder="School of Computer Science and Engineering" readonly>
+                    <div class="forms-inputs mb-4"> <label>School/Faculty</label> 
+                        <input class="w-100" autocomplete="off" type="text" value={{p.school_faculty}} readonly>
                     </div>
-                    <div class="forms-inputs mb-4"> <span>Programme Name</span>
-                        <input class="w-100" autocomplete="off" type="text" placeholder="Bachelors of Software Engineering" readonly>
+                    <div class="forms-inputs mb-4"> <label>Programme Name</label>
+                        <input class="w-100" autocomplete="off" type="text" value={{p.programme}} readonly>
                     </div>
-                    <div class="forms-inputs mb-4"> <span>Role</span>
-                        <input class="w-100" autocomplete="off" type="text" placeholder="Student" readonly>
+                    <div class="forms-inputs mb-4"> <label>Role</label>
+                        <input class="w-100" autocomplete="off" type="text" value={{p.get_role_display}} readonly>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
