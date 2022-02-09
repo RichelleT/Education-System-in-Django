@@ -1,0 +1,57 @@
+body{
+    margin-top:20px;
+    background:#DCDCDC;
+}
+.card-box {
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+.project-box {
+    position: relative
+}
+
+.project-box .badge {
+    position: absolute;
+    right: 20px
+}
+
+.project-box h4 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    overflow: hidden
+}
+
+.project-box ul li {
+    padding-right: 30px
+}
+
+.project-box .project-members a {
+    margin: 0 0 10px -12px;
+    display: inline-block;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 24px 0 rgba(0, 0, 0, .06), 0 1px 0 0 rgba(0, 0, 0, .02);
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, .06), 0 1px 0 0 rgba(0, 0, 0, .02)
+}
+
+.project-box .project-members a:first-of-type {
+    margin-left: 0
+}
+
+.thumb-sm {
+    height: 36px;
+    width: 36px;
+}
+
+.font-13 {
+    font-size: 13px!important;
+}
+
+.text-dark {
+    color: #313a46!important;
+}

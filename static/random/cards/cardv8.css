@@ -1,0 +1,18 @@
+body{margin-top:20px;}	
+body {
+  padding: 50px;
+}
+
+.alert-coupon {
+  border: 1px dashed;
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
