@@ -1,6 +1,5 @@
 {% load static %}
 {% include 'navbar.html' %}
-<link href="{% static 'css/login.css'%}" rel="stylesheet">
 <link href="{% static 'css/tablesv2.css'%}" rel="stylesheet">
 
 <div class="p-5 m-5">
@@ -8,12 +7,12 @@
         <table class="fl-table">
             <thead>
             <tr>
-                <th>
+                {% comment %} <th>
                     Module
                 </th>
                 <th>
                     Test
-                </th>
+                </th> {% endcomment %}
                 <th>
                     Attempted by
                 </th>
@@ -37,12 +36,12 @@
             {% for r in resList %}
             <tbody>
             <tr>
-                <th>
+                {% comment %} <th>
                     {{r.linked_module}}
                 </th>
                 <th>
                     {{r.linked_test}}
-                </th>
+                </th> {% endcomment %}
                 <th>
                     {{r.attempted_by}}
                 </th>
