@@ -7,6 +7,7 @@ from buildAssign.models import Assignment
 from buildAssign.forms import addAssignment
 from main.decorators import group_required
 import pdfplumber
+import shlex
 
 @login_required(login_url='/login/')
 @group_required('Educator', login_url='/login/')
