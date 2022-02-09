@@ -78,7 +78,7 @@
 |1.+| Then, in `register/forms.py` uncomment highlighted |![Guide6](/static/images/guide6.png)|
 |1.+| Then, in `register/forms.py` comment out the highlighted <br/><br/> (**Note: role field is neccessary to assign user to group**) <br/><br/> (**Warning: role field will interfere with creating superuser if present**)|![Guide7](/static/images/guide7.png)|
 |1.+|Then, in `templates/registerUser.html` comment out `line3`, `line4` and `line 17` to `line 72`| ![Guide9](/static/images/guide9.png)|
-|1.+|Then, in `templates/registerUser.html` uncomment `line73` and `line74` <br/><br/>Note: To uncomment, just remove `{% comment %}` and `{% endcomment %}` from `line73` and `line74` | ![Guide10](/static/images/guide10.png)|
+|1.+|Then, in `templates/registerUser.html` uncomment `line73` and `line74` <br/><br/>Note: To uncomment, <br/>just remove `{% comment %}` and `{% endcomment %}` from `line73` and `line74` | ![Guide10](/static/images/guide10.png)|
 |2| CD into folder w/ manage.py then enter `python manage.py runserver` to run server|
 |3| Go to http://127.0.0.1:8000/registerUser/ and create superuser| Note: Tick **both** `staff` and `superuser` when registering |
 |+| This error will appear, **ignore it**|![Guide8](/static/images/guide8.png)|
