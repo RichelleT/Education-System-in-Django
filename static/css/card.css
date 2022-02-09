@@ -1,15 +1,16 @@
 :root {
-    --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+    /* --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important; */
+    --gradient: linear-gradient(to left top, #3544cf 10%, #3544cf 90%) !important;
   }
   
   body {
-    background: #111 !important;
+    background: rgb(255, 255, 255) !important;
   }
   
   .card {
-    background: #222;
-    border: 1px solid #dd2476;
-    color: rgba(250, 250, 250, 0.8);
+    background: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    color: rgba(0, 0, 0, 0.8);
     margin-bottom: 2rem;
   }
   
