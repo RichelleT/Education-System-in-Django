@@ -1,10 +1,24 @@
 {% load static %}
 {% include 'navbar.html' %}
+<link href="{% static 'css/formStyle.css'%}" rel="stylesheet">
+<script src="{% static 'formStyle.js' %}"></script> 
 
 <div class="p-5 m-5">
-    <form method="post" autocomplete="off">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Quiz Questions</button> </div>
-    </form>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <p></p>
+          </div>
+          <div class="col">
+            <form class="form-style-7" method="post" autocomplete="off">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Test</button> </div>
+            </form>
+          </div>
+          <div class="col">
+            <p></p>
+          </div>
+        </div>
+      </div>
 </div>

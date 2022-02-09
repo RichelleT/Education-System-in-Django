@@ -177,8 +177,12 @@ def qrPage(request, pk):
 
 def resultPg(request, pk):
     resList = quizResult.objects.filter(linked_module=pk)
+    module_title = Module.objects.get(pk=pk)
+    test_title = Test.objects.get(pk=pk)
 
     context = {
         'resList':resList,
+        'module_title': module_title,
+        'test_title':test_title,
     }
     return render(request, "viewResultsPage.html", context)

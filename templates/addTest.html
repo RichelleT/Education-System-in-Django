@@ -13,21 +13,7 @@
             <div class="p-5 m-5">
                 <form class="form-style-7" method="post" autocomplete="off">
                     {% csrf_token %}
-                    <ul>
-                        <li>
-                            <label for="id_test_name">Test name:</label> 
-                            <input type="text" name="test_name" maxlength="100" required id="id_test_name">
-                        </li>
-                        <li>
-                            <label for="id_module_sel">Module sel:</label> 
-                            <select name="module_sel" required id="id_module_sel">
-                                <option value="" selected>---------</option>
-                                <option value="1">Add</option>
-                                <option value="2">Test Enter Mod</option>
-                              </select>
-                        </li>
-                        <p></p>
-                    </ul>
+                    {{ form.as_p }}
                     <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Module</button> </div>
                 </form>
             </div>
@@ -38,10 +24,3 @@
         </div>
       </div>
 </div>
-{% comment %} <div class="p-5 m-5">
-    <form method="post" autocomplete="off">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Test</button> </div>
-    </form>
-</div> {% endcomment %}
