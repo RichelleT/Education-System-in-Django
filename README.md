@@ -14,7 +14,7 @@
 | Select `MySQL Server`, `MySQL Workbench`, and `Connector/ODBC` from available products |
 | Execute and proceed until adding password to root account |
 | Proceed until install is done |
-| Open a terminal window/command prompt |
+| Open a command prompt |
 | Enter `mysql -u root -p` and enter password |
 | Enter `SET PASSWORD FOR root@localhost='';` |
 | Enter `CREATE DATABASE oaies;` |
@@ -44,6 +44,10 @@
 | Enter `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"` | Install homebrew **only for users running `macOS High Sierra, Sierra, El Capitan, or earlier`** |
 | Enter `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` | Install homebrew **only for users running `macOs Catalina, Mojave, or Big Sur, or later`** |
 | Enter `brew install mysql`|
+| Open a terminal window |
+| Enter `mysql -u root -p` and enter password | Note: try mysql.server start if unable to start sql
+| Enter `SET PASSWORD FOR root@localhost='';` |
+| Enter `CREATE DATABASE oaies;` |
 | Enter `brew install python3`|
 | Enter `sudo easy_install pip`|
 | Enter `sudo pip install virtualenv`|
