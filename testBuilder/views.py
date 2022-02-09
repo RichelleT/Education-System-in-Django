@@ -2,8 +2,8 @@ from django.shortcuts import  render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from testBuilder.forms import addModule, addTest, addQuestions, addUser
-from testBuilder.models import Module, Test, Quiz, quizResult, UserToModule
+from testBuilder.forms import addModule, addTest, addQuestions#, addUser
+from testBuilder.models import Module, Test, Quiz, quizResult#, UserToModule
 from django.db.models import F
 from django.contrib.auth.models import User, Group
 from main.decorators import group_required
@@ -85,10 +85,12 @@ def addTests(request):
 def modulePage(request, pk):
     modPage = Module.objects.filter(id=pk)
     mtLst = Test.objects.filter(module_sel=pk)
+    #resList = quizResult.objects.filter(linked_module=pk)
 
     context = {
         'modPage':modPage,
-        'mtLst':mtLst
+        'mtLst':mtLst,
+        #'resList': resList,
     }
     return render(request, "modulePage.html", context)
     #filter() returns a queryset (which is iterable)

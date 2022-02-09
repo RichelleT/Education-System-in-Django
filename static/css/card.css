@@ -11,7 +11,8 @@
     background: rgb(241, 241, 243);
     border: 1px solid #000000;
     color: rgba(0, 0, 0, 0.8);
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+    /* margin-bottom: 2rem; */
   }
   
   .btn {
@@ -38,3 +39,9 @@
     box-shadow: #222 1px 0 10px;
     text-decoration: none;
   }
+
+  br {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 20px; /* change this to whatever height you want it */
+}

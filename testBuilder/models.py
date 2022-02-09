@@ -10,12 +10,12 @@ class Module(models.Model):
     def __str__(self):
         return self.module_name
 
-class UserToModule(models.Model):
-    module_linked = models.ForeignKey(Module, on_delete=models.SET_NULL, null=True)
-    participants = models.ManyToManyField(User, related_name='participants', blank=True)
+# class UserToModule(models.Model):
+#     module_linked = models.ForeignKey(Module, on_delete=models.CASCADE, null=True)
+#     participants = models.ManyToManyField(User, related_name='participants', blank=True)
 
-    def __str__(self):
-        return self.module_linked
+#     def __str__(self):
+#         return self.module_linked
 
 
 class Test(models.Model):
@@ -51,8 +51,8 @@ class Quiz(models.Model):
 
 class quizResult(models.Model):
     linked_test = models.ForeignKey(Test, on_delete=models.CASCADE) #linking result to test paper
-    linked_module = models.ForeignKey(Module, on_delete=models.SET_NULL, null=True) #linking result to quiz questions model
-    attempted_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    linked_module = models.ForeignKey(Module, on_delete=models.CASCADE, null=True) #linking result to quiz questions model
+    attempted_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     correct = models.IntegerField(default=0)
     wrong = models.IntegerField(default=0)
     percentage = models.IntegerField(default=0)

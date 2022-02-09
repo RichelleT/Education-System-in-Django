@@ -11,26 +11,13 @@
                 <div class="card-body">
                     <h5 class="card-title"><b>Module:</b> {{module.module_name}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{module.host}}</h6>
-                    <p class="card-text"><b>Module Description:</b> <br/>{{module.module_desc}}</p>
-                    <a href="{% url 'modulePage' module.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i> Select</a>
-                    {% comment %} <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-                    <a href="#" class="btn "><i class="fab fa-github"></i> Github</a> {% endcomment %}
+                    <br/>
+                    <p class="card-text"><b>Module Description: </b>{{module.module_desc}}</p>
+                    <br/>
+                    <a href="{% url 'modulePage' module.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Select</a>
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
 </div>
-{% comment %} <div class="p-5 m-5">
-    {% for module in modlist %}
-    <div>
-        <p>{{module.module_name}}</p>
-        <p>{{module.module_desc}}</p>
-        <p>{{module.host}}</p>
-        <button class="btn btn-outline-primary w-100"><a href="{% url 'modulePage' module.id %}">Select</a></button>
-    </div>
-    {% endfor %}
-</div> {% endcomment %}

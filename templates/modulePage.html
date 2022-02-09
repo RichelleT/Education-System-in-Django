@@ -1,44 +1,85 @@
 {% load static %}
 {% include 'navbar.html' %}
-
+<link href="{% static 'css/card.css'%}" rel="stylesheet">
+<link href="{% static 'css/tablesv2.css'%}" rel="stylesheet">
 
 <div class="container mt-5 pt-5">
-    <div class="container mx-auto mt-4">
+    <div class="mt-2 pt-2">
+        {% for m in modPage %}
+        <p>
+            <label class="labelCust3"><b>Module:</b> {{m.module_name}}</label>
+        </p>
+        {% endfor %}
+    </div>
+    {% if user.is_authenticated %}
+    {% for group_for in request.user.groups.all %}
+      {% if group_for.name == 'Educator' %}
+      <div class="container mx-auto mt-4">
         <div class="row">
         {% for mt in mtLst %}
         <div class="col-md-4">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title"><b>Module:</b> {{module.module_name}}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{module.host}}</h6>
-                    <p class="card-text"><b>Module Description:</b> <br/>{{module.module_desc}}</p>
-                    <a href="{% url 'modulePage' module.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i> Select</a>
-                    {% comment %} <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-                    <a href="#" class="btn "><i class="fab fa-github"></i> Github</a> {% endcomment %}
+                    <h5 class="card-title">{{mt.test_name}}</h5>
+                    <br/>
+                    {% for m in modPage %}
+                    <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{m.host}}</h6>
+                    {% endfor %}
+                    <h6 class="card-subtitle mb-2 text-muted"><b>Created At:</b> {{mt.test_date}}</h6>
+                    <br/>
+                    <a href="{% url 'quizPage' mt.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Select</a>
+                    <br/>
+                    <a href="{% url 'resultPage' mt.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>View Results</a>
                 </div>
             </div>
         </div>
         {% endfor %}
-    </div>
+    </div> 
+        {% elif group_for.name == 'Student' %}
+        <div class="container mx-auto mt-4">
+            <div class="row">
+            {% for mt in mtLst %}
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{mt.test_name}}</h5>
+                        <br/>
+                        {% for m in modPage %}
+                        <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{m.host}}</h6>
+                        {% endfor %}
+                        <h6 class="card-subtitle mb-2 text-muted"><b>Created At:</b> {{mt.test_date}}</h6>
+                        <br/>
+                        <a href="{% url 'quizPage' mt.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Select</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div> 
+        {% elif group_for.name == 'Admin' %}
+        <div class="container mx-auto mt-4">
+            <div class="row">
+            {% for mt in mtLst %}
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{mt.test_name}}</h5>
+                        <br/>
+                        {% for m in modPage %}
+                        <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{m.host}}</h6>
+                        {% endfor %}
+                        <h6 class="card-subtitle mb-2 text-muted"><b>Created At:</b> {{mt.test_date}}</h6>
+                        <br/>
+                        <a href="{% url 'quizPage' mt.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Select</a>
+                        <br/>
+                        <a href="{% url 'resultPage' mt.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>View Results</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div> 
+      {% endif %}
+    {% endfor %}
+  {% else %}
+ <div></div>
+  {% endif %}
 </div>
-{% comment %} <div class="p-5 m-5">
-    <h1>Module</h1>
-    {% for m in modPage %}
-    <div>
-        <p>{{m.module_name}}</p>
-        <p>{{m.module_desc}}</p>
-        <p>{{m.host}}</p>
-    </div>
-    {% endfor %}
-    <h1>Tests</h1>
-    {% for mt in mtLst %}
-    <div>
-        <p>{{mt.test_name}}</p>
-        <p>{{mt.test_date}}</p>
-        <button class="btn btn-outline-primary w-100"><a href="{% url 'quizPage' mt.id %}">Select</a></button>
-    </div>
-    {% endfor %}
-</div> {% endcomment %}
