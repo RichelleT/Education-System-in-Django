@@ -52,6 +52,7 @@ def addUserToMod(request):
 @login_required(login_url='/login/')
 def modSel(request, *args, **kwargs):
     modlist = Module.objects.all()
+    
     return render(request, "moduleSelect.html", {'modlist':modlist})
 
 @login_required(login_url='/login/')
