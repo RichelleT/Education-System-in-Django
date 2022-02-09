@@ -87,7 +87,7 @@
 |+| **If used `step 1.+` to create superuser, and is able to login to admin panel, UNDO all `step 1.+`**| **Note: VERY IMPORTANT STEP** |
 |6| Go to http://127.0.0.1:8000/admin/, and select `add` to add groups <br/><br/> (Note: Please follow order of adding groups) |![Guide1](/static/images/guide1.png)|
 |7| Add the following permissions to the **`Admin`** group, then save |![Guide2](/static/images/guide2.png)|
-|8| Add the following permissions to the **`Educator`** group, then save <br/><br/> **Filter: build, then choose all** <br/>**Filter: addusermodule, then choose all**<br/><br/>**Note: all except** `admin, auth, contenttypes, sessions` **permissions**|![Guide4](/static/images/guide4.png)|
+|8| Add the following permissions to the **`Educator`** group, then save <br/><br/> **Filter: build, then choose all**<br/><br/>**Note: all except** `admin, auth, contenttypes, sessions` **permissions**|![Guide4](/static/images/guide4.png)|
 |9| Add the following permissions to the **`Student`** group, then save |![Guide3](/static/images/guide3.png)|
 |10| To create admin account, <br/><br/>  **Comment out `group_required` only** (like in the above step), <br/><br/> **Go to** http://127.0.0.1:8000/registerUser/ and **create admin account, <br/><br/> then uncomment `group_required` again.** <br/><br/> | (**Note: Do this while logged into the superuser account**) <br/><br/> **(Note: This is important to add users for the application/system)** <br/><br/>**(Warning: Must uncomment `group_required` Otherwise, any user can create users)**|
 |11| Once admin account(s) is created, **Log out of superuser account** and **login to created admin account**| 
