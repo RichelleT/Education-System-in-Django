@@ -1,10 +1,69 @@
 {% load static %}
 {% include 'navbar.html' %}
+<link href="{% static 'css/formStyle.css'%}" rel="stylesheet">
+<script src="{% static 'formStyle.js' %}"></script> 
 
 <div class="p-5 m-5">
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <p></p>
+          </div>
+          <div class="col">
+            <form class="form-style-7" method="post" autocomplete="off">
+                {% csrf_token %}
+                <ul>
+                    <li>
+                        <label for="id_test_sel">Test sel:</label> 
+                        <select name="test_sel" required id="id_test_sel">
+                            <option value="" selected>---------</option>
+                            <option value="1">Add</option>
+                            <option value="2">Testing Test</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="id_quest">Quest:</label> 
+                        <input type="text" name="quest" maxlength="500" required id="id_quest">
+                    </li>
+                    <li>
+                        <label for="id_op1">Op1:</label> 
+                        <input type="text" name="op1" maxlength="300" required id="id_op1">
+                    </li>
+                    <li>
+                        <label for="id_op2">Op2:</label> 
+                        <input type="text" name="op2" maxlength="300" required id="id_op2">
+                    </li>
+                    <li>
+                        <label for="id_op3">Op3:</label> 
+                        <input type="text" name="op3" maxlength="300" required id="id_op3">
+                    </li>
+                    <li>
+                        <label for="id_op4">Op4:</label> 
+                        <input type="text" name="op4" maxlength="300" required id="id_op4">
+                    </li>
+                    <li><label for="id_answ">Answ:</label> 
+                        <select name="answ" id="id_answ">
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>  
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option> 
+                        </select>
+                    </li>
+                    <p></p>
+                </ul>
+                <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Test</button> </div>
+            </form>
+          </div>
+          <div class="col">
+            <p></p>
+          </div>
+        </div>
+      </div>
+</div>
+{% comment %} <div class="p-5 m-5">
     <form method="post" autocomplete="off">
         {% csrf_token %}
         {{ form.as_p }}
         <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Quiz Questions</button> </div>
     </form>
-</div>
+</div> {% endcomment %}
