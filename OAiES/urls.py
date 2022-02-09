@@ -3,7 +3,7 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 
 #import views from main component
-from main.views import landing_view, login_view, redir_view, userProf_view, dashboard_view, sucess_view
+from main.views import landing_view, login_view, redir_view, userProf_view, dashboard_view, sucess_view, test_view
 
 #import views from testBuilder component
 from testBuilder.views import addMod, modSel, addTests, modulePage, addQuiz, qrPage, resultPg
@@ -32,6 +32,7 @@ urlpatterns = [
     path('quizPage/<str:pk>/', qrPage, name="quizPage"),
     #path('resultPage/', qrPage, name="resultPage"),
     path('redir/', redir_view), #REMOVE LATER
+    path('test/', test_view), #REMOVE LATER
     path('sucess/', sucess_view),
     path('result/<str:pk>/', resultPg, name="resultPage"),
     #path('register/', registerAdm, name="Register"),

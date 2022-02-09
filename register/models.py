@@ -16,8 +16,8 @@ ROLE_CHOICES = (
 
 class Profile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    school_faculty = models.TextField(max_length=500, blank=True, default="")
-    programme = models.CharField(max_length=30, blank=True, default="")
+    school_faculty = models.TextField(max_length=150, blank=True, default="")
+    programme = models.TextField(max_length=150, blank=True, default="")
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, blank=False, default='M')
     role = models.CharField(max_length=1, choices=ROLE_CHOICES, blank=False, default='S')
     #birth_date = models.DateField(null=True, blank=True)

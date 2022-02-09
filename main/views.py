@@ -26,3 +26,7 @@ def dashboard_view(request, *args, **kwargs):
 
 def sucess_view(request, *args, **kwargs):
     return render(request, "sucessPage.html", {})
+
+#change html file to preview test UI
+def test_view(request, *args, **kwargs):
+    return render(request, "formStyle.html", {})
