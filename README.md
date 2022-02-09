@@ -45,7 +45,7 @@
 | Enter `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` | Install homebrew **only for users running `macOs Catalina, Mojave, or Big Sur, or later`** |
 | Enter `brew install mysql`|
 | Open a terminal window |
-| Enter `mysql -u root -p` and enter password | Note: try mysql.server start if unable to start sql
+| Enter `mysql -u root -p` and enter password | Note: try `mysql.server start` if unable to start sql
 | Enter `SET PASSWORD FOR root@localhost='';` |
 | Enter `CREATE DATABASE oaies;` |
 | Enter `brew install python3`|
