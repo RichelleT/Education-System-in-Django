@@ -8,7 +8,7 @@ class Assignment(models.Model):
     #must test if not working, remove answer field.
     answer = models.CharField(max_length=5000, default="")
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    created_date = models.DateTimeField(auto_now_add=True)
+    created_date = models.DateTimeField()
 
     def __str__(self):
         return self.question

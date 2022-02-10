@@ -23,6 +23,10 @@ class addTest(forms.ModelForm):
             'test_name',
             'module_sel'
         )
+        labels = {
+            'test_name':'Enter Test Title',
+            'module_sel':'Select Module',
+        }
 
 class addQuestions(forms.ModelForm):
     class Meta:
