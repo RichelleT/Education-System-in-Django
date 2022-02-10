@@ -51,7 +51,7 @@
                     {{r.linked_test}}
                 </th> {% endcomment %}
                 <th>
-                    {{r.attempted_by}}
+                    {{r.attempted_by.first_name}} {{r.attempted_by.last_name}}<br/>@{{r.attempted_by}}
                 </th>
                 <th>
                     {{r.attempted_time}}
