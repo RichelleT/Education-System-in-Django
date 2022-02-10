@@ -15,14 +15,7 @@
                 {% csrf_token %}
                 {{ form.as_p }}
                 <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Test</button> </div>
-                <label class="labelCust5 w-100"><b>Note: <br/>Repeat to add more questions to test set</b></label>
-                <div class="mb-3">
-                  <br/>
-                  <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
-                      <i class="fas fa-link"></i>
-                      Click here to go back to module select page
-                  </a>
-              </div>
+                <label class="labelCust5"><b>Note: <br/>Repeat to add more questions to test set</b></label>
             </form>
           </div>
           <div class="col">

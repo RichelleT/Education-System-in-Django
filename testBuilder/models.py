@@ -1,10 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User, Group
-from ckeditor.fields import RichTextField
 
 class Module(models.Model):
     module_name = models.CharField(max_length=120, default="")
-    #module_desc = RichTextField(max_length=300, blank=True, null=True)
     module_desc = models.TextField(max_length=300, help_text="Resize textbox by dragging bottom right corner icon, if needed")
     host = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     #participants = models.ManyToManyField(User, related_name='participants', blank=True)
