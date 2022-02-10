@@ -18,21 +18,23 @@ class Answer(models.Model):
     host = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     question = models.TextField(max_length=5000, default="")
     answer = models.TextField(max_length=5000, default="")
-    
+    created_date = models.DateTimeField()
+
     def __str__(self):
         return self.question
 
 class AssignResult(models.Model):
-    linked_assign = models.ForeignKey(Assignment, on_delete=models.CASCADE, null=True) #linking result to test paper
-    linked_module = models.ForeignKey(Module, on_delete=models.CASCADE, null=True) #linking result to quiz questions model
+    link_ques = models.ForeignKey(Answer, on_delete=models.CASCADE, null=True) 
+    linked_assign = models.ForeignKey(Assignment, on_delete=models.CASCADE, null=True)
+    linked_module = models.ForeignKey(Module, on_delete=models.CASCADE, null=True) 
     attempted_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     correct = models.IntegerField(default=0)
     #wrong = models.IntegerField(default=0)
     percentage = models.IntegerField(default=0)
     total = models.IntegerField(default=0)
     grade = models.CharField(max_length=10, default="")
-    a_time = models.DateTimeField(auto_now=True)
-    attempted_time = models.DateTimeField(auto_now_add=True)
+    #a_time = models.DateTimeField(auto_now=True)
+    attempted_time = models.DateTimeField()
 
     def __str__(self):
         return str(self.attempted_by)

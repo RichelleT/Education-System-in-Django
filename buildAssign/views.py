@@ -17,22 +17,52 @@ def addAssign(request):
     if request.method =='POST':
         host = request.user
         current_datetime = datetime.datetime.now(tz=timezone.utc) 
-        mod_form = addAssignment(request.POST)
+        mod_form = addAnswer(request.POST)
         if mod_form.is_valid(): #and add_form.is_valid():
             form = mod_form.save(commit=False)
-            if form.created_by is None:
-                form.created_by = host
+            if form.host is None:
+                form.host = host
             if form.created_date is None:
                 form.created_date = current_datetime
                 form.save()
             return redirect('/sucess/')
     else:
-        mod_form = addAssignment()
+        mod_form = addAnswer()
 
         args = {
             'mod_form': mod_form
         }
         return render(request, 'addAssignment.html', args)
+
+def addAnsw(request):
+    if request.method == 'POST':
+        host = request.user
+        current_datetime = datetime.datetime.now(tz=timezone.utc) 
+        mod_form = addAnswer(request.POST)
+        #module = Module.objects.get(pk=pk)
+
+        if mod_form.is_valid(): #and add_form.is_valid():
+            form = mod_form.save(commit=False)
+
+            # if form.linked_assign is None:
+            #     form.linked_assign = module
+
+            if form.host is None:
+                form.host = host
+
+            if form.created_date is None:
+                form.created_date = current_datetime
+
+                form.save()
+            return redirect('/sucess/')
+    else:
+        mod_form = addAnswer()
+
+        args = {
+            'mod_form': mod_form
+        }
+        return render(request, 'addAssignQ.html', args)
+
 
 @login_required(login_url='/login/')
 def atPage(request, pk):
@@ -41,7 +71,9 @@ def atPage(request, pk):
         user = request.user
         for q in question:
             print(q.question)
-            print(q.answer)
+            print(answer)
+            userAnsw = request.POST.get(answer)
+        
 
     else: 
         questions = Answer.objects.filter(link_assign=pk)

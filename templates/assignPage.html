@@ -1,0 +1,31 @@
+{% load static %}
+{% include 'navbar.html' %}
+<link href="{% static 'css/textarea.css'%}" rel="stylesheet">
+<script src="{% static 'js/textarea.js' %}"></script>
+
+<div class="p-5 m-5">
+    <form method='post' action=''>
+        {% csrf_token %}
+        {% for q in questions %}
+        <div class="card" style="height: 700px;">
+            <p></p>
+            <p>&nbsp;&nbsp;&nbsp;<b>Question:</b>&nbsp;&nbsp;{{q.question}}</p>
+            <p>&nbsp;&nbsp;&nbsp;<b>Input your answer:</b></p>
+            <div class="form-check">
+                <div class="form-check">
+                    <textarea oninput="auto_grow(this)" class="form-check-input w-100"  id="id_answer" name="answer" required>                
+                    </textarea>
+                    {% comment %} <input class="form-check-input" type="radio" name="{{q.question}}" id="gridRadios1" value="option1" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                        {{q.op1}}
+                    </label> {% endcomment %}
+                </div>
+                <p>&nbsp;&nbsp;&nbsp;</p>
+                <p></p>
+            </div>
+        </div>
+        <br/>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
