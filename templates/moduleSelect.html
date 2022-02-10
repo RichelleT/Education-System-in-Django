@@ -18,6 +18,7 @@
                     <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{module.host}}</h6>
                     <br/>
                     <p class="card-text"><b>Module Description: </b>{{module.module_desc}}</p>
+                    <div [innerHTML]={{module.module_desc}}></div>
                     <br/>
                     <a href="{% url 'modulePage' module.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Select</a>
                 </div>

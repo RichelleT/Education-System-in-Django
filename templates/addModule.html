@@ -13,6 +13,7 @@
             <div class="p-5 m-5">
                 <form class="form-style-7" method="post" autocomplete="off">
                     {% csrf_token %}
+                    {{ mod_form.media }}
                     {{ mod_form.as_p }}
                     <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Module</button> </div>
                 </form>
