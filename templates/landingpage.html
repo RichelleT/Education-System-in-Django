@@ -4,7 +4,7 @@
 
 {% include 'navbar.html' %}
 
-<section>
+<section class="sectionCust">
   <div class="container">
     {% comment %} <div class="container mt-5 pt-5"> {% endcomment %}
     <div class="row d-flex justify-content-center">
@@ -16,38 +16,42 @@
         <div class="col-md-6">
             <div class="card px-5 py-5" id="form1">
                 <div>
-                  <h1 class="colH1">What is OAiES?</h1>
-                  <h2 class="custH2">add description add description</h2>
+                  <h1 class="colH1"><b>What is OAiES?</b></h1>
+                  <br/>
+                  <h2 class="custH2">OAiES is a system that allows educators to create tests for students to complete/answer.</h2>
                 </div>
             </div>
         </div>
     </div>
   </div>
-  {% comment %} <h1 class="text-center colH1">Main Features of OAiES</h1>
-  <div class="container mt-2">
+  {% comment %} <h1 class="text-center colH1"><b>Main Features of OAiES</b></h1>
+ <div class="container mt-2">
     <div class="row d-flex justify-content-center">
         <!-- left side; image  -->
         <div class="col-md-6">
-            <img src="{% static 'images/uploadFile.png' %}" width="700" height="450"/>                
+            <img src="{% static 'images/Form.png' %}" width="700" height="450"/>                
         </div>
         <!-- right side; card -->
         <div class="col-md-6">
             <div class="card px-5 py-5" id="form1">
                 <div>
-                  <h1 class="custH1">Title</h1>
+                  <h1 class="custH1">Create Tests</h1>
+                  <br/>
                   <h2 class="custH2">description</h2>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container">
+<hr class="new3">
+<div class="container">  {% comment %} Remove mt-2 if not first feature{% endcomment %}
   <div class="row d-flex justify-content-center">
       <!-- left side; image  -->
       <div class="col-md-6">
         <div class="card px-5 py-5" id="form1">
           <div>
-            <h1 class="custH1">Title</h1>
+            <h1 class="custH1">Complete Tests</h1>
+            <br/>
             <h2 class="custH2">description</h2>
           </div>
         </div>
@@ -58,6 +62,7 @@
       </div>
   </div>
 </div>
+<hr class="new3">
 <div class="container">
   <div class="row d-flex justify-content-center">
       <!-- left side; image  -->
@@ -68,14 +73,15 @@
       <div class="col-md-6">
           <div class="card px-5 py-5" id="form1">
               <div>
-                <h1 class="custH1">Title</h1>
-                <h2 class="custH2">description</h2>
+                <h1 class="custH1">View Results</h1>
+                <br/>
+                <h2 class="custH2">OAiES allows students to view their own results, and also allows educators to view every results for a test set.</h2>
               </div>
           </div>
       </div>
   </div>
-</div>
-<div class="container">
+</div> {% endcomment %}
+{% comment %} <div class="container">
   <div class="row d-flex justify-content-center">
     <!-- left side; image  -->
     <div class="col-md-6">
@@ -91,5 +97,5 @@
       <img src="{% static 'images/analysisImg.png' %}" width="700" height="450"/>                
     </div>
   </div>
-</div> {% endcomment %}
+</div>  {% endcomment %}
 </section>

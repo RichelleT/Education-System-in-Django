@@ -33,3 +33,31 @@
     font-size: 40px;
     color: #2487ce;
 }
+
+.sectionCust {
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+/* Red border */
+hr.new1 {
+    border-top: 1px solid red;
+}
+
+/* Dashed red border */
+hr.new2 {
+    border-top: 1px dashed red;
+}
+
+/* Dotted red border */
+hr.new3 {
+    border-top: 1px dotted rgb(0, 0, 0);
+    width: 75%;
+    text-align: center;
+    margin: auto;
+}
+
+/* Thick red border */
+hr.new4 {
+    border: 1px solid red;
+}
