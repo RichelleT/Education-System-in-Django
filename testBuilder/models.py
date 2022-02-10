@@ -28,10 +28,10 @@ class Test(models.Model):
 
 class Quiz(models.Model):
     ANSWER_CHOICES = (
-            ('option1', 'option1'),
-            ('option2', 'option2'),
-            ('option3', 'option3'),
-            ('option4', 'option4'),
+            ('option1', 'Answer Option 1'),
+            ('option2', 'Answer Option 2'),
+            ('option3', 'Answer Option 3'),
+            ('option4', 'Answer Option 4'),
         )
     test_sel = models.ForeignKey(Test, on_delete=models.CASCADE, null=True)
     quest = models.CharField(max_length=500, default="")

@@ -28,3 +28,11 @@ class addQuestions(forms.ModelForm):
     class Meta:
         model = Quiz
         fields = "__all__" 
+        labels  = {
+            'quest':'Input question', 
+            'op1':'Enter Answer Option 1',
+            'op2':'Enter Answer Option 2',
+            'op3':'Enter Answer Option 3',
+            'op4':'Enter Answer Option 4',
+            'answ':'Select Correct Answer',
+        }
