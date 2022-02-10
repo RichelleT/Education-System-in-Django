@@ -1,18 +1,18 @@
 {% load static %}
 {% include 'navbar.html' %}
-<link href="{% static 'css/tablesv2.css'%}" rel="stylesheet">
+<link href="{% static 'css/tablesv3.css'%}" rel="stylesheet">
 
 {% if user.is_authenticated %}
 {% for group_for in request.user.groups.all %}
 {% if group_for.name == 'Educator' %}
 <div class="p-5 m-5">
-    <div class="table-wrapper">
+    <div>
         <p>
             <label class="labelCust3"><b>Module:</b> {{module_title}}</label>
             <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
         </p>
         {% comment %} <h1>Module: {{module_title}} Test: {{test_title}}</h1> {% endcomment %}
-        <table class="fl-table">
+        <table>
             <thead>
             <tr>
                 {% comment %} <th>
@@ -76,13 +76,13 @@
 </div>   
 {% elif group_for.name == 'Student' %}
 <div class="p-5 m-5">
-    <div class="table-wrapper">
+    <div>
         <p>
             <label class="labelCust3"><b>Module:</b> {{module_title}}</label>
             <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
         </p>
         {% comment %} <h1>Module: {{module_title}} Test: {{test_title}}</h1> {% endcomment %}
-        <table class="fl-table">
+        <table>
             <thead>
             <tr>
                 {% comment %} <th>

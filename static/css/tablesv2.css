@@ -17,6 +17,13 @@ h2{
     padding: 30px 0;
 }
 
+tbody tr {
+    transition: background 0.25s ease;
+  }
+  tbody tr:hover {
+    background: #cfcfcf;
+  }
+
 /* Table Styles */
 
 .table-wrapper{
@@ -109,6 +116,10 @@ h2{
     }
     .fl-table tbody tr {
         display: table-cell;
+        transition: background 0.25s ease;
+    }
+    .fl-table tbody tr:hover{
+        background: #014055;
     }
     .fl-table tbody tr:nth-child(odd) {
         background: none;

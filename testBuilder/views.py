@@ -194,6 +194,7 @@ def resultPg(request, pk):
     }
     return render(request, "viewResultsPage.html", context)
     #return render(request, "viewResultsPageV2.html", context)
+    #return render(request, "viewResultsPageV3.html", context)
 
 # def studentResult(request, pk):
 #     resList = quizResult.objects.filter(attempted_by=pk)

@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+}
+table {
+  background: #012B39;
+  border-radius: 0.25em;
+  border-collapse: collapse;
+  margin: 1em;
+  width: 100%;
+}
+th {
+  border-bottom: 1px solid #364043;
+  border-left: 1px solid #364043 ;
+  color: #ecc456;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+td {
+  color: #fff;
+  font-weight: 400;
+  padding: 0.65em 1em;
+}
+.disabled td {
+  color: #4F5F64;
+}
+tbody tr {
+  transition: background 0.25s ease;
+}
+tbody tr:hover {
+  background: #014055;
+}
+
+.labelCust3 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.025rem;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #83cbdd;
+    border-radius: 0.3125rem;
+    -webkit-border-radius: 0.3125rem;
+    -moz-border-radius: 0.3125rem;
+    padding: 0.625rem 3rem;
+    border-style: none;
+    border-width: 0rem;
+    border-color: #EF2D56;
+    -webkit-box-shadow: inset 37px 0px 0px -16px rgba(51,51,51,1);
+    -moz-box-shadow: inset 37px 0px 0px -16px rgba(51,51,51,1);
+    -box-shadow: inset 37px 0px 0px -16px rgba(51,51,51,1);
+}
