@@ -4,4 +4,13 @@ from buildAssign.models import Assignment
 class addAssignment(forms.ModelForm):
     class Meta:
         model = Assignment
-        fields = "__all__"
+        fields = (
+            'linked_module',
+            'question',
+            'answer',
+        )
+        labels = {
+            'linked_module':'Select Module',
+            'question':'Input Question',
+            'answer':'Input Answer Keywords',
+        }
