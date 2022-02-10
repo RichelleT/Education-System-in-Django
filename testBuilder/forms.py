@@ -8,7 +8,10 @@ class addModule(forms.ModelForm):
             'module_name',
             'module_desc'
         )
-
+        labels = {
+            'module_name':'Enter Module Name',
+            'module_desc':'Enter Module Description',
+        }
 # class addUser(forms.ModelForm):
 #     class Meta:
 #         model = UserToModule

@@ -3,7 +3,7 @@ from django.contrib.auth.models import User, Group
 
 class Module(models.Model):
     module_name = models.CharField(max_length=120, default="")
-    module_desc = models.CharField(max_length=300)
+    module_desc = models.TextField(max_length=300, help_text="Resize textbox by dragging bottom right corner icon, if needed")
     host = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     #participants = models.ManyToManyField(User, related_name='participants', blank=True)
 

@@ -2,6 +2,7 @@
 {% include 'navbar.html' %}
 <link href="{% static 'css/formStyle.css'%}" rel="stylesheet">
 <script src="{% static 'formStyle.js' %}"></script> 
+<link href="{% static 'css/tablesv2.css'%}" rel="stylesheet">
 
 <div class="p-5 m-5">
     <div class="container">
@@ -14,6 +15,7 @@
                 {% csrf_token %}
                 {{ form.as_p }}
                 <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Test</button> </div>
+                <label class="labelCust5"><b>Note: <br/>Repeat to add more questions to test set</b></label>
             </form>
           </div>
           <div class="col">

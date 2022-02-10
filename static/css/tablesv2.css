@@ -233,3 +233,24 @@ h2{
     -moz-box-shadow: inset 37px 0px 0px -16px rgba(51,51,51,1);
     -box-shadow: inset 37px 0px 0px -16px rgba(51,51,51,1);
 }
+
+.labelCust5 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.025rem;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #d66363;
+    border-radius: 0.3125rem;
+    -webkit-border-radius: 0.3125rem;
+    -moz-border-radius: 0.3125rem;
+    padding: 0.625rem 3rem;
+    border-style: none;
+    border-width: 0rem;
+    border-color: #EF2D56;
+    -webkit-box-shadow: inset 37px 0px 0px -16px rgba(51,51,51,1);
+    -moz-box-shadow: inset 37px 0px 0px -16px rgba(51,51,51,1);
+    -box-shadow: inset 37px 0px 0px -16px rgba(51,51,51,1);
+}

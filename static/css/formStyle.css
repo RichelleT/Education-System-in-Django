@@ -167,3 +167,14 @@
 	background: #6B9FFF;
 	color:#fff;
 }
+
+span{
+	background: #F3F3F3;
+	display: block;
+	padding: 3px;
+	margin: 0 -9px -9px -9px;
+	text-align: center;
+	color: cadetblue;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
