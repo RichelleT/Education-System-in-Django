@@ -17,7 +17,7 @@ def addAssign(request):
     if request.method =='POST':
         host = request.user
         current_datetime = datetime.datetime.now(tz=timezone.utc) 
-        mod_form = addAnswer(request.POST)
+        mod_form = addAssignment(request.POST)
         if mod_form.is_valid(): #and add_form.is_valid():
             form = mod_form.save(commit=False)
             if form.host is None:
@@ -27,7 +27,7 @@ def addAssign(request):
                 form.save()
             return redirect('/sucess/')
     else:
-        mod_form = addAnswer()
+        mod_form = addAssignment()
 
         args = {
             'mod_form': mod_form

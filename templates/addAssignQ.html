@@ -2,24 +2,19 @@
 {% include 'navbar.html' %}
 <link href="{% static 'css/formStyle.css'%}" rel="stylesheet">
 <script src="{% static 'formStyle.js' %}"></script> 
+<link href="{% static 'css/textareav2.css'%}" rel="stylesheet">
+<script src="{% static 'js/textarea.js' %}"></script>
 
 <div class="p-5 m-5">
     <div class="container">
-        <div class="row">
-          <div class="col">
-            <p></p>
-          </div>
-          <div class="col">
-            <div class="p-5 m-5">
+          <div class="mx-auto">
+            <div>
                 <form class="form-style-7" method="post" autocomplete="off">
                     {% csrf_token %}
                     {{ mod_form.as_p }}
                     <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Module</button> </div>
                 </form>
             </div>
-          </div>
-          <div class="col">
-            <p></p>
           </div>
         </div>
       </div>
