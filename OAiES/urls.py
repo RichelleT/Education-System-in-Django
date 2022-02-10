@@ -6,7 +6,7 @@ from django.contrib.auth import views as auth_views
 from main.views import landing_view, login_view, redir_view, userProf_view, dashboard_view, sucess_view, test_view
 
 #import views from testBuilder component
-from testBuilder.views import addMod, modSel, addTests, modulePage, addQuiz, qrPage, resultPg
+from testBuilder.views import addMod, modSel, addTests, modulePage, addQuiz, qrPage, resultPg, studentResult
 
 from buildAssign.views import addAssign
 
@@ -35,6 +35,7 @@ urlpatterns = [
     path('test/', test_view), #REMOVE LATER
     path('sucess/', sucess_view),
     path('result/<str:pk>/', resultPg, name="resultPage"),
+    path('resultStudent/<str:pk>/', studentResult, name="studentResPage"),
     #path('register/', registerAdm, name="Register"),
     #path('registerUser/', regisUsr_view, name="RegisterUser"),
     path('registerUser/', registerUsr, name="RegisterUser"),

@@ -1,0 +1,73 @@
+{% load static %}
+{% include 'navbar.html' %}
+<link href="{% static 'css/tablesv2.css'%}" rel="stylesheet">
+
+<div class="p-5 m-5">
+    <div class="table-wrapper">
+        <p>
+            <label class="labelCust3"><b>Module:</b> {{module_title}}</label>
+            <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
+        </p>
+        {% comment %} <h1>Module: {{module_title}} Test: {{test_title}}</h1> {% endcomment %}
+        <table class="fl-table">
+            <thead>
+            <tr>
+                {% comment %} <th>
+                    Module
+                </th>
+                <th>
+                    Test
+                </th> {% endcomment %}
+                <th>
+                    Attempted by
+                </th>
+                <th>
+                    Time attempted
+                </th>
+                <th>
+                    Percentage
+                </th>
+                <th>
+                    Grade
+                </th>
+                <th>
+                    No. of correct answers
+                </th>
+                <th>
+                    No. of wrong answers
+                </th>
+            </tr>
+            </thead>
+            {% for r in resList %}
+            <tbody>
+            <tr>
+                {% comment %} <th>
+                    {{r.linked_module}}
+                </th>
+                <th>
+                    {{r.linked_test}}
+                </th> {% endcomment %}
+                <th>
+                    {{r.attempted_by}}
+                </th>
+                <th>
+                    {{r.attempted_time}}
+                </th>
+                <th>
+                    {{r.percentage}}
+                </th>
+                <th>
+                    {{r.grade}}
+                </th>
+                <th>
+                    {{r.correct}}
+                </th>
+                <th>
+                    {{r.wrong}}
+                </th>
+            </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+    </div> 
+</div>   

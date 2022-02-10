@@ -50,6 +50,8 @@
                         <h6 class="card-subtitle mb-2 text-muted"><b>Created At:</b> {{mt.test_date}}</h6>
                         <br/>
                         <a href="{% url 'quizPage' mt.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Select</a>
+                        <br/>
+                        <a href="{% url 'resultPage' mt.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>View Results</a>
                     </div>
                 </div>
             </div>

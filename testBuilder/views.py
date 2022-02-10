@@ -182,10 +182,22 @@ def resultPg(request, pk):
     resList = quizResult.objects.filter(linked_module=pk)
     module_title = Module.objects.get(pk=pk)
     test_title = Test.objects.get(pk=pk)
+    stuResList = quizResult.objects.filter(attempted_by=pk)
 
     context = {
         'resList':resList,
         'module_title': module_title,
         'test_title':test_title,
+        'stuResList':stuResList,
     }
     return render(request, "viewResultsPage.html", context)
+
+def studentResult(request, pk):
+    resList = quizResult.objects.filter(attempted_by=pk)
+    module_title = Module.objects.get(pk=pk)
+    test_title = Test.objects.get(pk=pk)
+
+    context = {
+        'resList':resList,
+    }
+    return render(request, "studentResult.html", context)
