@@ -1,11 +1,68 @@
 {% load static %}
 {% include 'navbar.html' %}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="{% static 'css/testTable.css'%}" rel="stylesheet">
 
-<div class="p-5 m-5">
-    <div class="card">
-        <p class="card-text">Percentage: {{percent}}%</p>
-        <p class="card-text">Correct answers: {{correct}}</p>
-        <p class="card-text">Incorrect answers: {{wrong}}</p>
-        <p class="card-text">Total questions: {{total}}</p>
+<div class="main-content">
+    <div class="container mt-7">
+        <div class="row">
+            <div class="col">
+              <div class="card shadow">
+                <div class="card-header border-0">
+                  <div>
+                      <h2 class="mb-0">
+                          Results
+                      </h2>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">
+                            Percentage
+                        </th>
+                        <th scope="col">
+                            Grade
+                        </th>
+                        <th scope="col">
+                            No. of correct answers
+                        </th>
+                        <th scope="col">
+                            No. of wrong answers
+                        </th>
+                        <th scope="col">
+                           Total Questions
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>
+                                {{percent}}%
+                            </th>
+                            <th>
+                                {{grade}}
+                            </th>
+                            <th>
+                                {{correct}}
+                            </th>
+                            <th>
+                                {{wrong}}
+                            </th>
+                            <th>
+                                {{total}}
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="mx-auto">
+            <a href="{% url 'selModule' %}" class="btn btn-outline-primary">
+                <i class="fas fa-link"></i>
+                Click here to go back to module select page
+            </a>
+        </div>
     </div>
-</div>   
+</div>  

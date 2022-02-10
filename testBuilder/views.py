@@ -120,6 +120,7 @@ def qrPage(request, pk):
         questions = Quiz.objects.filter(test_sel=pk)
         test = Test.objects.get(pk=pk)
         module = Module.objects.get(pk=pk)
+        res = quizResult.objects.get(pk=pk)
         print(test)
         print(module)
         score=0
@@ -166,7 +167,7 @@ def qrPage(request, pk):
             'total':total,
             'grade': grade,
             'user': user,
-            #'results':results,
+            'res':res,
         }
         return render(request,'generateResult.html',context)
         #return render(request, "resultPage.html", context)
