@@ -60,6 +60,7 @@ class quizResult(models.Model):
     grade = models.CharField(max_length=10, default="")
     #a_time = models.DateTimeField()
     attempted_time = models.DateTimeField()
+    #userAnsw = models.CharField(max_length=10, default="")
 
     def __str__(self):
         return str(self.attempted_by)
