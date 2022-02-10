@@ -29,4 +29,4 @@ def sucess_view(request, *args, **kwargs):
 
 #change html file to preview test UI
 def test_view(request, *args, **kwargs):
-    return render(request, "formStyle.html", {})
+    return render(request, "testTableW.html", {})
