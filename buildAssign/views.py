@@ -3,8 +3,8 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User, Group
-from buildAssign.models import Assignment
-from buildAssign.forms import addAssignment
+from buildAssign.models import Assignment, Answer
+from buildAssign.forms import addAssignment, addAnswer
 from main.decorators import group_required
 import pdfplumber
 import shlex
@@ -37,10 +37,14 @@ def addAssign(request):
 @login_required(login_url='/login/')
 def atPage(request, pk):
     if request.method == 'POST':
-        question = Assignment.objects.filter(linked_module=pk)
+        question = Answer.objects.filter(link_assign=pk)
         user = request.user
+        for q in question:
+            print(q.question)
+            print(q.answer)
+
     else: 
-        questions = Assignment.objects.filter(linked_module=pk)
+        questions = Answer.objects.filter(link_assign=pk)
 
         context = {
             'questions': questions

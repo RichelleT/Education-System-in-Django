@@ -1,16 +1,34 @@
 from django import forms
-from buildAssign.models import Assignment
+from buildAssign.models import Assignment, Answer
 
 class addAssignment(forms.ModelForm):
     class Meta:
         model = Assignment
         fields = (
             'linked_module',
+            'assign_name',
+            #'question',
+            #'answer',
+        )
+        labels = {
+            'linked_module':'Select Module',
+            'assign_name':'Add Assignment Title',
+            #'question':'Input Question',
+            #'answer':'Input Answer Keywords',
+        }
+
+class addAnswer(forms.ModelForm):
+    class Meta:
+        model = Answer
+        fields = (
+            'link_assign',
+            #'assign_name',
             'question',
             'answer',
         )
         labels = {
-            'linked_module':'Select Module',
+            'link_assign':'Select Assignment Set',
+            #'assign_name':'Add Assignment Title',
             'question':'Input Question',
             'answer':'Input Answer Keywords',
         }

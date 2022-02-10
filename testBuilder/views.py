@@ -9,6 +9,7 @@ from django.contrib.auth.models import User, Group
 from main.decorators import group_required
 import datetime
 from django.utils import timezone
+from buildAssign.models import Assignment, AssignResult
 
 @login_required(login_url='/login/')
 @group_required('Educator', login_url='/login/')
@@ -60,13 +61,16 @@ def modSel(request, *args, **kwargs):
 def addTests(request):
     if request.method =='POST':
         current_datetime = datetime.datetime.now(tz=timezone.utc) 
-
+        host = request.user
+        
         form = addTest(request.POST)
 
         if form.is_valid():
             #old_form.save()
             old_form = form.save(commit=False)
-            
+
+            if form.host is None:
+                form.host = host
             if old_form.test_date is None:
                 old_form.test_date = current_datetime
                 old_form.save()
@@ -86,11 +90,12 @@ def modulePage(request, pk):
     modPage = Module.objects.filter(id=pk)
     mtLst = Test.objects.filter(module_sel=pk)
     #resList = quizResult.objects.filter(linked_module=pk)
+    assignList = Assignment.objects.filter(linked_module=pk)
 
     context = {
         'modPage':modPage,
         'mtLst':mtLst,
-        #'resList': resList,
+        'assignList': assignList,
     }
     return render(request, "modulePage.html", context)
     #filter() returns a queryset (which is iterable)

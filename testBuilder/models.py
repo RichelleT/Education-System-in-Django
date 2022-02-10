@@ -22,6 +22,7 @@ class Test(models.Model):
     test_name = models.CharField(max_length=100, default="")
     test_date = models.DateTimeField()
     module_sel = models.ForeignKey(Module, on_delete=models.CASCADE, null=True)
+    host = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.test_name

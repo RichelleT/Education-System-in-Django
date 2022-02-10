@@ -8,7 +8,7 @@ from main.views import landing_view, login_view, redir_view, userProf_view, dash
 #import views from testBuilder component
 from testBuilder.views import addMod, modSel, addTests, modulePage, addQuiz, qrPage, resultPg#, studentResult
 
-from buildAssign.views import addAssign
+from buildAssign.views import addAssign, atPage
 
 #import views from other components
 #from registerAdmin.views import registerAdm
@@ -30,6 +30,7 @@ urlpatterns = [
     path('moduleSel/', modSel, name="selModule"),
     path('modulePage/<str:pk>/', modulePage, name="modulePage"),
     path('quizPage/<str:pk>/', qrPage, name="quizPage"),
+    path('assignPage/<str:pk>/', atPage, name="assignPage"),
     #path('resultPage/', qrPage, name="resultPage"),
     path('redir/', redir_view), #REMOVE LATER
     path('test/', test_view), #REMOVE LATER
