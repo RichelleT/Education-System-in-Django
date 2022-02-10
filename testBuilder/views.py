@@ -155,6 +155,7 @@ def qrPage(request, pk):
             #linked_module=module,
             attempted_time=current_datetime,
             attempted_by=user,
+            #userAnsw=request.POST.get(q.quest),
         )
 
         context = {
