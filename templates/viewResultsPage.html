@@ -39,6 +39,9 @@
                 <th>
                     No. of wrong answers
                 </th>
+                <th>
+                    Total Questions
+                </th>
             </tr>
             </thead>
             {% for r in resList %}
@@ -68,10 +71,20 @@
                 <th>
                     {{r.wrong}}
                 </th>
+                <th>
+                    {{r.total}}
+                </th>
             </tr>
             </tbody>
             {% endfor %}
         </table>
+        <div>
+            <br/>
+            <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
+              <i class="fas fa-link"></i>
+              Click Here to Return To Module Page
+            </a>
+          </div>
     </div> 
 </div>   
 {% elif group_for.name == 'Student' %}
@@ -109,6 +122,9 @@
                 <th>
                     No. of wrong answers
                 </th>
+                <th>
+                    Total Questions
+                </th>
             </tr>
             </thead>
             {% for sr in stuResList %}
@@ -121,7 +137,7 @@
                     {{r.linked_test}}
                 </th> {% endcomment %}
                 <th>
-                    {{sr.attempted_by}}
+                    {{sr.attempted_by.first_name}} {{sr.attempted_by.last_name}}<br/>@{{sr.attempted_by}}
                 </th>
                 <th>
                     {{sr.attempted_time}}
@@ -138,10 +154,20 @@
                 <th>
                     {{sr.wrong}}
                 </th>
+                <th>
+                    {{sr.total}}
+                </th>
             </tr>
             </tbody>
             {% endfor %}
         </table>
+        <div>
+            <br/>
+            <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
+              <i class="fas fa-link"></i>
+              Click Here to Return To Module Page
+            </a>
+          </div>
     </div> 
 </div>  
 {% endif %}
