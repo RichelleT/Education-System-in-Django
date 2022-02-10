@@ -29,7 +29,8 @@ class addQuestions(forms.ModelForm):
         model = Quiz
         fields = "__all__" 
         labels  = {
-            'quest':'Input question', 
+            'test_sel':'Please Select Test Set', 
+            'quest':'Input Question', 
             'op1':'Enter Answer Option 1',
             'op2':'Enter Answer Option 2',
             'op3':'Enter Answer Option 3',
