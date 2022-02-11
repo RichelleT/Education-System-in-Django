@@ -69,10 +69,12 @@ def addTests(request):
             #old_form.save()
             old_form = form.save(commit=False)
 
-            if form.host is None:
-                form.host = host
+            if old_form.host is None:
+                old_form.host = host
+
             if old_form.test_date is None:
                 old_form.test_date = current_datetime
+
                 old_form.save()
             return redirect('/addQuizQ/')
     else:
