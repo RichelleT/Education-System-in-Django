@@ -21,13 +21,13 @@ class addAnswer(forms.ModelForm):
     class Meta:
         model = Answer
         fields = (
-            'link_assign',
+            #'link_assign',
             #'assign_name',
             'question',
             'answer',
         )
         labels = {
-            'link_assign':'Select Assignment Set',
+            #'link_assign':'Select Assignment Set',
             #'assign_name':'Add Assignment Title',
             'question':'Input Question',
             'answer':'Input Answer Keywords',

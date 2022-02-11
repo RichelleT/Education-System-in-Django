@@ -1,0 +1,63 @@
+{% load static %}
+{% include 'navbar.html' %}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="{% static 'css/testTable.css'%}" rel="stylesheet">
+
+<div class="main-content">
+    <div class="container mt-7">
+        <div class="row">
+            <div class="col">
+              <div class="card shadow">
+                <div class="card-header border-0">
+                  <div>
+                      <h2 class="mb-0">
+                          Results
+                      </h2>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">
+                            Percentage
+                        </th>
+                        <th scope="col">
+                            Grade
+                        </th>
+                        <th scope="col">
+                            No. of correct keyword(s)
+                        </th>
+                        <th scope="col">
+                           Total Keyword(s)
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>
+                                {{percent}}%
+                            </th>
+                            <th>
+                                {{grade}}
+                            </th>
+                            <th>
+                                {{correct}}
+                            </th>
+                            <th>
+                                {{total}}
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <br/>
+            <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
+              <i class="fas fa-link"></i>
+              Click Here to Return To Module Page
+            </a>
+          </div>
+    </div>
+</div>  

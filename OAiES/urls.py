@@ -30,7 +30,7 @@ urlpatterns = [
     path('moduleSel/', modSel, name="selModule"),
     path('modulePage/<str:pk>/', modulePage, name="modulePage"),
     path('quizPage/<str:pk>/', qrPage, name="quizPage"),
-    path('addAssignQ/', addAnsw, name="addAssignQ"),
+    path('addAssignQ/<str:pk>/', addAnsw, name="addAssignQ"),
     path('assignPage/<str:pk>/', atPage, name="assignPage"),
     #path('resultPage/', qrPage, name="resultPage"),
     path('redir/', redir_view), #REMOVE LATER
