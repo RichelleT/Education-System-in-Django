@@ -4,3 +4,8 @@ textarea {
     min-height: 270px;
     max-height: 270px;  
 }
+
+.v2{
+    border: none;
+    outline: none;
+}

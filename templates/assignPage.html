@@ -1,6 +1,6 @@
 {% load static %}
 {% include 'navbar.html' %}
-<link href="{% static 'css/textarea.css'%}" rel="stylesheet">
+<link href="{% static 'css/textareav2.css'%}" rel="stylesheet">
 <script src="{% static 'js/textarea.js' %}"></script>
 
 <div class="p-5 m-5">
@@ -9,7 +9,14 @@
         {% for q in questions %}
         <div class="card" style="height: 700px;">
             <p></p>
-            <p>&nbsp;&nbsp;&nbsp;<b>Question:</b>&nbsp;&nbsp;{{q.question}}</p>
+            {% comment %} <p>&nbsp;&nbsp;&nbsp;<b>Question:</b>&nbsp;&nbsp;{{q.question}}</p> {% endcomment %}
+            <p>&nbsp;&nbsp;&nbsp;<b>Question:</b></p>
+            <div>
+                <textarea oninput="auto_grow(this)" class="form-check-input w-100 v2" style="border-style: 0;" readonly>
+                    {{q.question}}
+                </textarea>
+            </div>
+            <p></p>
             <p>&nbsp;&nbsp;&nbsp;<b>Input your answer:</b></p>
             <div class="form-check">
                 <div class="form-check">
