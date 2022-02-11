@@ -91,7 +91,7 @@ def modulePage(request, pk):
     mtLst = Test.objects.filter(module_sel=pk)
     #resList = quizResult.objects.filter(linked_module=pk)
     assignList = Assignment.objects.filter(linked_module=pk)
-    quesList = Answer.objects.filter(link_assign=pk)
+    #quesList = Answer.objects.filter(pk=pk)
 
     context = {
         'modPage':modPage,
