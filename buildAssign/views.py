@@ -22,7 +22,7 @@ def addAssign(request):
         host = request.user
         current_datetime = datetime.datetime.now(tz=timezone.utc) 
         mod_form = addAssignment(request.POST)
-        if mod_form.is_valid(): #and add_form.is_valid():
+        if mod_form.is_valid(): 
             form = mod_form.save(commit=False)
             if form.created_by is None:
                 form.created_by = host
@@ -45,7 +45,7 @@ def addAnsw(request, pk):
         mod_form = addAnswer(request.POST)
         link = Assignment.objects.get(pk=pk)       
 
-        if mod_form.is_valid(): #and lim > 0: #and add_form.is_valid():
+        if mod_form.is_valid(): 
             form = mod_form.save(commit=False)
 
             if form.link_assign is None:
@@ -99,19 +99,13 @@ def atPage(request, pk):
         print('Length:', len(userL))
 
         for l in oriL:
-            total += 1 #works
+            total += 1 
 
         for m in oriL:
             for n in userL:
                 if m == n: 
                     correct += 1
                     score += 10
-
-        # if userL == oriL:
-        #     correct += 1
-        #     score += 10
-        # else:
-        #     wrong += 1
 
         percent = round(score/(total*10) * 100)
 
