@@ -9,7 +9,7 @@ from django.contrib.auth.models import User, Group
 from main.decorators import group_required
 import datetime
 from django.utils import timezone
-from buildAssign.models import Assignment, AssignResult
+from buildAssign.models import Assignment, AssignResult, Answer
 
 @login_required(login_url='/login/')
 @group_required('Educator', login_url='/login/')
@@ -91,11 +91,13 @@ def modulePage(request, pk):
     mtLst = Test.objects.filter(module_sel=pk)
     #resList = quizResult.objects.filter(linked_module=pk)
     assignList = Assignment.objects.filter(linked_module=pk)
+    quesList = Answer.objects.filter(link_assign=pk)
 
     context = {
         'modPage':modPage,
         'mtLst':mtLst,
         'assignList': assignList,
+        'quesList': quesList,
     }
     return render(request, "modulePage.html", context)
     #filter() returns a queryset (which is iterable)
@@ -149,6 +151,29 @@ def qrPage(request, pk):
             grade = "Pass"
         else:
             grade = "Fail"
+        
+        if percent >= 90:
+            lettergrade = "A+"
+        elif percent >= 85:
+            lettergrade = "A"
+        elif percent >= 80:
+            lettergrade = "A-"
+        elif percent >= 75:
+            lettergrade = "B+"
+        elif percent >= 70:
+            lettergrade = "B+"
+        elif percent >= 65:
+            lettergrade = "B+"
+        elif percent >= 60:
+            lettergrade = "C+"
+        elif percent >= 55:
+            lettergrade = "C"
+        elif percent >= 50:
+            lettergrade = "C-"
+        elif percent >= 45:
+            lettergrade = "D+"
+        elif percent <= 40:
+            lettergrade = "F"
 
         insert_to_db = quizResult.objects.create(
             linked_module=module,
@@ -158,6 +183,7 @@ def qrPage(request, pk):
             percentage=percent, 
             total=total,
             grade=grade,
+            lettergrade=lettergrade, 
             #linked_module=module,
             attempted_time=current_datetime,
             attempted_by=user,

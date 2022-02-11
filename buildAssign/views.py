@@ -120,11 +120,34 @@ def atPage(request, pk):
         else:
             grade = "Fail"
 
+        if percent >= 90:
+            lettergrade = "A+"
+        elif percent >= 85:
+            lettergrade = "A"
+        elif percent >= 80:
+            lettergrade = "A-"
+        elif percent >= 75:
+            lettergrade = "B+"
+        elif percent >= 70:
+            lettergrade = "B+"
+        elif percent >= 65:
+            lettergrade = "B+"
+        elif percent >= 60:
+            lettergrade = "C+"
+        elif percent >= 55:
+            lettergrade = "C"
+        elif percent >= 50:
+            lettergrade = "C-"
+        elif percent >= 45:
+            lettergrade = "D+"
+        elif percent <= 40:
+            lettergrade = "F"
+
         insert_to_db = AssignResult.objects.create(
             #linked_module=module,
             link_ques=test,
             correct=correct, 
-            #wrong=wrong, 
+            lettergrade=lettergrade, 
             percentage=percent, 
             total=total,
             grade=grade,

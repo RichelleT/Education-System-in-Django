@@ -59,6 +59,7 @@ class quizResult(models.Model):
     percentage = models.IntegerField(default=0)
     total = models.IntegerField(default=0)
     grade = models.CharField(max_length=10, default="")
+    lettergrade = models.CharField(max_length=10, default="")
     #a_time = models.DateTimeField()
     attempted_time = models.DateTimeField()
     #userAnsw = models.CharField(max_length=10, default="")
