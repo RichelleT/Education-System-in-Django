@@ -5,12 +5,15 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User, Group
 from buildAssign.models import Assignment, Answer, AssignResult
 from testBuilder.models import Module, Test, Quiz, quizResult#, UserToModule
-from buildAssign.forms import addAssignment, addAnswer
+from buildAssign.forms import addAssignment, addAnswer, fileUpload
 from main.decorators import group_required
 import pdfplumber
 import shlex
 import datetime
 from django.utils import timezone
+from django.conf import settings
+from django.core.files.storage import FileSystemStorage
+
 
 @login_required(login_url='/login/')
 @group_required('Educator', login_url='/login/')
@@ -168,3 +171,52 @@ def aResultPg(request, pk):
         'stuResList':stuResList,
     }
     return render(request, "fullAssignResult.html", context)
+
+def addByFile(request, pk):
+    if request.method == 'POST' and 'upload_txt' in request.FILES:
+        host = request.user
+        current_datetime = datetime.datetime.now(tz=timezone.utc) 
+        mod_form = fileUpload(request.POST, request.FILES)
+        ass = Assignment.objects.get(pk=pk)
+        if mod_form.is_valid():
+            form = mod_form.save(commit=False)
+ 
+            doc = request.FILES #returns a dict-like object
+            doc_name = doc['upload_txt']
+            open_file = open(doc_name, "r")
+            for line in open_file:
+                print(line)
+
+            fileLine1 = line.readline()
+            fileLine2 = line.split()[1]
+            print(fileLine1)
+            print(fileLine2)
+
+            form.save()
+
+
+        # #open_file = open(name, "r")
+        # for line in fileName:
+        #     print(line)
+
+        # fileLine1 = line.readline()
+        # fileLine2 = line.split()[1]
+        # print(fileLine1)
+        # print(fileLine2)
+
+        insert_to_db = Answer.objects.create(
+            created_date=current_datetime,
+            question=fileLine1,
+            answer= fileLine2,
+            linked_assign=ass,
+            host=host,   
+        )
+        return redirect('/moduleSel/')
+
+    else:
+        mod_form = fileUpload()
+
+        args = {
+            'mod_form': mod_form
+        }
+        return render(request, 'addAssignQbyFile.html', args)

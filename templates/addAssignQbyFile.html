@@ -1,0 +1,21 @@
+{% load static %}
+{% include 'navbar.html' %}
+<link href="{% static 'css/formStyle.css'%}" rel="stylesheet">
+<script src="{% static 'formStyle.js' %}"></script> 
+<link href="{% static 'css/textareav2.css'%}" rel="stylesheet">
+<script src="{% static 'js/textarea.js' %}"></script>
+
+<div class="p-5 m-5">
+    <div class="container">
+          <div class="mx-auto">
+            <div>
+                <form class="form-style-7" method="post" autocomplete="off">
+                    {% csrf_token %}
+                    <p><label for="id_upload_txt">Upload txt:</label> <input type="file" accept=".txt" name="upload_txt" id="id_upload_txt"></p>                    
+                    <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Question to Assignment Set</button> </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

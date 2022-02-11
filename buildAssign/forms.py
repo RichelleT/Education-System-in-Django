@@ -1,5 +1,5 @@
 from django import forms
-from buildAssign.models import Assignment, Answer
+from buildAssign.models import Assignment, Answer, File
 
 class addAssignment(forms.ModelForm):
     class Meta:
@@ -32,3 +32,10 @@ class addAnswer(forms.ModelForm):
             'question':'Input Question',
             'answer':'Input Answer Keywords',
         }
+
+class fileUpload(forms.ModelForm):
+    class Meta:
+        model = File
+        fields = (
+            'upload_txt',
+        )

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from buildAssign.models import Assignment, Answer, AssignResult
+from buildAssign.models import Assignment, Answer, AssignResult, File
 
 class AnswerInline(admin.StackedInline):
     model = Answer
@@ -9,10 +9,15 @@ class ARInline(admin.TabularInline):
     model = AssignResult
     extra = 0
 
+class FileInline(admin.TabularInline):
+    model = File
+    extra = 0
+
 class TestLinkQuiz(admin.ModelAdmin):
     inlines = [
         AnswerInline,
         ARInline,
+        FileInline,
     ]
 
 

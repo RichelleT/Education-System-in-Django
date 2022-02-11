@@ -1,6 +1,7 @@
 from django.db import models
 from testBuilder.models import Module
 from django.contrib.auth.models import User
+from django.core.validators import FileExtensionValidator
 
 class Assignment(models.Model):
     linked_module = models.ForeignKey(Module, on_delete=models.CASCADE, null=True)
@@ -19,9 +20,20 @@ class Answer(models.Model):
     question = models.TextField(max_length=5000, default="")
     answer = models.TextField(max_length=5000, default="")
     created_date = models.DateTimeField()
+    #upload_txt = models.FileField(null=True, blank=True, validators=[FileExtensionValidator( ['txt'] ) ])
 
     def __str__(self):
         return self.question
+
+class File(models.Model):
+    link_answ = models.ForeignKey(Answer, on_delete=models.CASCADE, null=True)
+    upload_txt = models.FileField(null=True, blank=True, validators=[FileExtensionValidator( ['txt'] ) ])
+    uploader = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    link_assign = models.ForeignKey(Assignment, on_delete=models.CASCADE, null=True)
+    
+    def __str__(self):
+        return self.question + " " + self.uploader
+
 
 class AssignResult(models.Model):
     link_ques = models.ForeignKey(Answer, on_delete=models.CASCADE, null=True) 
