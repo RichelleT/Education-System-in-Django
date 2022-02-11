@@ -37,9 +37,6 @@
                     No. of correct answers
                 </th>
                 <th>
-                    No. of wrong answers
-                </th>
-                <th>
                     Total Questions
                 </th>
             </tr>
@@ -69,9 +66,6 @@
                     {{r.correct}}
                 </th>
                 <th>
-                    {{r.wrong}}
-                </th>
-                <th>
                     {{r.total}}
                 </th>
             </tr>
@@ -79,7 +73,6 @@
             {% endfor %}
         </table>
         <div>
-            <br/>
             <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
               <i class="fas fa-link"></i>
               Click Here to Return To Module Page
@@ -162,7 +155,6 @@
             {% endfor %}
         </table>
         <div>
-            <br/>
             <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
               <i class="fas fa-link"></i>
               Click Here to Return To Module Page

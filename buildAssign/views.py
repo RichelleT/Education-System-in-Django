@@ -156,10 +156,10 @@ def atPage(request, pk):
         return render(request, "assignPage.html", context)
 
 def aResultPg(request, pk):
-    resList = AssignResult.objects.filter(linked_module=pk)
+    resList = AssignResult.objects.filter(linked_assign=pk)
     #module_title = Module.objects.get(pk=pk)
     test_title = Answer.objects.get(pk=pk)
-    stuResList = AssignResult.objects.filter(attempted_by=request.user, linked_module=pk)
+    stuResList = AssignResult.objects.filter(attempted_by=request.user, linked_assign=pk)
 
     context = {
         'resList':resList,
