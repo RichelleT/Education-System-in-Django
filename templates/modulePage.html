@@ -8,6 +8,7 @@
     {% for group_for in request.user.groups.all %}
       {% if group_for.name == 'Educator' %}
       <div class="mt-2 pt-2">
+        <hr/>
         {% for m in modPage %}
         <p>
             <label class="labelCust3"><b>Module:</b> {{m.module_name}}</label>
@@ -15,10 +16,9 @@
         </p>
         {% endfor %}
     </div>
-        <p></p>
-        <p></p>
+        <hr/>
         <h3>&nbsp;Test(s):</h3>
-      <div class="container mx-auto mt-4">
+      <div class="container mx-auto">
         <div class="row">
         {% for mt in mtLst %}
         <div class="col-md-4">
@@ -38,12 +38,9 @@
             </div>
         </div>
         {% endfor %}
-        <p></p>
-        <p></p>
         <hr/>
-        <p></p>
         <h3>Assignment(s):</h3>
-        <div class="container mx-auto mt-4">
+        <div class="container mx-auto">
         <div class="row">
         {% for al in assignList %}
         <div class="col-md-4">
@@ -67,18 +64,18 @@
         {% endfor %}
     </div>
     </div> 
-    
         {% elif group_for.name == 'Student' %}
         <div class="mt-2 pt-2">
+            <hr/>
             {% for m in modPage %}
             <p>
                 <label class="labelCust3"><b>Module:</b> {{m.module_name}}</label>
             </p>
             {% endfor %}
         </div>
-        <p>&nbsp;</p>
+        <hr/>
         <h3>&nbsp;Test(s):</h3>
-        <div class="container mx-auto mt-4">
+        <div class="container mx-auto">
             <div class="row">
             {% for mt in mtLst %}
             <div class="col-md-4">
@@ -101,11 +98,9 @@
         </div>
 
     </div>
-    <p>&nbsp;</p>
     <hr/>
-    <p>&nbsp;</p>
     <h3>Assignment(s):</h3>
-    <div class="container mx-auto mt-4">
+    <div class="container mx-auto">
         <div class="row">
         {% for al in assignList %}
         <div class="col-md-4">
