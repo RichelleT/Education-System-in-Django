@@ -97,7 +97,7 @@ def modulePage(request, pk):
         'modPage':modPage,
         'mtLst':mtLst,
         'assignList': assignList,
-        'quesList': quesList,
+        #'quesList': quesList,
     }
     return render(request, "modulePage.html", context)
     #filter() returns a queryset (which is iterable)
