@@ -56,9 +56,11 @@
                     {% endfor %}
                     <h6 class="card-subtitle mb-2 text-muted"><b>Created At:</b> {{al.created_date}}</h6>
                     <br/>
-                    <a href="{% url 'assignPage' al.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Attempt Test</a>
-                    <br/>
                     <a href="{% url 'addAssignQ' al.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Add Question</a>
+                    <br/>
+                    <a href="{% url 'aResultPage' al.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>View Results</a>
+                    <br/>
+                    <a href="{% url 'assignPage' al.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Attempt Test</a>
                 </div>
             </div>
         </div>
@@ -116,9 +118,9 @@
                     {% endfor %}
                     <h6 class="card-subtitle mb-2 text-muted"><b>Created At:</b> {{al.created_date}}</h6>
                     <br/>
-                    {% comment %} <a href="{% url 'quizPage' mt.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Attempt Test</a> {% endcomment %}
+                    <a href="{% url 'assignPage' al.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Attempt Test</a>
                     <br/>
-                    {% comment %} <a href="{% url 'resultPage' mt.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>View Results</a> {% endcomment %}
+                    <a href="{% url 'aResultPage' al.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>View Results</a>
                 </div>
             </div>
         </div>

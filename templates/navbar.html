@@ -45,12 +45,13 @@
                     <li><a href="/addQuizQ/">Add Test Questions</a></li>
                   </ul>
                 </li>
-                <li class="dropdown"><a href="#"><span>Add Assignment</span> <i class="bi bi-chevron-down"></i></a>
+                <li><a class="nav-link scrollto" href="/addAssignment/">Add Assignment Set</a></li>
+                {% comment %} <li class="dropdown"><a href="#"><span>Add Assignment</span> <i class="bi bi-chevron-down"></i></a>
                   <ul>
                     <li><a href="/addAssignment/">Add Assignment Set</a></li>
-                    <li><a href="/addAssignQ/">Add Assignment Question</a></li>
+                    <li><a href="/addAssignment/">Add Assignment Question</a></li>
                   </ul>
-                </li>
+                </li> {% endcomment %}
                 <li><a class="nav-link scrollto" href="/moduleSel/">Modules</a></li>
                 <li><a class="getstarted scrollto" href="{% url 'logout' %}">Log Out</a></li>
               </ul>

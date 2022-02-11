@@ -26,7 +26,7 @@ class Answer(models.Model):
 class AssignResult(models.Model):
     link_ques = models.ForeignKey(Answer, on_delete=models.CASCADE, null=True) 
     linked_assign = models.ForeignKey(Assignment, on_delete=models.CASCADE, null=True)
-    linked_module = models.ForeignKey(Module, on_delete=models.CASCADE, null=True) 
+    #linked_module = models.ForeignKey(Module, on_delete=models.CASCADE, null=True) 
     attempted_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     correct = models.IntegerField(default=0)
     #wrong = models.IntegerField(default=0)

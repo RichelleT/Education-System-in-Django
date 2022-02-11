@@ -58,7 +58,7 @@ def addAnsw(request, pk):
                 form.created_date = current_datetime
 
                 form.save()
-            return redirect('/sucess/')
+            return redirect('/moduleSel/')
     else:
         mod_form = addAnswer()
 
@@ -73,6 +73,7 @@ def atPage(request, pk):
     if request.method == 'POST':
         question = Answer.objects.filter(link_assign=pk)
         #module = Module.objects.get(pk=pk)
+        ass = Assignment.objects.get(pk=pk)
         test = Answer.objects.get(link_assign=pk)
 
         score=0
@@ -128,6 +129,7 @@ def atPage(request, pk):
             total=total,
             grade=grade,
             #linked_module=module,
+            linked_assign=ass,
             attempted_time=current_datetime,
             attempted_by=user,
             #userAnsw=request.POST.get(q.quest),
@@ -152,24 +154,17 @@ def atPage(request, pk):
             'questions': questions
         }
         return render(request, "assignPage.html", context)
-"""
-save instance
-@login_required(login_url='/login/')
-def atPage(request, pk):
-    if request.method == 'POST':
-        question = Answer.objects.filter(link_assign=pk)
-        user = request.user
-        for q in question:
-            print(q.question)
-            print(answer)
-            userAnsw = request.POST.get(answer)
-        
 
-    else: 
-        questions = Answer.objects.filter(link_assign=pk)
+def aResultPg(request, pk):
+    resList = AssignResult.objects.filter(linked_module=pk)
+    #module_title = Module.objects.get(pk=pk)
+    test_title = Answer.objects.get(pk=pk)
+    stuResList = AssignResult.objects.filter(attempted_by=request.user, linked_module=pk)
 
-        context = {
-            'questions': questions
-        }
-        return render(request, "assignPage.html", context)
-"""
+    context = {
+        'resList':resList,
+        #'module_title': module_title,
+        'test_title':test_title,
+        'stuResList':stuResList,
+    }
+    return render(request, "fullAssignResult.html", context)
