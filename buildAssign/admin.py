@@ -5,11 +5,11 @@ class AnswerInline(admin.StackedInline):
     model = Answer
     extra = 0
 
-class ARInline(admin.TabularInline):
+class ARInline(admin.StackedInline):
     model = AssignResult
     extra = 0
 
-class FileInline(admin.TabularInline):
+class FileInline(admin.StackedInline):
     model = File
     extra = 0
 

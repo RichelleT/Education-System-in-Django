@@ -4,12 +4,18 @@ from django.contrib.auth.models import User
 from django.core.validators import FileExtensionValidator
 
 class Assignment(models.Model):
+    # LIMIT_CHOICES = (
+    #     ('1', '1'),
+    #     ('0', '0'),
+    # )
+
     linked_module = models.ForeignKey(Module, on_delete=models.CASCADE, null=True)
     assign_name = models.CharField(max_length=1000, default="")
     #must test if not working, remove answer field.
     #answer = models.CharField(max_length=5000, default="")
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     created_date = models.DateTimeField()
+    #limit = models.CharField(max_length=1, choices=LIMIT_CHOICES, blank=False, default='1')
 
     def __str__(self):
         return self.assign_name

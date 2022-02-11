@@ -43,14 +43,11 @@ def addAnsw(request, pk):
         host = request.user
         current_datetime = datetime.datetime.now(tz=timezone.utc) 
         mod_form = addAnswer(request.POST)
-        link = Assignment.objects.get(pk=pk)
-        #module = Module.objects.get(pk=pk)
+        link = Assignment.objects.get(pk=pk)       
 
-        if mod_form.is_valid(): #and add_form.is_valid():
+        if mod_form.is_valid(): #and lim > 0: #and add_form.is_valid():
             form = mod_form.save(commit=False)
 
-            # if form.linked_assign is None:
-            #     form.linked_assign = module
             if form.link_assign is None:
                 form.link_assign = link
 
@@ -60,7 +57,7 @@ def addAnsw(request, pk):
             if form.created_date is None:
                 form.created_date = current_datetime
 
-                form.save()
+            form.save()
             return redirect('/moduleSel/')
     else:
         mod_form = addAnswer()

@@ -7,7 +7,7 @@ class addAssignment(forms.ModelForm):
         fields = (
             'linked_module',
             'assign_name',
-            #'question',
+            #'limit',
             #'answer',
         )
         labels = {
