@@ -2,6 +2,8 @@ from django.db import models
 from testBuilder.models import Module
 from django.contrib.auth.models import User
 from django.core.validators import FileExtensionValidator
+from django_quill.fields import QuillField
+
 
 class Assignment(models.Model):
     linked_module = models.ForeignKey(Module, on_delete=models.CASCADE, null=True)
@@ -17,7 +19,10 @@ class Answer(models.Model):
     host = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     question = models.TextField(max_length=5000, default="")
     answer = models.TextField(max_length=5000, default="")
+    #question = QuillField()
+    #answer = QuillField()
     created_date = models.DateTimeField()
+    set_added = models.BooleanField(default=False)
 
     def __str__(self):
         return self.question
