@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'buildAssign',
     #'registerAdmin',
     'register',
+    'django_quill',
 ]
 
 MIDDLEWARE = [

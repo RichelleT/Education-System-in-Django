@@ -1,6 +1,7 @@
 {% load static %}
 {% include 'navbar.html' %}
 <link href="{% static 'css/testTable.css'%}" rel="stylesheet">
+<link href="{% static 'css/spacing.css'%}" rel="stylesheet">
 
 <div class="p-5 m-5">
     <form method='post' action=''>
@@ -8,7 +9,9 @@
         {% for q in questions %}
         <div class="card">
             <p></p>
+            {% comment %} <p>&nbsp;&nbsp;&nbsp;<b>Question:</b></p> {% endcomment %}
             <p>&nbsp;&nbsp;&nbsp;<b>Question:</b>&nbsp;&nbsp;{{q.quest}}</p>
+            {% comment %} <div class="spacing">{{q.quest.html|safe}}</div> {% endcomment %}
             <p>&nbsp;&nbsp;&nbsp;<b>Select Answer:</b></p>
             <div class="form-check">
                 <div class="form-check">

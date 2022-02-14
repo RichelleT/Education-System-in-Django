@@ -1,9 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User, Group
+from django_quill.fields import QuillField
 
 class Module(models.Model):
     module_name = models.CharField(max_length=120, default="")
-    module_desc = models.TextField(max_length=300, help_text="Resize textbox by dragging bottom right corner icon, if needed")
+    #module_desc = models.TextField(max_length=300, help_text="Resize textbox by dragging bottom right corner icon, if needed")
+    module_desc = QuillField()
     host = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     #participants = models.ManyToManyField(User, related_name='participants', blank=True)
 

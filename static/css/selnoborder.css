@@ -1,0 +1,9 @@
+select {
+    border: none;
+    width: 100%;
+}
+
+textarea{
+    border: none;
+    width: 100%;
+}

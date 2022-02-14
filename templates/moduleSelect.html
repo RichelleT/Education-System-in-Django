@@ -3,7 +3,6 @@
 <link href="{% static 'css/card.css'%}" rel="stylesheet">
 <link href="{% static 'css/tablesv2.css'%}" rel="stylesheet">
 
-
 <div class="container mt-5 pt-5">
     {% if user.is_authenticated %}
     {% for group_for in request.user.groups.all %}
@@ -17,7 +16,7 @@
                     <h5 class="card-title"><b>Module:</b> {{module.module_name}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{module.host}}</h6>
                     <br/>
-                    <p class="card-text"><b>Module Description: </b>{{module.module_desc}}</p>
+                    <p class="card-text"><b>Module Description: </b>{{module.module_desc.html|safe}}</p>
                     <br/>
                     <a href="{% url 'modulePage' module.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Select</a>
                 </div>
@@ -35,7 +34,7 @@
                         <h5 class="card-title"><b>Module:</b> {{module.module_name}}</h5>
                         <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{module.host}}</h6>
                         <br/>
-                        <p class="card-text"><b>Module Description: </b>{{module.module_desc}}</p>
+                        <p class="card-text"><b>Module Description: </b>{{module.module_desc.html|safe}}</p>
                         <br/>
                         <a href="{% url 'modulePage' module.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Select</a>
                     </div>
