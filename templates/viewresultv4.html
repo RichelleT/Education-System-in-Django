@@ -2,38 +2,66 @@
 {% include 'navbar.html' %}
 <link href="{% static 'css/tablesv2.css'%}" rel="stylesheet">
 <script src="{% static 'excellentexport.js' %}"></script> 
-<script >
-    function download_table_as_csv(table_id="id1", separator = ",") {
-      // Select rows from table_id
-      var rows = document.querySelectorAll("table#" + table_id + " tr");
-      // Construct csv
-      var csv = [];
-        //looping through the table
-      for (var i = 0; i < rows.length; i++) {
-          var row = [], cols = rows[i].querySelectorAll("td, th");
-             //looping through the tr
-          for (var j = 0; j < cols.length; j++) {
-             // removing space from the data
-              var data = cols[j].innerText.replace(/(\r\n|\n|\r)/gm, "").replace(/(\s\s)/gm, " ")
-               // removing double qoute from the data
-              data = data.replace(/"/g, `""`);
-              // Push escaped string
-              row.push(`"` + data + `"`);
-          }
-          csv.push(row.join(separator));
-      }
-      var csv_string = csv.join("\n");
-      // Download it
-      var filename = "export_" + table_id + "_" + new Date().toLocaleDateString() + ".csv";
-      var link = document.createElement("a");
-      link.style.display = "none";
-      link.setAttribute("target", "_blank");
-      link.setAttribute("href", "data:text/csv;charset=utf-8," + encodeURIComponent(csv_string));
-      link.setAttribute("download", filename);
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-  }
+<script type="text/javascript">
+    function tableToCSV() {
+
+        // Variable to store the final csv data
+        var csv_data = [];
+
+        // Get each row data
+        var rows = document.getElementsByTagName('tr');
+        for (var i = 0; i < rows.length; i++) {
+
+            // Get each column data
+            var cols = rows[i].querySelectorAll('td,th');
+
+            // Stores each csv row data
+            var csvrow = [];
+            for (var j = 0; j < cols.length; j++) {
+
+                // Get the text data of each cell
+                // of a row and push it to csvrow
+                csvrow.push(cols[j].innerHTML);
+            }
+
+            // Combine each column value with comma
+            csv_data.push(csvrow.join(","));
+        }
+
+        // Combine each row data with new line character
+        csv_data = csv_data.join('\n');
+
+        // Call this function to download csv file 
+        downloadCSVFile(csv_data);
+
+    }
+
+    function downloadCSVFile(csv_data) {
+
+        // Create CSV file object and feed
+        // our csv_data into it
+        CSVFile = new Blob([csv_data], {
+            type: "text/csv"
+        });
+
+        // Create to temporary link to initiate
+        // download process
+        var temp_link = document.createElement('a');
+
+        // Download csv file
+        temp_link.download = "GfG.csv";
+        var url = window.URL.createObjectURL(CSVFile);
+        temp_link.href = url;
+
+        // This link should not be displayed
+        temp_link.style.display = "none";
+        document.body.appendChild(temp_link);
+
+        // Automatically click the link to
+        // trigger download
+        temp_link.click();
+        document.body.removeChild(temp_link);
+    }
 </script>
 
 {% if user.is_authenticated %}
@@ -46,7 +74,7 @@
             <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
         </p>
         {% comment %} <h1>Module: {{module_title}} Test: {{test_title}}</h1> {% endcomment %}
-        <table class="fl-table" id="id1">
+        <table class="fl-table">
             <thead>
             <tr>
                 {% comment %} <th>
@@ -123,7 +151,7 @@
               <i class="fas fa-link"></i>
               Click Here to Return To Module Page
             </a>
-            <button class="btn btn-outline-primary w-100" onclick="download_table_as_csv();">Download CSV</button>
+            <button class="btn btn-outline-primary w-100" onclick="tableToCSV()">Download</button>
             {% comment %} <a download="somedata.xls" href="#" onclick="return ExcellentExport.excel(this, 'datatable', 'Sheet Name Here');">Export to Excel</a>
             <br/>
             <a download="somedata.csv" href="#" onclick="return ExcellentExport.csv(this, 'datatable');">Export to CSV</a>
@@ -139,7 +167,7 @@
             <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
         </p>
         {% comment %} <h1>Module: {{module_title}} Test: {{test_title}}</h1> {% endcomment %}
-        <table class="fl-table" id="id1">
+        <table class="fl-table">
             <thead>
             <tr>
                 {% comment %} <th>
@@ -216,7 +244,6 @@
               <i class="fas fa-link"></i>
               Click Here to Return To Module Page
             </a>
-            <button class="btn btn-outline-primary w-100" onclick="download_table_as_csv();">Download CSV</button>
           </div>
     </div> 
 </div>  
