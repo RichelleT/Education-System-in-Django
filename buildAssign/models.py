@@ -10,6 +10,7 @@ class Assignment(models.Model):
     assign_name = models.CharField(max_length=1000, default="")
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     created_date = models.DateTimeField()
+    set_added = models.BooleanField(default=False)
 
     def __str__(self):
         return self.assign_name

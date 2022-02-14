@@ -57,7 +57,7 @@ def addAnsw(request, pk):
             if form.created_date is None:
                 form.created_date = current_datetime
 
-            #set_bool = Answer.objects.filter(pk=pk).update(set_added=True)
+            set_bool = Assignment.objects.filter(pk=pk).update(set_added=True)
 
             form.save()
             return redirect('/moduleSel/')

@@ -93,13 +93,14 @@ def modulePage(request, pk):
     mtLst = Test.objects.filter(module_sel=pk)
     #resList = quizResult.objects.filter(linked_module=pk)
     assignList = Assignment.objects.filter(linked_module=pk)
+    answList = Answer.objects.filter(link_assign=pk)
     #quesList = Answer.objects.filter(pk=pk)
 
     context = {
         'modPage':modPage,
         'mtLst':mtLst,
         'assignList': assignList,
-        #'quesList': quesList,
+        'answList': answList,
     }
     return render(request, "modulePage.html", context)
     #filter() returns a queryset (which is iterable)
