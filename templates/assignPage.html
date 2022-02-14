@@ -13,7 +13,7 @@
             {% comment %} <p>&nbsp;&nbsp;&nbsp;<b>Question:</b>&nbsp;&nbsp;{{q.question}}</p> {% endcomment %}
             <p>&nbsp;&nbsp;&nbsp;<b>Question:</b></p>
             <div class="spacing">
-                    {{Answer.question}}
+                    {{q.question|safe}}
             </div>
             <p></p>
             <p>&nbsp;&nbsp;&nbsp;<b>Input your answer:</b></p>

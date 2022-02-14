@@ -75,7 +75,7 @@ def atPage(request, pk):
         #module = Module.objects.get(pk=pk)
         ass = Assignment.objects.get(pk=pk)
         test = Answer.objects.get(link_assign=pk)
-
+        
         score=0
         #wrong=0
         correct=0

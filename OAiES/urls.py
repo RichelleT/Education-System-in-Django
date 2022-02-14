@@ -17,7 +17,8 @@ from register.views import registerUsr
 urlpatterns = [
     #main page
     path('', landing_view, name='landing'),
-
+    path('tinymce/', include('tinymce.urls')),
+    
     path('accounts/', include('django.contrib.auth.urls')),
     path('landing/', landing_view, name="landingP"),
     path('login/', auth_views.LoginView.as_view(template_name='login.html')),
