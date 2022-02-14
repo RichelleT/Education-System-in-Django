@@ -18,11 +18,11 @@ class Answer(models.Model):
     link_assign = models.ForeignKey(Assignment, on_delete=models.CASCADE, null=True)
     host = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     #question = models.TextField(max_length=5000, default="")
-    answer = models.TextField(max_length=5000, default="")
+    answer = models.CharField(max_length=5000, default="")
     question = tinymce_models.HTMLField()
     #answer = QuillField()
     created_date = models.DateTimeField()
-    set_added = models.BooleanField(default=False)
+    #set_added = models.BooleanField(default=False)
 
     def __str__(self):
         return self.question

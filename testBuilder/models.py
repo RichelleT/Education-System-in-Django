@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User, Group
 from django_quill.fields import QuillField
+from tinymce import models as tinymce_models
 
 class Module(models.Model):
     module_name = models.CharField(max_length=120, default="")
@@ -37,7 +38,8 @@ class Quiz(models.Model):
             ('option4', 'Answer Option 4'),
         )
     test_sel = models.ForeignKey(Test, on_delete=models.CASCADE, null=True)
-    quest = models.CharField(max_length=500, default="")
+    #quest = models.CharField(max_length=500, default="")
+    quest = tinymce_models.HTMLField()
     op1 = models.CharField(max_length=300, default="")
     op2 = models.CharField(max_length=300, default="")
     op3 = models.CharField(max_length=300, default="")

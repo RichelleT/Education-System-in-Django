@@ -14,7 +14,6 @@ from django.utils import timezone
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 
-
 @login_required(login_url='/login/')
 @group_required('Educator', login_url='/login/')
 def addAssign(request):
@@ -45,7 +44,8 @@ def addAnsw(request, pk):
         mod_form = addAnswer(request.POST)
         link = Assignment.objects.get(pk=pk)       
 
-        if mod_form.is_valid(): 
+        if mod_form.is_valid():
+
             form = mod_form.save(commit=False)
 
             if form.link_assign is None:
@@ -56,6 +56,8 @@ def addAnsw(request, pk):
 
             if form.created_date is None:
                 form.created_date = current_datetime
+
+            #set_bool = Answer.objects.filter(pk=pk).update(set_added=True)
 
             form.save()
             return redirect('/moduleSel/')
