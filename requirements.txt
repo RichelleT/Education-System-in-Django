@@ -1,0 +1,5 @@
+Django==3.2
+django_quill==0.1.0
+django_quill_editor==0.1.40
+django_tinymce==3.4.0
+pdfplumber==0.6.0
