@@ -92,11 +92,17 @@ def atPage(request, pk):
             oriAnsw = q.answer
             userAnsw = request.POST.get('my_textarea')
             print(userAnsw)
-        
-        oriL = list(oriAnsw.split())
+        lwrOriAnsw = oriAnsw.lower()
+        print("lowercase test:", lwrOriAnsw)
+
+        oriL = list(lwrOriAnsw.split())
         print("Original Answer Splited Lines:", oriL)
         print('Length:', len(oriL))
-        userL = userAnsw.split()
+
+        lwrUsrAnsw = userAnsw.lower()
+        print("lowercase user input test", lwrUsrAnsw)
+
+        userL = lwrUsrAnsw.split()
         print("User Input Splited Line:", userL)
         print('Length:', len(userL))
 
