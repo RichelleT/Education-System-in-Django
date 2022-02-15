@@ -76,7 +76,7 @@ def addTests(request):
                 old_form.test_date = current_datetime
 
                 old_form.save()
-            return redirect('/addQuizQ/')
+            return redirect('/moduleSel/')
     else:
         form = addTest()
 
@@ -108,18 +108,27 @@ def modulePage(request, pk):
     
 @login_required(login_url='/login/')
 @group_required('Educator', login_url='/login/')
-def addQuiz(request):
+def addQuiz(request, pk):
+    link = Test.objects.get(pk=pk)
+
     if request.method == 'POST':
         form = addQuestions(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('/addQuizQ/')
+            mod_form = form.save(commit=False)
+
+            if mod_form.test_sel is None:
+                mod_form.test_sel = link
+            
+            mod_form.save()
+
+            return redirect('/moduleSel/')
             #add page redir
     else:
         form = addQuestions()
 
         context = {
-            'form': form
+            'form': form,
+            'mtLst': mtLst,
         }
         return render(request, "addQuiz.html", context)
 
@@ -216,10 +225,10 @@ def qrPage(request, pk):
         return render(request, "quizPage.html", context)
 
 def resultPg(request, pk):
-    resList = quizResult.objects.filter(linked_module=pk)
+    resList = quizResult.objects.filter(linked_test=pk)
     #module_title = Module.objects.get(pk=pk)
     test_title = Test.objects.get(pk=pk)
-    stuResList = quizResult.objects.filter(attempted_by=request.user, linked_module=pk)
+    stuResList = quizResult.objects.filter(attempted_by=request.user, linked_test=pk)
 
     context = {
         'resList':resList,

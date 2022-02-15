@@ -34,7 +34,16 @@ class addTest(forms.ModelForm):
 class addQuestions(forms.ModelForm):
     class Meta:
         model = Quiz
-        fields = "__all__" 
+        fields = (
+            'test_sel',
+            'quest',
+            'op1',
+            'op2',
+            'op3',
+            'op4',
+            'answ',
+            
+        )
         labels  = {
             'test_sel':'Please Select Test Set', 
             'quest':'Input Question', 

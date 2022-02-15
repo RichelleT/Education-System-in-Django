@@ -49,6 +49,7 @@ class Quiz(models.Model):
     # op3 = models.CharField(max_length=300, default="")
     # op4 = models.CharField(max_length=300, default="")
     answ = models.CharField(max_length=7, choices=ANSWER_CHOICES, blank=False, default='')
+    #linked_assign = models.ForeignKey(Module, on_delete=models.CASCADE, null=True) #linking result to quiz questions model
     # answ = models.CharField(
     #     max_length=300, 
     #     help_text="Input option1 for the first option, option2 for the second option",
