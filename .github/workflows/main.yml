@@ -34,6 +34,21 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      - name: Delete Deployment Environment
+
+      # You may pin to the exact commit or the version.
+      # uses: strumwolf/delete-deployment-environment@45c821e46baa405e25410700fe2e9643929706a0
+        uses: strumwolf/delete-deployment-environment@v2.0.1
+        with:
+          # GitHub access token
+              token: 
+          # Environment to be deleted
+              environment: 
+          # Only remove deployments, keep the environment. Defaults to false
+              onlyRemoveDeployments: # optional
+          # Only inactive deployments, keep the environment and deployments. Defaults to false
+            onlyDeactivateDeployments: # optional
 
 
 
