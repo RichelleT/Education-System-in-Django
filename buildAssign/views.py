@@ -183,14 +183,14 @@ def atPage(request, pk):
 def aResultPg(request, pk):
     resList = AssignResult.objects.filter(linked_assign=pk)
     #module_title = Module.objects.get(pk=pk)
-    test_title = Answer.objects.get(pk=pk)
+    #test_title = Answer.objects.get(pk=pk)
     assign_title = Assignment.objects.get(pk=pk)
     stuResList = AssignResult.objects.filter(attempted_by=request.user, linked_assign=pk)
 
     context = {
         'resList':resList,
         'assign_title': assign_title,
-        'test_title':test_title,
+        #'test_title':test_title,
         'stuResList':stuResList,
         #'module_title': module_title,
     }
