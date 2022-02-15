@@ -8,6 +8,7 @@
     {% for group_for in request.user.groups.all %}
       {% if group_for.name == 'Educator' %}
     <div class="container mx-auto mt-4">
+        <h3>&nbsp;Module(s):</h3>
         <div class="row">
         {% for module in modlist %}
           <div class="col-md-4">
@@ -21,11 +22,13 @@
                     <a href="{% url 'modulePage' module.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Select</a>
                 </div>
             </div>
+            <div></div>
         </div>
         {% endfor %}
     </div>
         {% elif group_for.name == 'Student' %}
         <div class="container mx-auto mt-4">
+            <h3>&nbsp;Module(s):</h3>
             <div class="row">
             {% for module in modlist %}
               <div class="col-md-4">
@@ -39,6 +42,7 @@
                         <a href="{% url 'modulePage' module.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Select</a>
                     </div>
                 </div>
+                <div></div>
             </div>
             {% endfor %}
         </div>
@@ -59,6 +63,7 @@
                     <label class="labelCust4">Only <b>students</b> and <b>educators</b> is allowed here.</label>
                 </div>
             </div>
+            <div></div>
         </div>
       {% endif %}
     {% endfor %}
