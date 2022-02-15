@@ -27,7 +27,7 @@ def addMod(request):
                 form.host = host
                 form.save()
             #add_form.save()
-            return redirect('/addTests/')
+            return redirect('/select/')
     else:
         mod_form = addModule()
         #add_form = addUser()

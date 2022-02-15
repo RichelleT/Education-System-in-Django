@@ -30,3 +30,6 @@ def sucess_view(request, *args, **kwargs):
 #change html file to preview test UI
 def test_view(request, *args, **kwargs):
     return render(request, "testTableW.html", {})
+
+def select_view(request, *args, **kwargs):
+    return render(request, "addSelect.html", {})
