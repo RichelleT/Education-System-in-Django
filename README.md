@@ -22,6 +22,8 @@
 | Enter `pip install mysqlclient` |
 | Enter `pip install django-utils-six` |
 | Enter `pip install pdfplumber` |
+| Enter `pip install django-quill-editor` |
+| Enter `pip install django-tinymce` |
 | Enter `pip install virtualenv` |
 | Enter `pip install virtualenvwrapper-win`|
 | Enter `mkvirtualenv foldername`|
@@ -58,6 +60,8 @@
 | Enter `pip install mysqlclient` |
 | Enter `pip install django-utils-six` |
 | Enter `pip install pdfplumber` |
+| Enter `pip install django-quill-editor` |
+| Enter `pip install django-tinymce` |
 | Download project zip |
 | Extract downloaded zip to virtual env folder created |
 | Open the folder containing the manage.py file, <br/>then, right click on the folder name on the folder path, <br/>then select `open in terminal`<br/><br/> Or just manually cd into the folder containing the manage.py file in terminal| **Always Do This before running the server or performing runserver** |
