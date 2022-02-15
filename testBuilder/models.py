@@ -40,10 +40,14 @@ class Quiz(models.Model):
     test_sel = models.ForeignKey(Test, on_delete=models.CASCADE, null=True)
     #quest = models.CharField(max_length=500, default="")
     quest = tinymce_models.HTMLField()
-    op1 = models.CharField(max_length=300, default="")
-    op2 = models.CharField(max_length=300, default="")
-    op3 = models.CharField(max_length=300, default="")
-    op4 = models.CharField(max_length=300, default="")
+    op1 = tinymce_models.HTMLField()
+    op2 = tinymce_models.HTMLField()
+    op3 = tinymce_models.HTMLField()
+    op4 = tinymce_models.HTMLField()
+    # op1 = models.CharField(max_length=300, default="")
+    # op2 = models.CharField(max_length=300, default="")
+    # op3 = models.CharField(max_length=300, default="")
+    # op4 = models.CharField(max_length=300, default="")
     answ = models.CharField(max_length=7, choices=ANSWER_CHOICES, blank=False, default='')
     # answ = models.CharField(
     #     max_length=300, 

@@ -1,6 +1,39 @@
 {% load static %}
 {% include 'navbar.html' %}
 <link href="{% static 'css/tablesv2.css'%}" rel="stylesheet">
+<script >
+    function download_table_as_csv(table_id="id1", separator = ",") {
+      // Select rows from table_id
+      var rows = document.querySelectorAll("table#" + table_id + " tr");
+      // Construct csv
+      var csv = [];
+        //looping through the table
+      for (var i = 0; i < rows.length; i++) {
+          var row = [], cols = rows[i].querySelectorAll("td, th");
+             //looping through the tr
+          for (var j = 0; j < cols.length; j++) {
+             // removing space from the data
+              var data = cols[j].innerText.replace(/(\r\n|\n|\r)/gm, "").replace(/(\s\s)/gm, " ")
+               // removing double qoute from the data
+              data = data.replace(/"/g, `""`);
+              // Push escaped string
+              row.push(`"` + data + `"`);
+          }
+          csv.push(row.join(separator));
+      }
+      var csv_string = csv.join("\n");
+      // Download it
+      var filename = "export_" + table_id + "_" + new Date().toLocaleDateString() + ".csv";
+      var link = document.createElement("a");
+      link.style.display = "none";
+      link.setAttribute("target", "_blank");
+      link.setAttribute("href", "data:text/csv;charset=utf-8," + encodeURIComponent(csv_string));
+      link.setAttribute("download", filename);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+  }
+</script>
 
 {% if user.is_authenticated %}
 {% for group_for in request.user.groups.all %}
@@ -8,11 +41,11 @@
 <div class="p-5 m-5">
     <div class="table-wrapper">
         <p>
-            <label class="labelCust3"><b>Module:</b> {{module_title}}</label>
-            <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
+            <label class="labelCust3"><b>Module:</b> {{assign_title.linked_module}}</label>
+            <label class="labelCust3"><b>Assignment Set:</b> {{assign_title}}</label>
         </p>
         {% comment %} <h1>Module: {{module_title}} Test: {{test_title}}</h1> {% endcomment %}
-        <table class="fl-table">
+        <table class="fl-table" id="id1">
             <thead>
             <tr>
                 {% comment %} <th>
@@ -77,6 +110,7 @@
               <i class="fas fa-link"></i>
               Click Here to Return To Module Page
             </a>
+            <button class="btn btn-outline-primary w-100" onclick="download_table_as_csv();">Download CSV</button>
           </div>
     </div> 
 </div>   
@@ -84,11 +118,11 @@
 <div class="p-5 m-5">
     <div class="table-wrapper">
         <p>
-            <label class="labelCust3"><b>Module:</b> {{module_title}}</label>
-            <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
+            <label class="labelCust3"><b>Module:</b> {{assign_title.linked_module}}</label>
+            <label class="labelCust3"><b>Test:</b> {{assign_title}}</label>
         </p>
         {% comment %} <h1>Module: {{module_title}} Test: {{test_title}}</h1> {% endcomment %}
-        <table class="fl-table">
+        <table class="fl-table" id="id1">
             <thead>
             <tr>
                 {% comment %} <th>
@@ -159,6 +193,7 @@
               <i class="fas fa-link"></i>
               Click Here to Return To Module Page
             </a>
+            <button class="btn btn-outline-primary w-100" onclick="download_table_as_csv();">Download CSV</button>
           </div>
     </div> 
 </div>  
