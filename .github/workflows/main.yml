@@ -34,7 +34,6 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      
-      - name: Delete Deployment Environment
-        uses: strumwolf/delete-deployment-environment@v2.0.1
+
+
 
