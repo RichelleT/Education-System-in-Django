@@ -128,7 +128,7 @@ def addQuiz(request, pk):
 
         context = {
             'form': form,
-            'mtLst': mtLst,
+            #'mtLst': mtLst,
         }
         return render(request, "addQuiz.html", context)
 
