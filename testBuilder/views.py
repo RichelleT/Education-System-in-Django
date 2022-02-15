@@ -129,10 +129,10 @@ def qrPage(request, pk):
         print(request.POST)
         questions = Quiz.objects.filter(test_sel=pk)
         test = Test.objects.get(pk=pk)
-        module = Module.objects.get(pk=pk)
+        #module = Module.objects.get(pk=pk)
         #res = quizResult.objects.get(pk=pk)
         print(test)
-        print(module)
+        #print(module)
         score=0
         wrong=0
         correct=0
@@ -178,8 +178,9 @@ def qrPage(request, pk):
         elif percent <= 40:
             lettergrade = "F"
 
+        #print(test.linked_module)
         insert_to_db = quizResult.objects.create(
-            linked_module=module,
+            #linked_module=test.linked_module,
             linked_test=test,
             correct=correct, 
             wrong=wrong, 
