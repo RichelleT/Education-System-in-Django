@@ -17,7 +17,7 @@
 | Open a command prompt |
 | Enter `mysql -u root -p` and enter password |
 | Enter `SET PASSWORD FOR root@localhost='';` |
-| Enter `CREATE DATABASE oaies;` |
+| Enter `CREATE DATABASE oaies;` | Or any other database name. But it must be changed in the settings.py file |
 | Open scripts folder (in the python folder in appdata/program) where pip is located in cmd |
 | Enter `pip install mysqlclient` |
 | Enter `pip install django-utils-six` |
@@ -49,7 +49,7 @@
 | Open a terminal window |
 | Enter `mysql -u root -p` and enter password | Note: try `mysql.server start` if unable to start sql
 | Enter `SET PASSWORD FOR root@localhost='';` |
-| Enter `CREATE DATABASE oaies;` |
+| Enter `CREATE DATABASE oaies;` | Or any other database name. But it must be changed in the settings.py file |
 | Enter `brew install python3`|
 | Enter `sudo easy_install pip`|
 | Enter `sudo pip install virtualenv`|
@@ -96,22 +96,3 @@
 |10| To create admin account, <br/><br/>  **Comment out `group_required` only** (like in the above step), <br/><br/> **Go to** http://127.0.0.1:8000/registerUser/ and **create admin account, <br/><br/> then uncomment `group_required` again.** <br/><br/> | (**Note: Do this while logged into the superuser account**) <br/><br/> **(Note: This is important to add users for the application/system)** <br/><br/>**(Warning: Must uncomment `group_required` Otherwise, any user can create users)**|
 |11| Once admin account(s) is created, **Log out of superuser account** and **login to created admin account**| 
 |12|**(While Logged into the Admin Account)** <br/><br/> Create Educator account(s) and Student account(s)| Note: <br/><br/> Educator accounts can create test/quizes/modules and etc. <br/><br/> Student accounts can attempt created tests/quizes |
-
-
-
-
-
-<!-- 
-## Dependencies
-
-```sh
-pip install django-utils-six
-```
-```sh
-pip install mysqlclient
-```
-```sh
-pip install pdfplumber
-```
-|7| These are the total **groups** to add|![Guide11](/static/images/guide11.png)| 
--->
