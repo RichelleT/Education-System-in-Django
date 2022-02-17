@@ -111,3 +111,34 @@
 |Select Dump20220217 folder inside the Database folder to be imported|
 |Superuser Account Credentials <br/><br/>- To **access admin panel**| Username: Owner <br/><br/> Password: oaies@123|
 |Admin Account Credentials <br/><br/>- Account used to create new admin, educator, and student accounts|Username: Admin <br/><br/> Password: oaies@123|
+
+## Step-by-Step Manual Superuser Creation
+|Step |
+|-------------|
+|**Must** have completed the setup **and** either the new database config or the existing database import config|
+|Use existing superuser account to login to system|
+|Access admin panel @ http://127.0.0.1:8000/admin/|
+|Create New User|
+|Enter desired credentials/info|
+|Set `as staff` and `superuser` status `on`|
+|Create New Profile|
+|Link the new profile to new user <br/><br/>**- important as profile model is linked to the user model**|
+|Done|
+
+## Step-by-Step Manual Admin Creation
+|Step | 
+|-------------|
+|Log into the existing admin account|
+|Go to http://127.0.0.1:8000/registerUser/|
+|Create a new admin account <br/><br/>**- double check role selection and select Admin**|
+|Done|
+
+##To remove two existing user accounts in existing database imported
+### Warning: Do not perform this step before creating your own superuser and admin account and before double checking newly created superuser and admin account works
+|Step |
+|-------------|
+|Login to superuser account|
+|Go to http://127.0.0.1:8000/admin/|
+|Select accounts to be deleted|
+|Delete them|
+|Done|
