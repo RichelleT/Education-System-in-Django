@@ -6,6 +6,9 @@
 - [MacOS Setup Guide](#MacOS-Step-by-Step-Setup-Manual)
 - [New Database - Configuration](#Step-by-Step-One-Time-Configuration)
 - [Existing Database Import - Configuration](#Step-by-Step-Existing-Database-Configuration)
+- [Guide to manually create Superuser](#Step-by-Step-Manual-Superuser-Creation)
+- [Guide to manually create Admin](#Step-by-Step-Manual-Admin-Creation)
+- [Guide to remove 2 existing user accounts in existing imported database](#To-remove-two-existing-user-accounts-in-existing-database-imported)
 
 ## Windows Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
@@ -101,6 +104,7 @@
 |12|**(While Logged into the Admin Account)** <br/><br/> Create Educator account(s) and Student account(s)| Note: <br/><br/> Educator accounts can create test/quizes/modules and etc. <br/><br/> Student accounts can attempt created tests/quizes |
 
 ## Step-by-Step Existing Database Configuration
+
 |Step | Note |
 |-------------|------------|
 |Follow setup manual for your specific OS in the Manuals folder first then perform the below steps|
@@ -113,6 +117,7 @@
 |Admin Account Credentials <br/><br/>- Account used to create new admin, educator, and student accounts|Username: Admin <br/><br/> Password: oaies@123|
 
 ## Step-by-Step Manual Superuser Creation
+
 |Step |
 |-------------|
 |**Must** have completed the setup **and** either the new database config or the existing database import config|
@@ -126,6 +131,7 @@
 |Done|
 
 ## Step-by-Step Manual Admin Creation
+
 |Step | 
 |-------------|
 |Log into the existing admin account|
@@ -133,8 +139,10 @@
 |Create a new admin account <br/><br/>**- double check role selection and select Admin**|
 |Done|
 
-##To remove two existing user accounts in existing database imported
+## To remove two existing user accounts in existing database imported
+### Note: Only for those who had used the imported database
 ### Warning: Do not perform this step before creating your own superuser and admin account and before double checking newly created superuser and admin account works
+
 |Step |
 |-------------|
 |Login to superuser account|
