@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'OAiES.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', #change the engine if you would like to change databases
+        'ENGINE': 'django.db.backends.mysql', #change the engine if you would like to change databases 
         'NAME': 'OAiES', #change the name of the database if using another custom database
         'HOST': '127.0.0.1',
         'PORT': '3306',
