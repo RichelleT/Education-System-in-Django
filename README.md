@@ -6,9 +6,9 @@
 - [MacOS Setup Guide](#MacOS-Step-by-Step-Setup-Manual)
 - [New Database - Configuration](#Step-by-Step-One-Time-Configuration)
 - [Existing Database Import - Configuration](#Step-by-Step-Existing-Database-Configuration)
-- [Guide to manually create Superuser](#Step-by-Step-Manual-Superuser-Creation)
-- [Guide to manually create Admin](#Step-by-Step-Manual-Admin-Creation)
-- [Guide to remove 2 existing user accounts in existing imported database](#To-remove-two-existing-user-accounts-in-existing-database-imported)
+  - [Guide to manually create Superuser](#Step-by-Step-Manual-Superuser-Creation)
+  - [Guide to manually create Admin](#Step-by-Step-Manual-Admin-Creation)
+  - [Guide to remove 2 existing user accounts in existing imported database](#To-remove-two-existing-user-accounts-in-existing-database-imported)
 
 ## Windows Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
