@@ -101,3 +101,13 @@
 |12|**(While Logged into the Admin Account)** <br/><br/> Create Educator account(s) and Student account(s)| Note: <br/><br/> Educator accounts can create test/quizes/modules and etc. <br/><br/> Student accounts can attempt created tests/quizes |
 
 ## Step-by-Step Existing Database Configuration
+|Step | Note |
+|-------------|------------|
+|Follow setup manual for your specific OS in the Manuals folder first then perform the below steps|
+|Download MySQL workbench|
+|Open the database folder|
+|Select Instance of mysql connection|
+|Click on data import/restore|
+|Select Dump20220217 folder inside the Database folder to be imported|
+|Superuser Account Credentials <br/><br/>- To **access admin panel**| Username: Owner <br/><br/> Password: oaies@123|
+|Admin Account Credentials <br/><br/>- Account used to create new admin, educator, and student accounts|Username: Admin <br/><br/> Password: oaies@123|
