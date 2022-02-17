@@ -2,7 +2,7 @@
 
 - [Windows Setup Guide](#Windows-Step-by-Step-Setup-Manual)
 - [MacOS Setup Guide](#MacOS-Step-by-Step-Setup-Manual)
-- [Configuration (Must Do)](#Step-by-Step-Configuration)
+- [Configuration (Must Do)](#Step-by-Step-One-Time-Configuration)
 
 ## Windows Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
@@ -71,7 +71,7 @@
 | Press ctrl+C to stop server from running |
 | Perform these steps next - [Configuration](#Step-by-Step-Configuration) |
 
-## Step-by-Step Configuration
+## Step-by-Step One-Time Configuration
 ### Warning: This is required (only once during setup for the first time/or the resetting of the database), if not you cannot use the system/application
 ### Warning: Please do not skip any steps, unless it is an optional steps marked with `+`
 
