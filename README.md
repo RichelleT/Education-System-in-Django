@@ -12,6 +12,7 @@
 
 ## Windows Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
+-[Return to Table of Contents](#Table-of-Contents)
 
 |Description | Note |
 |-------------|------------|
@@ -45,6 +46,7 @@
 ## MacOS Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
 ### Warning: Please install homebrew for your specific OS
+-[Return to Table of Contents](#Table-of-Contents)
 
 | Description | Note |
 |-------------|------------|
@@ -80,6 +82,7 @@
 ## Step-by-Step One-Time Configuration
 ### Warning: This is required (only once during setup for the first time/or the resetting of the database), if not you cannot use the system/application
 ### Warning: Please do not skip any steps, unless it is an optional steps marked with `+`
+-[Return to Table of Contents](#Table-of-Contents)
 
 |Step| Description | Screenshot/Note |
 |-----|-------------|---------|
@@ -104,6 +107,7 @@
 |12|**(While Logged into the Admin Account)** <br/><br/> Create Educator account(s) and Student account(s)| Note: <br/><br/> Educator accounts can create test/quizes/modules and etc. <br/><br/> Student accounts can attempt created tests/quizes |
 
 ## Step-by-Step Existing Database Configuration
+-[Return to Table of Contents](#Table-of-Contents)
 
 |Step | Note |
 |-------------|------------|
@@ -117,6 +121,7 @@
 |Admin Account Credentials <br/><br/>- Account used to create new admin, educator, and student accounts|Username: Admin <br/><br/> Password: oaies@123|
 
 ## Step-by-Step Manual Superuser Creation
+-[Return to Table of Contents](#Table-of-Contents)
 
 |Step |
 |-------------|
@@ -131,6 +136,7 @@
 |Done|
 
 ## Step-by-Step Manual Admin Creation
+-[Return to Table of Contents](#Table-of-Contents)
 
 |Step | 
 |-------------|
@@ -142,6 +148,7 @@
 ## To remove two existing user accounts in existing database imported
 ### Note: Only for those who had used the imported database
 ### Warning: Do not perform this step before creating your own superuser and admin account and before double checking newly created superuser and admin account works
+-[Return to Table of Contents](#Table-of-Contents)
 
 |Step |
 |-------------|
