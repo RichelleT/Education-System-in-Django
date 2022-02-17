@@ -1,11 +1,18 @@
 ## Table of Contents
+### Note: Setup **must** be done
+### Note: Either Fresh Database Configuration **OR** Database Import Configuration **must** be done
 
 - [Windows Setup Guide](#Windows-Step-by-Step-Setup-Manual)
 - [MacOS Setup Guide](#MacOS-Step-by-Step-Setup-Manual)
-- [Configuration (Must Do)](#Step-by-Step-Configuration)
+- [New Database - Configuration](#Step-by-Step-One-Time-Configuration)
+- [Existing Database Import - Configuration](#Step-by-Step-Existing-Database-Configuration)
+- [Guide to manually create Superuser](#Step-by-Step-Manual-Superuser-Creation)
+- [Guide to manually create Admin](#Step-by-Step-Manual-Admin-Creation)
+- [Guide to remove 2 existing user accounts in existing imported database](#To-remove-two-existing-user-accounts-in-existing-database-imported)
 
 ## Windows Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
+- [Return to Table of Contents](#Table-of-Contents)
 
 |Description | Note |
 |-------------|------------|
@@ -39,6 +46,7 @@
 ## MacOS Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
 ### Warning: Please install homebrew for your specific OS
+- [Return to Table of Contents](#Table-of-Contents)
 
 | Description | Note |
 |-------------|------------|
@@ -71,9 +79,10 @@
 | Press ctrl+C to stop server from running |
 | Perform these steps next - [Configuration](#Step-by-Step-Configuration) |
 
-## Step-by-Step Configuration
+## Step-by-Step One-Time Configuration
 ### Warning: This is required (only once during setup for the first time/or the resetting of the database), if not you cannot use the system/application
 ### Warning: Please do not skip any steps, unless it is an optional steps marked with `+`
+- [Return to Table of Contents](#Table-of-Contents)
 
 |Step| Description | Screenshot/Note |
 |-----|-------------|---------|
@@ -96,3 +105,55 @@
 |10| To create admin account, <br/><br/>  **Comment out `group_required` only** (like in the above step), <br/><br/> **Go to** http://127.0.0.1:8000/registerUser/ and **create admin account, <br/><br/> then uncomment `group_required` again.** <br/><br/> | (**Note: Do this while logged into the superuser account**) <br/><br/> **(Note: This is important to add users for the application/system)** <br/><br/>**(Warning: Must uncomment `group_required` Otherwise, any user can create users)**|
 |11| Once admin account(s) is created, **Log out of superuser account** and **login to created admin account**| 
 |12|**(While Logged into the Admin Account)** <br/><br/> Create Educator account(s) and Student account(s)| Note: <br/><br/> Educator accounts can create test/quizes/modules and etc. <br/><br/> Student accounts can attempt created tests/quizes |
+
+## Step-by-Step Existing Database Configuration
+- [Return to Table of Contents](#Table-of-Contents)
+
+|Step | Note |
+|-------------|------------|
+|Follow setup manual for your specific OS in the Manuals folder first then perform the below steps|
+|Download MySQL workbench|
+|Open the database folder|
+|Select Instance of mysql connection|
+|Click on data import/restore|
+|Select Dump20220217 folder inside the Database folder to be imported|
+|Superuser Account Credentials <br/><br/>- To **access admin panel**| Username: Owner <br/><br/> Password: oaies@123|
+|Admin Account Credentials <br/><br/>- Account used to create new admin, educator, and student accounts|Username: Admin <br/><br/> Password: oaies@123|
+
+## Step-by-Step Manual Superuser Creation
+- [Return to Table of Contents](#Table-of-Contents)
+
+|Step |
+|-------------|
+|**Must** have completed the setup **and** either the new database config or the existing database import config|
+|Use existing superuser account to login to system|
+|Access admin panel @ http://127.0.0.1:8000/admin/|
+|Create New User|
+|Enter desired credentials/info|
+|Set `as staff` and `superuser` status `on`|
+|Create New Profile|
+|Link the new profile to new user <br/><br/>**- important as profile model is linked to the user model**|
+|Done|
+
+## Step-by-Step Manual Admin Creation
+- [Return to Table of Contents](#Table-of-Contents)
+
+|Step | 
+|-------------|
+|Log into the existing admin account|
+|Go to http://127.0.0.1:8000/registerUser/|
+|Create a new admin account <br/><br/>**- double check role selection and select Admin**|
+|Done|
+
+## To remove two existing user accounts in existing database imported
+### Note: Only for those who had used the imported database
+### Warning: Do not perform this step before creating your own superuser and admin account and before double checking newly created superuser and admin account works
+- [Return to Table of Contents](#Table-of-Contents)
+
+|Step |
+|-------------|
+|Login to superuser account|
+|Go to http://127.0.0.1:8000/admin/|
+|Select accounts to be deleted|
+|Delete them|
+|Done|
