@@ -4,7 +4,8 @@
 
 - [Windows Setup Guide](#Windows-Step-by-Step-Setup-Manual)
 - [MacOS Setup Guide](#MacOS-Step-by-Step-Setup-Manual)
-- [Fresh database - Configuration](#Step-by-Step-One-Time-Configuration)
+- [New Database - Configuration](#Step-by-Step-One-Time-Configuration)
+- [Existing Database Import - Configuration](#Step-by-Step-Existing-Database-Configuration)
 
 ## Windows Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
@@ -98,3 +99,5 @@
 |10| To create admin account, <br/><br/>  **Comment out `group_required` only** (like in the above step), <br/><br/> **Go to** http://127.0.0.1:8000/registerUser/ and **create admin account, <br/><br/> then uncomment `group_required` again.** <br/><br/> | (**Note: Do this while logged into the superuser account**) <br/><br/> **(Note: This is important to add users for the application/system)** <br/><br/>**(Warning: Must uncomment `group_required` Otherwise, any user can create users)**|
 |11| Once admin account(s) is created, **Log out of superuser account** and **login to created admin account**| 
 |12|**(While Logged into the Admin Account)** <br/><br/> Create Educator account(s) and Student account(s)| Note: <br/><br/> Educator accounts can create test/quizes/modules and etc. <br/><br/> Student accounts can attempt created tests/quizes |
+
+## Step-by-Step Existing Database Configuration
