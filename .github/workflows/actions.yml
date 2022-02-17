@@ -1,4 +1,4 @@
-name: Delete Deployment
+name: Delete Releases
 
 # Controls when the workflow will run
 on:
