@@ -72,7 +72,7 @@
 | Perform these steps next - [Configuration](#Step-by-Step-Configuration) |
 
 ## Step-by-Step Configuration
-### Warning: This is required, if not you cannot use the system/application
+### Warning: This is required (only once during setup for the first time/or the resetting of the database), if not you cannot use the system/application
 ### Warning: Please do not skip any steps, unless it is an optional steps marked with `+`
 
 |Step| Description | Screenshot/Note |
