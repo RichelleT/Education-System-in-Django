@@ -1,8 +1,10 @@
 ## Table of Contents
+### Note: Setup **must** be done
+### Note: Either Fresh Database Configuration **OR** Database Import Configuration **must** be done
 
 - [Windows Setup Guide](#Windows-Step-by-Step-Setup-Manual)
 - [MacOS Setup Guide](#MacOS-Step-by-Step-Setup-Manual)
-- [Configuration (Must Do)](#Step-by-Step-One-Time-Configuration)
+- [Fresh database - Configuration](#Step-by-Step-One-Time-Configuration)
 
 ## Windows Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
