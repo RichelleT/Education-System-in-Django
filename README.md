@@ -12,7 +12,7 @@
 
 ## Windows Step-by-Step Setup Manual
 ### Warning: Please do not skip any steps
--[Return to Table of Contents](#Table-of-Contents)
+- [Return to Table of Contents](#Table-of-Contents)
 
 |Description | Note |
 |-------------|------------|
