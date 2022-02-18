@@ -1,97 +1,103 @@
-{% load static %} {% include 'navbar.html' %}
-<link
-  href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
-  rel="stylesheet"
-/>
-<link href="{% static 'css/testTable.css'%}" rel="stylesheet" />
-<script>
-  function download_table_as_csv(table_id = "id1", separator = ",") {
-    // Select rows from table_id
-    var rows = document.querySelectorAll("table#" + table_id + " tr");
-    // Construct csv
-    var csv = [];
-    //looping through the table
-    for (var i = 0; i < rows.length; i++) {
-      var row = [],
-        cols = rows[i].querySelectorAll("td, th");
-      //looping through the tr
-      for (var j = 0; j < cols.length; j++) {
-        // removing space from the data
-        var data = cols[j].innerText
-          .replace(/(\r\n|\n|\r)/gm, "")
-          .replace(/(\s\s)/gm, " ");
-        // removing double qoute from the data
-        data = data.replace(/"/g, `""`);
-        // Push escaped string
-        row.push(`"` + data + `"`);
+{% load static %}
+{% include 'navbar.html' %}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="{% static 'css/testTable.css'%}" rel="stylesheet">
+<script >
+    function download_table_as_csv(table_id="id1", separator = ",") {
+      // Select rows from table_id
+      var rows = document.querySelectorAll("table#" + table_id + " tr");
+      // Construct csv
+      var csv = [];
+        //looping through the table
+      for (var i = 0; i < rows.length; i++) {
+          var row = [], cols = rows[i].querySelectorAll("td, th");
+             //looping through the tr
+          for (var j = 0; j < cols.length; j++) {
+             // removing space from the data
+              var data = cols[j].innerText.replace(/(\r\n|\n|\r)/gm, "").replace(/(\s\s)/gm, " ")
+               // removing double qoute from the data
+              data = data.replace(/"/g, `""`);
+              // Push escaped string
+              row.push(`"` + data + `"`);
+          }
+          csv.push(row.join(separator));
       }
-      csv.push(row.join(separator));
-    }
-    var csv_string = csv.join("\n");
-    // Download it
-    var filename =
-      "export_" + table_id + "_" + new Date().toLocaleDateString() + ".csv";
-    var link = document.createElement("a");
-    link.style.display = "none";
-    link.setAttribute("target", "_blank");
-    link.setAttribute(
-      "href",
-      "data:text/csv;charset=utf-8," + encodeURIComponent(csv_string)
-    );
-    link.setAttribute("download", filename);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+      var csv_string = csv.join("\n");
+      // Download it
+      var filename = "export_" + table_id + "_" + new Date().toLocaleDateString() + ".csv";
+      var link = document.createElement("a");
+      link.style.display = "none";
+      link.setAttribute("target", "_blank");
+      link.setAttribute("href", "data:text/csv;charset=utf-8," + encodeURIComponent(csv_string));
+      link.setAttribute("download", filename);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
   }
 </script>
 
 <div class="main-content">
-  <div class="container mt-7">
-    <div class="row">
-      <div class="col">
-        <div class="card shadow">
-          <div class="card-header border-0">
-            <div>
-              <h2 class="mb-0">Results</h2>
+    <div class="container mt-7">
+        <div class="row">
+            <div class="col">
+              <div class="card shadow">
+                <div class="card-header border-0">
+                  <div>
+                      <h2 class="mb-0">
+                          Results
+                      </h2>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table align-items-center table-flush" id="id1">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">
+                            Percentage
+                        </th>
+                        <th scope="col">
+                            Grade
+                        </th>
+                        <th scope="col">
+                            No. of correct answers
+                        </th>
+                        <th scope="col">
+                            No. of wrong answers
+                        </th>
+                        <th scope="col">
+                           Total Questions
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>
+                                {{percent}}%
+                            </th>
+                            <th>
+                                {{grade}}
+                            </th>
+                            <th>
+                                {{correct}}
+                            </th>
+                            <th>
+                                {{wrong}}
+                            </th>
+                            <th>
+                                {{total}}
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-          </div>
-          <div class="table-responsive">
-            <table class="table align-items-center table-flush" id="id1">
-              <thead class="thead-light">
-                <tr>
-                  <th scope="col">Percentage</th>
-                  <th scope="col">Grade</th>
-                  <th scope="col">No. of correct answers</th>
-                  <th scope="col">No. of wrong answers</th>
-                  <th scope="col">Total Questions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>{{percent}}%</th>
-                  <th>{{grade}}</th>
-                  <th>{{correct}}</th>
-                  <th>{{wrong}}</th>
-                  <th>{{total}}</th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </div>
         <div>
-          <br />
-          <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
-            <i class="fas fa-link"></i>
-            Click Here to Return To Module Page
-          </a>
-          <button
-            class="btn btn-outline-primary w-100"
-            onclick="download_table_as_csv();"
-          >
-            Download CSV
-          </button>
-        </div>
-      </div>
+            <br/>
+            <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
+              <i class="fas fa-link"></i>
+              Click Here to Return To Module Page
+            </a>
+            <button class="btn btn-outline-primary w-100" onclick="download_table_as_csv();">Download CSV</button>
+          </div>
     </div>
-  </div>
-</div>
+</div>  

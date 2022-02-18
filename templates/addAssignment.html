@@ -1,8 +1,9 @@
-{% load static %} {% include 'navbar.html' %} {% comment %}
-<link href="{% static 'css/formStyle.css'%}" rel="stylesheet" />
-<script src="{% static 'formStyle.js' %}"></script>
-{% endcomment %}
-<link href="{% static 'css/inputwidth.css'%}" rel="stylesheet" />
+{% load static %}
+{% include 'navbar.html' %}
+{% comment %}
+<link href="{% static 'css/formStyle.css'%}" rel="stylesheet">
+<script src="{% static 'formStyle.js' %}"></script> {% endcomment %}
+<link href="{% static 'css/inputwidth.css'%}" rel="stylesheet">
 
 <div class="p-5 m-5">
   <div class="p-5 m-5">
@@ -12,11 +13,10 @@
           <div class="m-5">
             <div class="m-5">
               <form class="form-style-7" method="post" autocomplete="off">
-                {% csrf_token %} {{ mod_form.as_p }}
-                <div class="mb-3">
-                  <button class="btn btn-outline-primary w-100" type="submit">
-                    Add Assignment Set
-                  </button>
+                {% csrf_token %}
+                {{ mod_form.as_p }}
+                <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Assignment
+                    Set</button>
                 </div>
               </form>
             </div>

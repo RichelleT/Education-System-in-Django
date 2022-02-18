@@ -1,11 +1,11 @@
 textarea {
-  resize: none;
-  overflow: scroll;
-  min-height: 270px;
-  max-height: 270px;
+    resize: none;
+    overflow: scroll;
+    min-height: 270px;
+    max-height: 270px;  
 }
 
-.v2 {
-  border: none;
-  outline: none;
+.v2{
+    border: none;
+    outline: none;
 }

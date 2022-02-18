@@ -1,9 +1,10 @@
-{% load static %} {% include 'navbar.html' %} {% comment %}
-<link href="{% static 'css/formStyle.css'%}" rel="stylesheet" />
-<script src="{% static 'formStyle.js' %}"></script>
-{% endcomment %}
-<link href="{% static 'css/tablesv2.css'%}" rel="stylesheet" />
-<link href="{% static 'css/inputwidth.css'%}" rel="stylesheet" />
+{% load static %}
+{% include 'navbar.html' %}
+{% comment %}
+<link href="{% static 'css/formStyle.css'%}" rel="stylesheet">
+<script src="{% static 'formStyle.js' %}"></script> {% endcomment %}
+<link href="{% static 'css/tablesv2.css'%}" rel="stylesheet">
+<link href="{% static 'css/inputwidth.css'%}" rel="stylesheet">
 
 <div class="p-5 m-5">
   <div class="container">
@@ -13,23 +14,15 @@
           <div class="m-5">
             <div class="m-5">
               <form class="form-style-7" method="post" autocomplete="off">
-                {% csrf_token %} {{ form.media }} {{ form.as_p }}
-                <div class="mb-3">
-                  <button class="btn btn-outline-primary w-100" type="submit">
-                    Add Test Question To Set
-                  </button>
-                </div>
-                <label class="labelCust5 w-100"
-                  ><b
-                    >Note: <br />Repeat to add more questions to test set</b
-                  ></label
-                >
+                {% csrf_token %}
+                {{ form.media }}
+                {{ form.as_p }}
+                <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Test Question To
+                    Set</button> </div>
+                <label class="labelCust5 w-100"><b>Note: <br />Repeat to add more questions to test set</b></label>
                 <div>
                   <br />
-                  <a
-                    href="{% url 'selModule' %}"
-                    class="btn btn-outline-primary w-100"
-                  >
+                  <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
                     <i class="fas fa-link"></i>
                     Click Here to Return To Module Page
                   </a>
@@ -42,15 +35,10 @@
     </div>
   </div>
 </div>
-{% comment %}
-<div class="p-5 m-5">
+{% comment %} <div class="p-5 m-5">
   <form method="post" autocomplete="off">
-    {% csrf_token %} {{ form.as_p }}
-    <div class="mb-3">
-      <button class="btn btn-outline-primary w-100" type="submit">
-        Add Quiz Questions
-      </button>
-    </div>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add Quiz Questions</button> </div>
   </form>
-</div>
-{% endcomment %}
+</div> {% endcomment %}

@@ -1,157 +1,222 @@
-{% load static %} {% include 'navbar.html' %}
-<link
-  href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
-  rel="stylesheet"
-/>
-<link href="{% static 'css/testTable.css'%}" rel="stylesheet" />
+{% load static %}
+{% include 'navbar.html' %}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="{% static 'css/testTable.css'%}" rel="stylesheet">
 
-{% if user.is_authenticated %} {% for group_for in request.user.groups.all %} {%
-if group_for.name == 'Educator' %}
+{% if user.is_authenticated %}
+{% for group_for in request.user.groups.all %}
+{% if group_for.name == 'Educator' %}
 <div class="main-content">
-  <div class="container mt-7">
-    <div class="row">
-      <div class="col">
-        <div class="card shadow">
-          <div class="card-header border-0">
-            <div>
-              <p class="mb-0">
-                <label class="labelCust3"
-                  ><b>Module:</b> {{module_title}}</label
-                >
-                <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
-              </p>
-            </div>
-          </div>
-          <div class="table-responsive">
-            <table class="table align-items-center table-flush">
-              <thead class="thead-light">
-                <tr>
-                  <th scope="col">Attempted by</th>
-                  <th scope="col">Time attempted</th>
-                  <th scope="col">Percentage</th>
-                  <th scope="col">Grade</th>
-                  <th scope="col">No. of correct answers</th>
-                  <th scope="col">No. of wrong answers</th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
-              {% for r in resList %}
-              <tbody>
-                <tr>
-                  <th>{{r.attempted_by}}</th>
-                  <th>{{r.attempted_time}}</th>
-                  <th>{{r.percentage}}</th>
-                  <th>{{r.grade}}</th>
-                  <th>{{r.correct}}</th>
-                  <th>{{r.wrong}}</th>
-                </tr>
-              </tbody>
-              {% endfor %}
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% elif group_for.name == 'Student' %}
-    <div class="main-content">
-      <div class="container mt-7">
+    <div class="container mt-7">
         <div class="row">
-          <div class="col">
-            <div class="card shadow">
-              <div class="card-header border-0">
-                <div>
-                  <p class="mb-0">
-                    <label class="labelCust3"
-                      ><b>Module:</b> {{module_title}}</label
-                    >
-                    <label class="labelCust3"
-                      ><b>Test:</b> {{test_title}}</label
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="table-responsive">
-                <table class="table align-items-center table-flush">
-                  <thead class="thead-light">
-                    <tr>
-                      <th scope="col">Attempted by</th>
-                      <th scope="col">Time attempted</th>
-                      <th scope="col">Percentage</th>
-                      <th scope="col">Grade</th>
-                      <th scope="col">No. of correct answers</th>
-                      <th scope="col">No. of wrong answers</th>
-                      <th scope="col"></th>
-                    </tr>
-                  </thead>
-                  {% for sr in stuResList %}
-                  <tbody>
-                    <tr>
-                      <th>{{sr.attempted_by}}</th>
-                      <th>{{sr.attempted_time}}</th>
-                      <th>{{sr.percentage}}</th>
-                      <th>{{sr.grade}}</th>
-                      <th>{{sr.correct}}</th>
-                      <th>{{sr.wrong}}</th>
-                    </tr>
-                  </tbody>
-                  {% endfor %}
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        {% endif %} {% endfor %} {% endif %} {% comment %}
-        <div class="main-content">
-          <div class="container mt-7">
-            <div class="row">
-              <div class="col">
-                <div class="card shadow">
-                  <div class="card-header border-0">
-                    <div>
+            <div class="col">
+              <div class="card shadow">
+                <div class="card-header border-0">
+                  <div>
                       <p class="mb-0">
-                        <label class="labelCust3"
-                          ><b>Module:</b> {{module_title}}</label
-                        >
-                        <label class="labelCust3"
-                          ><b>Test:</b> {{test_title}}</label
-                        >
+                        <label class="labelCust3"><b>Module:</b> {{module_title}}</label>
+                        <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
                       </p>
-                    </div>
-                  </div>
-                  <div class="table-responsive">
-                    <table class="table align-items-center table-flush">
-                      <thead class="thead-light">
-                        <tr>
-                          <th scope="col">Attempted by</th>
-                          <th scope="col">Time attempted</th>
-                          <th scope="col">Percentage</th>
-                          <th scope="col">Grade</th>
-                          <th scope="col">No. of correct answers</th>
-                          <th scope="col">No. of wrong answers</th>
-                          <th scope="col"></th>
-                        </tr>
-                      </thead>
-                      {% for r in resList %}
-                      <tbody>
-                        <tr>
-                          <th>{{r.attempted_by}}</th>
-                          <th>{{r.attempted_time}}</th>
-                          <th>{{r.percentage}}</th>
-                          <th>{{r.grade}}</th>
-                          <th>{{r.correct}}</th>
-                          <th>{{r.wrong}}</th>
-                        </tr>
-                      </tbody>
-                      {% endfor %}
-                    </table>
                   </div>
                 </div>
-              </div>
+                <div class="table-responsive">
+                  <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">
+                            Attempted by
+                        </th>
+                        <th scope="col">
+                            Time attempted
+                        </th>
+                        <th scope="col">
+                            Percentage
+                        </th>
+                        <th scope="col">
+                            Grade
+                        </th>
+                        <th scope="col">
+                            No. of correct answers
+                        </th>
+                        <th scope="col">
+                            No. of wrong answers
+                        </th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    {% for r in resList %}
+                    <tbody>
+                        <tr>
+                            <th>
+                                {{r.attempted_by}}
+                            </th>
+                            <th>
+                                {{r.attempted_time}}
+                            </th>
+                            <th>
+                                {{r.percentage}}
+                            </th>
+                            <th>
+                                {{r.grade}}
+                            </th>
+                            <th>
+                                {{r.correct}}
+                            </th>
+                            <th>
+                                {{r.wrong}}
+                            </th>
+                        </tr>
+                    </tbody>
+                    {% endfor %}
+                </table>
             </div>
-            {% endcomment %}
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
+</div>   
+{% elif group_for.name == 'Student' %}
+<div class="main-content">
+    <div class="container mt-7">
+        <div class="row">
+            <div class="col">
+              <div class="card shadow">
+                <div class="card-header border-0">
+                  <div>
+                      <p class="mb-0">
+                        <label class="labelCust3"><b>Module:</b> {{module_title}}</label>
+                        <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
+                      </p>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">
+                            Attempted by
+                        </th>
+                        <th scope="col">
+                            Time attempted
+                        </th>
+                        <th scope="col">
+                            Percentage
+                        </th>
+                        <th scope="col">
+                            Grade
+                        </th>
+                        <th scope="col">
+                            No. of correct answers
+                        </th>
+                        <th scope="col">
+                            No. of wrong answers
+                        </th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    {% for sr in stuResList %}
+                    <tbody>
+                        <tr>
+                            <th>
+                                {{sr.attempted_by}}
+                            </th>
+                            <th>
+                                {{sr.attempted_time}}
+                            </th>
+                            <th>
+                                {{sr.percentage}}
+                            </th>
+                            <th>
+                                {{sr.grade}}
+                            </th>
+                            <th>
+                                {{sr.correct}}
+                            </th>
+                            <th>
+                                {{sr.wrong}}
+                            </th>
+                        </tr>
+                    </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div> 
+{% endif %}
+{% endfor %}
+{% endif %}
+
+
+
+
+
+
+
+
+
+{% comment %} <div class="main-content">
+    <div class="container mt-7">
+        <div class="row">
+            <div class="col">
+              <div class="card shadow">
+                <div class="card-header border-0">
+                  <div>
+                      <p class="mb-0">
+                        <label class="labelCust3"><b>Module:</b> {{module_title}}</label>
+                        <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
+                      </p>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">
+                            Attempted by
+                        </th>
+                        <th scope="col">
+                            Time attempted
+                        </th>
+                        <th scope="col">
+                            Percentage
+                        </th>
+                        <th scope="col">
+                            Grade
+                        </th>
+                        <th scope="col">
+                            No. of correct answers
+                        </th>
+                        <th scope="col">
+                            No. of wrong answers
+                        </th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    {% for r in resList %}
+                    <tbody>
+                        <tr>
+                            <th>
+                                {{r.attempted_by}}
+                            </th>
+                            <th>
+                                {{r.attempted_time}}
+                            </th>
+                            <th>
+                                {{r.percentage}}
+                            </th>
+                            <th>
+                                {{r.grade}}
+                            </th>
+                            <th>
+                                {{r.correct}}
+                            </th>
+                            <th>
+                                {{r.wrong}}
+                            </th>
+                        </tr>
+                    </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div> {% endcomment %}

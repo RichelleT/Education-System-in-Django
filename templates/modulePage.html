@@ -1,212 +1,167 @@
-{% load static %} {% include 'navbar.html' %}
-<link href="{% static 'css/card.css'%}" rel="stylesheet" />
-<link href="{% static 'css/tablesv2.css'%}" rel="stylesheet" />
+{% load static %}
+{% include 'navbar.html' %}
+<link href="{% static 'css/card.css'%}" rel="stylesheet">
+<link href="{% static 'css/tablesv2.css'%}" rel="stylesheet">
 
 <div class="container mt-5 pt-5">
-  {% if user.is_authenticated %} {% for group_for in request.user.groups.all %}
-  {% if group_for.name == 'Educator' %}
-  <div class="mt-2 pt-2">
-    <hr />
-    {% for m in modPage %}
-    <p>
-      <label class="labelCust3"><b>Module:</b> {{m.module_name}}</label>
-      <br />
-    </p>
-    {% endfor %}
-  </div>
-  <hr />
-  <h3>&nbsp;Test(s):</h3>
-  <div class="container mx-auto">
-    <div class="row">
-      {% for mt in mtLst %}
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">{{mt.test_name}}</h5>
-            <br />
-            {% for m in modPage %}
-            <h6 class="card-subtitle mb-2 text-muted">
-              <b>Created By:</b> {{m.host}}
-            </h6>
-            {% endfor %}
-            <h6 class="card-subtitle mb-2 text-muted">
-              <b>Created At:</b> {{mt.test_date}}
-            </h6>
-            <br />
-            <a href="{% url 'quizPage' mt.id %}" class="btn btn-outline-primary"
-              ><i class="fas fa-link"></i>Attempt Test</a
-            >
-            <br />
-            <a href="{% url 'addQuiz' mt.id %}" class="btn btn-outline-primary"
-              ><i class="fas fa-link"></i>Add Test Question</a
-            >
-            <br />
-            <a
-              href="{% url 'resultPage' mt.id %}"
-              class="btn btn-outline-primary"
-              ><i class="fas fa-link"></i>View Results</a
-            >
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-      <hr />
-      <h3>Assignment(s):</h3>
-      <div class="container mx-auto">
-        <div class="row">
-          {% for al in assignList %}
-          <div class="col-md-4">
-            <div class="card" style="width: 18rem">
-              <div class="card-body">
-                <h5 class="card-title">{{al.assign_name}}</h5>
-                <br />
-                {% for m in modPage %}
-                <h6 class="card-subtitle mb-2 text-muted">
-                  <b>Created By:</b> {{m.host}}
-                </h6>
-                {% endfor %}
-                <h6 class="card-subtitle mb-2 text-muted">
-                  <b>Created At:</b> {{al.created_date}}
-                </h6>
-                {% if al.set_added|lower == 'true' %}
-                <!--  EDIT THIS ONE TILL WORKS  -->
-                <div><p></p></div>
-                {% else %}
-                <br />
-                <a
-                  href="{% url 'addAssignQ' al.id %}"
-                  class="btn btn-outline-primary"
-                  ><i class="fas fa-link"></i>Add Question</a
-                >
-                {% endif %}
-                <!--  EDIT THIS ONE TILL WORKS  -->
-                <br />
-                <a
-                  href="{% url 'aResultPage' al.id %}"
-                  class="btn btn-outline-primary"
-                  ><i class="fas fa-link"></i>View Results</a
-                >
-                <br />
-                <a
-                  href="{% url 'assignPage' al.id %}"
-                  class="btn btn-outline-primary"
-                  ><i class="fas fa-link"></i>Attempt Test</a
-                >
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% elif group_for.name == 'Student' %}
-      <div class="mt-2 pt-2">
+    {% if user.is_authenticated %}
+    {% for group_for in request.user.groups.all %}
+    {% if group_for.name == 'Educator' %}
+    <div class="mt-2 pt-2">
         <hr />
         {% for m in modPage %}
         <p>
-          <label class="labelCust3"><b>Module:</b> {{m.module_name}}</label>
+            <label class="labelCust3"><b>Module:</b> {{m.module_name}}</label>
+            <br />
         </p>
         {% endfor %}
-      </div>
-      <hr />
-      <h3>&nbsp;Test(s):</h3>
-      <div class="container mx-auto">
-        <div class="row">
-          {% for mt in mtLst %}
-          <div class="col-md-4">
-            <div class="card" style="width: 18rem">
-              <div class="card-body">
-                <h5 class="card-title">{{mt.test_name}}</h5>
-                <br />
-                {% for m in modPage %}
-                <h6 class="card-subtitle mb-2 text-muted">
-                  <b>Created By:</b> {{m.host}}
-                </h6>
-                {% endfor %}
-                <h6 class="card-subtitle mb-2 text-muted">
-                  <b>Created At:</b> {{mt.test_date}}
-                </h6>
-                <br />
-                <a
-                  href="{% url 'quizPage' mt.id %}"
-                  class="btn btn-outline-primary"
-                  ><i class="fas fa-link"></i>Attempt Test</a
-                >
-                <br />
-                <a
-                  href="{% url 'resultPage' mt.id %}"
-                  class="btn btn-outline-primary"
-                  ><i class="fas fa-link"></i>View Results</a
-                >
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      <hr />
-      <h3>Assignment(s):</h3>
-      <div class="container mx-auto">
-        <div class="row">
-          {% for al in assignList %}
-          <div class="col-md-4">
-            <div class="card" style="width: 18rem">
-              <div class="card-body">
-                <h5 class="card-title">{{al.assign_name}}</h5>
-                <br />
-                {% for m in modPage %}
-                <h6 class="card-subtitle mb-2 text-muted">
-                  <b>Created By:</b> {{m.host}}
-                </h6>
-                {% endfor %}
-                <h6 class="card-subtitle mb-2 text-muted">
-                  <b>Created At:</b> {{al.created_date}}
-                </h6>
-                <br />
-                <a
-                  href="{% url 'assignPage' al.id %}"
-                  class="btn btn-outline-primary"
-                  ><i class="fas fa-link"></i>Attempt Test</a
-                >
-                <br />
-                <a
-                  href="{% url 'aResultPage' al.id %}"
-                  class="btn btn-outline-primary"
-                  ><i class="fas fa-link"></i>View Results</a
-                >
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-
-        {% elif group_for.name == 'Admin' %}
-        <div class="container mt-5 pt-5">
-          <div class="col-md-6 mx-auto">
-            <div class="mx-auto">
-              <label class="labelCust4"
-                >Only <b>students</b> and <b>educators</b> is allowed
-                here.</label
-              >
-              <br />
-            </div>
-          </div>
-          <div class="col-md-6 mx-auto">
-            <img src="{% static 'images/403.png' %}" width="700" height="450" />
-          </div>
-          <div class="col-md-6 mx-auto">
-            <div class="mx-auto">
-              <br />
-              <label class="labelCust4"
-                >Only <b>students</b> and <b>educators</b> is allowed
-                here.</label
-              >
-            </div>
-          </div>
-        </div>
-        {% endif %} {% endfor %} {% else %}
-        <div></div>
-        {% endif %}
-      </div>
     </div>
-  </div>
+    <hr />
+    <h3>&nbsp;Test(s):</h3>
+    <div class="container mx-auto">
+        <div class="row">
+            {% for mt in mtLst %}
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{mt.test_name}}</h5>
+                        <br />
+                        {% for m in modPage %}
+                        <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{m.host}}</h6>
+                        {% endfor %}
+                        <h6 class="card-subtitle mb-2 text-muted"><b>Created At:</b> {{mt.test_date}}</h6>
+                        <br />
+                        <a href="{% url 'quizPage' mt.id %}" class="btn btn-outline-primary"><i
+                                class="fas fa-link"></i>Attempt Test</a>
+                        <br />
+                        <a href="{% url 'addQuiz' mt.id %}" class="btn btn-outline-primary"><i
+                            class="fas fa-link"></i>Add Test Question</a>
+                    <br />
+                        <a href="{% url 'resultPage' mt.id %}" class="btn btn-outline-primary"><i
+                                class="fas fa-link"></i>View Results</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <hr />
+            <h3>Assignment(s):</h3>
+            <div class="container mx-auto">
+                <div class="row">
+                    {% for al in assignList %}
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{al.assign_name}}</h5>
+                                <br />
+                                {% for m in modPage %}
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{m.host}}</h6>
+                                {% endfor %}
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Created At:</b> {{al.created_date}}</h6>
+                                {% if al.set_added|lower == 'true' %} <!--  EDIT THIS ONE TILL WORKS  -->
+                                <div><p></p></div>
+                                {% else %}
+                                <br />
+                                <a href="{% url 'addAssignQ' al.id %}" class="btn btn-outline-primary"><i
+                                        class="fas fa-link"></i>Add Question</a>
+                                {% endif %} <!--  EDIT THIS ONE TILL WORKS  -->  
+                                <br />
+                                <a href="{% url 'aResultPage' al.id %}" class="btn btn-outline-primary"><i
+                                        class="fas fa-link"></i>View Results</a>
+                                <br />
+                                <a href="{% url 'assignPage' al.id %}" class="btn btn-outline-primary"><i
+                                        class="fas fa-link"></i>Attempt Test</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% elif group_for.name == 'Student' %}
+            <div class="mt-2 pt-2">
+                <hr />
+                {% for m in modPage %}
+                <p>
+                    <label class="labelCust3"><b>Module:</b> {{m.module_name}}</label>
+                </p>
+                {% endfor %}
+            </div>
+            <hr />
+            <h3>&nbsp;Test(s):</h3>
+            <div class="container mx-auto">
+                <div class="row">
+                    {% for mt in mtLst %}
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{mt.test_name}}</h5>
+                                <br />
+                                {% for m in modPage %}
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{m.host}}</h6>
+                                {% endfor %}
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Created At:</b> {{mt.test_date}}</h6>
+                                <br />
+                                <a href="{% url 'quizPage' mt.id %}" class="btn btn-outline-primary"><i
+                                        class="fas fa-link"></i>Attempt Test</a>
+                                <br />
+                                <a href="{% url 'resultPage' mt.id %}" class="btn btn-outline-primary"><i
+                                        class="fas fa-link"></i>View Results</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+            <hr />
+            <h3>Assignment(s):</h3>
+            <div class="container mx-auto">
+                <div class="row">
+                    {% for al in assignList %}
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{al.assign_name}}</h5>
+                                <br />
+                                {% for m in modPage %}
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{m.host}}</h6>
+                                {% endfor %}
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Created At:</b> {{al.created_date}}</h6>
+                                <br />
+                                <a href="{% url 'assignPage' al.id %}" class="btn btn-outline-primary"><i
+                                        class="fas fa-link"></i>Attempt Test</a>
+                                <br />
+                                <a href="{% url 'aResultPage' al.id %}" class="btn btn-outline-primary"><i
+                                        class="fas fa-link"></i>View Results</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                {% elif group_for.name == 'Admin' %}
+                <div class="container mt-5 pt-5">
+                    <div class="col-md-6 mx-auto">
+                        <div class="mx-auto">
+                            <label class="labelCust4">Only <b>students</b> and <b>educators</b> is allowed here.</label>
+                            <br />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mx-auto">
+                        <img src="{% static 'images/403.png' %}" width="700" height="450" />
+                    </div>
+                    <div class="col-md-6 mx-auto">
+                        <div class="mx-auto">
+                            <br />
+                            <label class="labelCust4">Only <b>students</b> and <b>educators</b> is allowed here.</label>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% else %}
+                <div></div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 </div>

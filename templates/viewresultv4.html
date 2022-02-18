@@ -1,193 +1,252 @@
-{% load static %} {% include 'navbar.html' %}
-<link href="{% static 'css/tablesv2.css'%}" rel="stylesheet" />
-<script src="{% static 'excellentexport.js' %}"></script>
+{% load static %}
+{% include 'navbar.html' %}
+<link href="{% static 'css/tablesv2.css'%}" rel="stylesheet">
+<script src="{% static 'excellentexport.js' %}"></script> 
 <script type="text/javascript">
-  function tableToCSV() {
-    // Variable to store the final csv data
-    var csv_data = [];
+    function tableToCSV() {
 
-    // Get each row data
-    var rows = document.getElementsByTagName("tr");
-    for (var i = 0; i < rows.length; i++) {
-      // Get each column data
-      var cols = rows[i].querySelectorAll("td,th");
+        // Variable to store the final csv data
+        var csv_data = [];
 
-      // Stores each csv row data
-      var csvrow = [];
-      for (var j = 0; j < cols.length; j++) {
-        // Get the text data of each cell
-        // of a row and push it to csvrow
-        csvrow.push(cols[j].innerHTML);
-      }
+        // Get each row data
+        var rows = document.getElementsByTagName('tr');
+        for (var i = 0; i < rows.length; i++) {
 
-      // Combine each column value with comma
-      csv_data.push(csvrow.join(","));
+            // Get each column data
+            var cols = rows[i].querySelectorAll('td,th');
+
+            // Stores each csv row data
+            var csvrow = [];
+            for (var j = 0; j < cols.length; j++) {
+
+                // Get the text data of each cell
+                // of a row and push it to csvrow
+                csvrow.push(cols[j].innerHTML);
+            }
+
+            // Combine each column value with comma
+            csv_data.push(csvrow.join(","));
+        }
+
+        // Combine each row data with new line character
+        csv_data = csv_data.join('\n');
+
+        // Call this function to download csv file 
+        downloadCSVFile(csv_data);
+
     }
 
-    // Combine each row data with new line character
-    csv_data = csv_data.join("\n");
+    function downloadCSVFile(csv_data) {
 
-    // Call this function to download csv file
-    downloadCSVFile(csv_data);
-  }
+        // Create CSV file object and feed
+        // our csv_data into it
+        CSVFile = new Blob([csv_data], {
+            type: "text/csv"
+        });
 
-  function downloadCSVFile(csv_data) {
-    // Create CSV file object and feed
-    // our csv_data into it
-    CSVFile = new Blob([csv_data], {
-      type: "text/csv",
-    });
+        // Create to temporary link to initiate
+        // download process
+        var temp_link = document.createElement('a');
 
-    // Create to temporary link to initiate
-    // download process
-    var temp_link = document.createElement("a");
+        // Download csv file
+        temp_link.download = "GfG.csv";
+        var url = window.URL.createObjectURL(CSVFile);
+        temp_link.href = url;
 
-    // Download csv file
-    temp_link.download = "GfG.csv";
-    var url = window.URL.createObjectURL(CSVFile);
-    temp_link.href = url;
+        // This link should not be displayed
+        temp_link.style.display = "none";
+        document.body.appendChild(temp_link);
 
-    // This link should not be displayed
-    temp_link.style.display = "none";
-    document.body.appendChild(temp_link);
-
-    // Automatically click the link to
-    // trigger download
-    temp_link.click();
-    document.body.removeChild(temp_link);
-  }
+        // Automatically click the link to
+        // trigger download
+        temp_link.click();
+        document.body.removeChild(temp_link);
+    }
 </script>
 
-{% if user.is_authenticated %} {% for group_for in request.user.groups.all %} {%
-if group_for.name == 'Educator' %}
+{% if user.is_authenticated %}
+{% for group_for in request.user.groups.all %}
+{% if group_for.name == 'Educator' %}
 <div class="p-5 m-5">
-  <div class="table-wrapper">
-    <p>
-      <label class="labelCust3"><b>Module:</b> {{module_title}}</label>
-      <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
-    </p>
-    {% comment %}
-    <h1>Module: {{module_title}} Test: {{test_title}}</h1>
-    {% endcomment %}
-    <table class="fl-table">
-      <thead>
-        <tr>
-          {% comment %}
-          <th>Module</th>
-          <th>Test</th>
-          {% endcomment %}
-          <th>Attempted by</th>
-          <th>Time attempted</th>
-          <th>Percentage</th>
-          <th>Grade</th>
-          <th>Letter Grade</th>
-          <th>No. of correct answers</th>
-          <th>No. of wrong answers</th>
-          <th>Total Questions</th>
-        </tr>
-      </thead>
-      {% for r in resList %}
-      <tbody>
-        <tr>
-          {% comment %}
-          <th>{{r.linked_module}}</th>
-          <th>{{r.linked_test}}</th>
-          {% endcomment %}
-          <th>
-            {{r.attempted_by.first_name}} {{r.attempted_by.last_name}}<br />@{{r.attempted_by}}
-          </th>
-          <th>{{r.attempted_time}}</th>
-          <th>{{r.percentage}}</th>
-          <th>{{r.grade}}</th>
-          <th>{{r.lettergrade}}</th>
-          <th>{{r.correct}}</th>
-          <th>{{r.wrong}}</th>
-          <th>{{r.total}}</th>
-        </tr>
-      </tbody>
-      {% endfor %}
-    </table>
-    <div>
-      <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
-        <i class="fas fa-link"></i>
-        Click Here to Return To Module Page
-      </a>
-      <button class="btn btn-outline-primary w-100" onclick="tableToCSV()">
-        Download
-      </button>
-      {% comment %}
-      <a
-        download="somedata.xls"
-        href="#"
-        onclick="return ExcellentExport.excel(this, 'datatable', 'Sheet Name Here');"
-        >Export to Excel</a
-      >
-      <br />
-      <a
-        download="somedata.csv"
-        href="#"
-        onclick="return ExcellentExport.csv(this, 'datatable');"
-        >Export to CSV</a
-      >
-      <br />
-      {% endcomment %}
-    </div>
-  </div>
-</div>
+    <div class="table-wrapper">
+        <p>
+            <label class="labelCust3"><b>Module:</b> {{module_title}}</label>
+            <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
+        </p>
+        {% comment %} <h1>Module: {{module_title}} Test: {{test_title}}</h1> {% endcomment %}
+        <table class="fl-table">
+            <thead>
+            <tr>
+                {% comment %} <th>
+                    Module
+                </th>
+                <th>
+                    Test
+                </th> {% endcomment %}
+                <th>
+                    Attempted by
+                </th>
+                <th>
+                    Time attempted
+                </th>
+                <th>
+                    Percentage
+                </th>
+                <th>
+                    Grade
+                </th>
+                <th>
+                    Letter Grade
+                </th>
+                <th>
+                    No. of correct answers
+                </th>
+                <th>
+                    No. of wrong answers
+                </th>
+                <th>
+                    Total Questions
+                </th>
+            </tr>
+            </thead>
+            {% for r in resList %}
+            <tbody>
+            <tr>
+                {% comment %} <th>
+                    {{r.linked_module}}
+                </th>
+                <th>
+                    {{r.linked_test}}
+                </th> {% endcomment %}
+                <th>
+                    {{r.attempted_by.first_name}} {{r.attempted_by.last_name}}<br/>@{{r.attempted_by}}
+                </th>
+                <th>
+                    {{r.attempted_time}}
+                </th>
+                <th>
+                    {{r.percentage}}
+                </th>
+                <th>
+                    {{r.grade}}
+                </th>
+                <th>
+                    {{r.lettergrade}}
+                </th>
+                <th>
+                    {{r.correct}}
+                </th>
+                <th>
+                    {{r.wrong}}
+                </th>
+                <th>
+                    {{r.total}}
+                </th>
+            </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+        <div>
+            <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
+              <i class="fas fa-link"></i>
+              Click Here to Return To Module Page
+            </a>
+            <button class="btn btn-outline-primary w-100" onclick="tableToCSV()">Download</button>
+            {% comment %} <a download="somedata.xls" href="#" onclick="return ExcellentExport.excel(this, 'datatable', 'Sheet Name Here');">Export to Excel</a>
+            <br/>
+            <a download="somedata.csv" href="#" onclick="return ExcellentExport.csv(this, 'datatable');">Export to CSV</a>
+            <br/> {% endcomment %}
+          </div>
+    </div> 
+</div>   
 {% elif group_for.name == 'Student' %}
 <div class="p-5 m-5">
-  <div class="table-wrapper">
-    <p>
-      <label class="labelCust3"><b>Module:</b> {{module_title}}</label>
-      <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
-    </p>
-    {% comment %}
-    <h1>Module: {{module_title}} Test: {{test_title}}</h1>
-    {% endcomment %}
-    <table class="fl-table">
-      <thead>
-        <tr>
-          {% comment %}
-          <th>Module</th>
-          <th>Test</th>
-          {% endcomment %}
-          <th>Attempted by</th>
-          <th>Time attempted</th>
-          <th>Percentage</th>
-          <th>Grade</th>
-          <th>Letter Grade</th>
-          <th>No. of correct answers</th>
-          <th>No. of wrong answers</th>
-          <th>Total Questions</th>
-        </tr>
-      </thead>
-      {% for sr in stuResList %}
-      <tbody>
-        <tr>
-          {% comment %}
-          <th>{{r.linked_module}}</th>
-          <th>{{r.linked_test}}</th>
-          {% endcomment %}
-          <th>
-            {{sr.attempted_by.first_name}} {{sr.attempted_by.last_name}}<br />@{{sr.attempted_by}}
-          </th>
-          <th>{{sr.attempted_time}}</th>
-          <th>{{sr.percentage}}</th>
-          <th>{{sr.grade}}</th>
-          <th>{{sr.lettergrade}}</th>
-          <th>{{sr.correct}}</th>
-          <th>{{sr.wrong}}</th>
-          <th>{{sr.total}}</th>
-        </tr>
-      </tbody>
-      {% endfor %}
-    </table>
-    <div>
-      <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
-        <i class="fas fa-link"></i>
-        Click Here to Return To Module Page
-      </a>
-    </div>
-  </div>
-</div>
-{% endif %} {% endfor %} {% endif %}
+    <div class="table-wrapper">
+        <p>
+            <label class="labelCust3"><b>Module:</b> {{module_title}}</label>
+            <label class="labelCust3"><b>Test:</b> {{test_title}}</label>
+        </p>
+        {% comment %} <h1>Module: {{module_title}} Test: {{test_title}}</h1> {% endcomment %}
+        <table class="fl-table">
+            <thead>
+            <tr>
+                {% comment %} <th>
+                    Module
+                </th>
+                <th>
+                    Test
+                </th> {% endcomment %}
+                <th>
+                    Attempted by
+                </th>
+                <th>
+                    Time attempted
+                </th>
+                <th>
+                    Percentage
+                </th>
+                <th>
+                    Grade
+                </th>
+                <th>
+                    Letter Grade
+                </th>
+                <th>
+                    No. of correct answers
+                </th>
+                <th>
+                    No. of wrong answers
+                </th>
+                <th>
+                    Total Questions
+                </th>
+            </tr>
+            </thead>
+            {% for sr in stuResList %}
+            <tbody>
+            <tr>
+                {% comment %} <th>
+                    {{r.linked_module}}
+                </th>
+                <th>
+                    {{r.linked_test}}
+                </th> {% endcomment %}
+                <th>
+                    {{sr.attempted_by.first_name}} {{sr.attempted_by.last_name}}<br/>@{{sr.attempted_by}}
+                </th>
+                <th>
+                    {{sr.attempted_time}}
+                </th>
+                <th>
+                    {{sr.percentage}}
+                </th>
+                <th>
+                    {{sr.grade}}
+                </th>
+                <th>
+                    {{sr.lettergrade}}
+                </th>
+                <th>
+                    {{sr.correct}}
+                </th>
+                <th>
+                    {{sr.wrong}}
+                </th>
+                <th>
+                    {{sr.total}}
+                </th>
+            </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+        <div>
+            <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
+              <i class="fas fa-link"></i>
+              Click Here to Return To Module Page
+            </a>
+          </div>
+    </div> 
+</div>  
+{% endif %}
+{% endfor %}
+{% endif %}

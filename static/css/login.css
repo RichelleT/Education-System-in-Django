@@ -1,14 +1,14 @@
 body {
-  background: #ffff;
+    background: #ffff
 }
 
 .card {
-  border: none;
-  height: 320px;
+    border: none;
+    height: 320px
 }
 
 .forms-inputs {
-  position: relative;
+    position: relative;
 }
 
 /* .forms-inputs span {
@@ -21,54 +21,54 @@ body {
 } */
 
 .forms-inputs label {
-  position: absolute;
-  top: -18px;
-  left: 10px;
-  background-color: #fff;
-  padding: 5px 10px;
-  font-size: 15px;
+    position: absolute;
+    top: -18px;
+    left: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 15px
 }
 
 .forms-inputs input {
-  height: 50px;
-  border: 2px solid #eee;
-  width: 100%;
+    height: 50px;
+    border: 2px solid #eee;
+    width: 100%;
 }
 
 .forms-inputs input:focus {
-  box-shadow: none;
-  outline: none;
-  border: 2px solid #000;
+    box-shadow: none;
+    outline: none;
+    border: 2px solid #000
 }
 
 .forms-inputs select {
-  height: 50px;
-  border: 2px solid #eee;
+    height: 50px;
+    border: 2px solid #eee
 }
 
 .forms-inputs select:focus {
-  box-shadow: none;
-  outline: none;
-  border: 2px solid #000;
+    box-shadow: none;
+    outline: none;
+    border: 2px solid #000
 }
 
 .btn {
-  height: 50px;
+    height: 50px;
 }
 
 .success-data {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column
 }
 
 .bxs-badge-check {
-  font-size: 90px;
+    font-size: 90px
 }
 
-.w50 {
-  width: 50%;
+.w50{
+    width: 50%;
 }
 
 input {
-  text-indent: 10px;
+    text-indent: 10px;
 }
