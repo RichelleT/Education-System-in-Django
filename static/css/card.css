@@ -1,47 +1,48 @@
 :root {
-    /* --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important; */
-    --gradient: linear-gradient(to left top, #273cf5 10%, #273cf5 90%) !important;
-  }
-  
-  body {
-    background: rgb(255, 255, 255) !important;
-  }
-  
-  .card {
-    background: rgb(241, 241, 243);
-    border: 1px solid #000000;
-    color: rgba(0, 0, 0, 0.8);
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .btn {
-    border: 1px solid;
-    /* border-image-slice: 1;
+  /* --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important; */
+  --gradient: linear-gradient(to left top, #273cf5 10%, #273cf5 90%) !important;
+}
+
+body {
+  background: rgb(255, 255, 255) !important;
+}
+
+.card {
+  background: rgb(241, 241, 243);
+  border: 1px solid #000000;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  border: 1px solid;
+  /* border-image-slice: 1;
     background: var(--gradient) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     border-image-source:  var(--gradient) !important;  */
-    background-color: #fff;
-    text-decoration: none;
-    transition: all .4s ease;
-    width: 100%;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-  }
-  
-  .btn:hover, .btn:focus {
-    /* background: var(--gradient) !important; */
-    -webkit-background-clip: none !important;
-    -webkit-text-fill-color: #fff !important;
-    border: 1px solid #fff !important; 
-    box-shadow: #222 1px 0 10px;
-    text-decoration: none;
-  }
+  background-color: #fff;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  width: 100%;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
 
-  br {
-    display: block; /* makes it have a width */
-    content: ""; /* clears default height */
-    margin-top: 20px; /* change this to whatever height you want it */
+.btn:hover,
+.btn:focus {
+  /* background: var(--gradient) !important; */
+  -webkit-background-clip: none !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 1px solid #fff !important;
+  box-shadow: #222 1px 0 10px;
+  text-decoration: none;
+}
+
+br {
+  display: block; /* makes it have a width */
+  content: ""; /* clears default height */
+  margin-top: 20px; /* change this to whatever height you want it */
 }
