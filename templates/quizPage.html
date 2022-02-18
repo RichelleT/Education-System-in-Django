@@ -1,49 +1,75 @@
-{% load static %}
-{% include 'navbar.html' %}
-<link href="{% static 'css/testTable.css'%}" rel="stylesheet">
-<link href="{% static 'css/spacing.css'%}" rel="stylesheet">
+{% load static %} {% include 'navbar.html' %}
+<link href="{% static 'css/testTable.css'%}" rel="stylesheet" />
+<link href="{% static 'css/spacing.css'%}" rel="stylesheet" />
 
 <div class="p-5 m-5">
-    <form method='post' action=''>
-        {% csrf_token %}
-        {% for q in questions %}
-        <div class="card">
-            <p></p>
-            {% comment %} <p>&nbsp;&nbsp;&nbsp;<b>Question:</b></p> {% endcomment %}
-            <p>&nbsp;&nbsp;&nbsp;<b>Question:</b></p>
-            <div class="spacing">{{q.quest|safe}}</div>
-            {% comment %} <div class="spacing">{{q.quest.html|safe}}</div> {% endcomment %}
-            <p>&nbsp;&nbsp;&nbsp;<b>Select Answer:</b></p>
-            <div class="form-check">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="{{q.quest}}" id="gridRadios1" value="option1">
-                    <label class="form-check-label" for="gridRadios1">
-                        {{q.op1|safe}}
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="{{q.quest}}" id="gridRadios2" value="option2">
-                    <label class="form-check-label" for="gridRadios2">
-                        {{q.op2|safe}}
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="{{q.quest}}" id="gridRadios1" value="option3">
-                    <label class="form-check-label" for="gridRadios1">
-                        {{q.op3|safe}}
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="{{q.quest}}" id="gridRadios2" value="option4">
-                    <label class="form-check-label" for="gridRadios2">
-                        {{q.op4|safe}}
-                    </label>
-                </div>
-                <p></p>
-            </div>
+  <form method="post" action="">
+    {% csrf_token %} {% for q in questions %}
+    <div class="card">
+      <p></p>
+      {% comment %}
+      <p>&nbsp;&nbsp;&nbsp;<b>Question:</b></p>
+      {% endcomment %}
+      <p>&nbsp;&nbsp;&nbsp;<b>Question:</b></p>
+      <div class="spacing">{{q.quest|safe}}</div>
+      {% comment %}
+      <div class="spacing">{{q.quest.html|safe}}</div>
+      {% endcomment %}
+      <p>&nbsp;&nbsp;&nbsp;<b>Select Answer:</b></p>
+      <div class="form-check">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="{{q.quest}}"
+            id="gridRadios1"
+            value="option1"
+          />
+          <label class="form-check-label" for="gridRadios1">
+            {{q.op1|safe}}
+          </label>
         </div>
-        <br/>
-        {% endfor %}
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="{{q.quest}}"
+            id="gridRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="gridRadios2">
+            {{q.op2|safe}}
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="{{q.quest}}"
+            id="gridRadios1"
+            value="option3"
+          />
+          <label class="form-check-label" for="gridRadios1">
+            {{q.op3|safe}}
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="{{q.quest}}"
+            id="gridRadios2"
+            value="option4"
+          />
+          <label class="form-check-label" for="gridRadios2">
+            {{q.op4|safe}}
+          </label>
+        </div>
+        <p></p>
+      </div>
+    </div>
+    <br />
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 </div>

@@ -1,94 +1,124 @@
-{% load static %}
-{% include 'navbar.html' %}
-<link href="{% static 'css/card.css'%}" rel="stylesheet">
-<link href="{% static 'css/tablesv2.css'%}" rel="stylesheet">
+{% load static %} {% include 'navbar.html' %}
+<link href="{% static 'css/card.css'%}" rel="stylesheet" />
+<link href="{% static 'css/tablesv2.css'%}" rel="stylesheet" />
 
 <div class="container mt-5 pt-5">
-    {% if user.is_authenticated %}
-    {% for group_for in request.user.groups.all %}
-      {% if group_for.name == 'Educator' %}
+  {% if user.is_authenticated %} {% for group_for in request.user.groups.all %}
+  {% if group_for.name == 'Educator' %}
+  <div class="container mx-auto mt-4">
+    <h3>&nbsp;Module(s):</h3>
+    <div class="row">
+      {% for module in modlist %}
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title"><b>Module:</b> {{module.module_name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+              <b>Created By:</b> {{module.host}}
+            </h6>
+            <br />
+            <p class="card-text">
+              <b>Module Description: </b>{{module.module_desc.html|safe}}
+            </p>
+            <br />
+            <a
+              href="{% url 'modulePage' module.id %}"
+              class="btn btn-outline-primary"
+              ><i class="fas fa-link"></i>Select</a
+            >
+          </div>
+        </div>
+        <div></div>
+      </div>
+      {% endfor %}
+    </div>
+    {% elif group_for.name == 'Student' %}
     <div class="container mx-auto mt-4">
-        <h3>&nbsp;Module(s):</h3> 
-        <div class="row">
+      <h3>&nbsp;Module(s):</h3>
+      <div class="row">
         {% for module in modlist %}
-          <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title"><b>Module:</b> {{module.module_name}}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{module.host}}</h6>
-                    <br/>
-                    <p class="card-text"><b>Module Description: </b>{{module.module_desc.html|safe}}</p>
-                    <br/>
-                    <a href="{% url 'modulePage' module.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Select</a>
-                </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title"><b>Module:</b> {{module.module_name}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <b>Created By:</b> {{module.host}}
+              </h6>
+              <br />
+              <p class="card-text">
+                <b>Module Description: </b>{{module.module_desc.html|safe}}
+              </p>
+              <br />
+              <a
+                href="{% url 'modulePage' module.id %}"
+                class="btn btn-outline-primary"
+                ><i class="fas fa-link"></i>Select</a
+              >
             </div>
-            <div></div>
+          </div>
+          <div></div>
         </div>
         {% endfor %}
-    </div>
-        {% elif group_for.name == 'Student' %}
-        <div class="container mx-auto mt-4">
-            <h3>&nbsp;Module(s):</h3>
-            <div class="row">
-            {% for module in modlist %}
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Module:</b> {{module.module_name}}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{module.host}}</h6>
-                        <br/>
-                        <p class="card-text"><b>Module Description: </b>{{module.module_desc.html|safe}}</p>
-                        <br/>
-                        <a href="{% url 'modulePage' module.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Select</a>
-                    </div>
-                </div>
-                <div></div>
-            </div>
-            {% endfor %}
+      </div>
+      {% elif group_for.name == 'Admin' %}
+      <div class="container mt-5 pt-5">
+        <div class="col-md-6 mx-auto">
+          <div class="mx-auto">
+            <label class="labelCust4"
+              >Only <b>students</b> and <b>educators</b> is allowed here.</label
+            >
+            <br />
+          </div>
         </div>
-        {% elif group_for.name == 'Admin' %}
-        <div class="container mt-5 pt-5">  
-            <div class="col-md-6 mx-auto">
-                <div class="mx-auto">
-                    <label class="labelCust4">Only <b>students</b> and <b>educators</b> is allowed here.</label>
-                    <br/>
-                </div>
-            </div>          
-            <div class="col-md-6 mx-auto">
-                <img src="{% static 'images/403.png' %}" width="700" height="450"/>
-            </div>
-            <div class="col-md-6 mx-auto">
-                <div class="mx-auto">
-                    <br/>
-                    <label class="labelCust4">Only <b>students</b> and <b>educators</b> is allowed here.</label>
-                </div>
-            </div>
-            <div></div>
+        <div class="col-md-6 mx-auto">
+          <img src="{% static 'images/403.png' %}" width="700" height="450" />
         </div>
+        <div class="col-md-6 mx-auto">
+          <div class="mx-auto">
+            <br />
+            <label class="labelCust4"
+              >Only <b>students</b> and <b>educators</b> is allowed here.</label
+            >
+          </div>
+        </div>
+        <div></div>
+      </div>
+      {% endif %} {% endfor %} {% else %}
+      <div></div>
       {% endif %}
-    {% endfor %}
-  {% else %}
- <div></div>
-  {% endif %}
-</div>
-
-
-{% comment %} <div class="container mt-5 pt-5">
-    <div class="container mx-auto mt-4">
-        <div class="row">
-        {% for module in modlist %}
-          <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title"><b>Module:</b> {{module.module_name}}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><b>Created By:</b> {{module.host}}</h6>
-                    <br/>
-                    <p class="card-text"><b>Module Description: </b>{{module.module_desc}}</p>
-                    <br/>
-                    <a href="{% url 'modulePage' module.id %}" class="btn btn-outline-primary"><i class="fas fa-link"></i>Select</a>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
     </div>
-</div> {% endcomment %}
+
+    {% comment %}
+    <div class="container mt-5 pt-5">
+      <div class="container mx-auto mt-4">
+        <div class="row">
+          {% for module in modlist %}
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <b>Module:</b> {{module.module_name}}
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <b>Created By:</b> {{module.host}}
+                </h6>
+                <br />
+                <p class="card-text">
+                  <b>Module Description: </b>{{module.module_desc}}
+                </p>
+                <br />
+                <a
+                  href="{% url 'modulePage' module.id %}"
+                  class="btn btn-outline-primary"
+                  ><i class="fas fa-link"></i>Select</a
+                >
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endcomment %}
+    </div>
+  </div>
+</div>

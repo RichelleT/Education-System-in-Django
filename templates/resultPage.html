@@ -1,37 +1,133 @@
-{% load static %}
-{% include 'navbar.html' %}
+{% load static %} {% include 'navbar.html' %}
 
 <div class="p-5 m-5">
-    <div class="card">
-        <form method='post' action=''>
-            {% csrf_token %}
-            <p>
-                <label for="id_correct">Correct:</label> 
-                <input type="number" name="correct" required id="id_correct" value="{{correct}}" readonly>
-            </p>
-            <p>
-                <label for="id_wrong">Wrong:</label> 
-                <input type="number" name="wrong" required id="id_wrong" value="{{wrong}}" readonly></p>
-            <p><label for="id_percentage">Percentage:</label> <input type="number" name="percentage" required id="id_percentage" value="{{percent}}" readonly>
-            </p>
-            <p>
-                <label for="id_total">Total:</label> 
-                <input type="number" name="total" required id="id_total" value="{{total}}" readonly>
-            </p>
-            <p>
-                <label for="id_grade">Grade:</label> <input type="text" name="grade" maxlength="10" required id="id_grade" value="{{grade}}" readonly>
-            </p>
-            <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Submit Results</button> </div> 
-        </form>
-    </div>
+  <div class="card">
+    <form method="post" action="">
+      {% csrf_token %}
+      <p>
+        <label for="id_correct">Correct:</label>
+        <input
+          type="number"
+          name="correct"
+          required
+          id="id_correct"
+          value="{{correct}}"
+          readonly
+        />
+      </p>
+      <p>
+        <label for="id_wrong">Wrong:</label>
+        <input
+          type="number"
+          name="wrong"
+          required
+          id="id_wrong"
+          value="{{wrong}}"
+          readonly
+        />
+      </p>
+      <p>
+        <label for="id_percentage">Percentage:</label>
+        <input
+          type="number"
+          name="percentage"
+          required
+          id="id_percentage"
+          value="{{percent}}"
+          readonly
+        />
+      </p>
+      <p>
+        <label for="id_total">Total:</label>
+        <input
+          type="number"
+          name="total"
+          required
+          id="id_total"
+          value="{{total}}"
+          readonly
+        />
+      </p>
+      <p>
+        <label for="id_grade">Grade:</label>
+        <input
+          type="text"
+          name="grade"
+          maxlength="10"
+          required
+          id="id_grade"
+          value="{{grade}}"
+          readonly
+        />
+      </p>
+      <div class="mb-3">
+        <button class="btn btn-outline-primary w-100" type="submit">
+          Submit Results
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
 
-{% comment %} {{ form.as_p }} {% endcomment %}
-{% comment %}
-<p><label for="id_correct">Correct Answer(s):</label> <input type="text" name="correct" maxlength="10" required id="id_correct" readonly value="{{correct}}"></p>
-<p><label for="id_wrong">Wrong Answer(s):</label> <input type="text" name="wrong" maxlength="10" required id="id_wrong" readonly value="{{wrong}}"></p>
-<p><label for="id_percentage">Percentage:</label> <input type="text" name="percentage" maxlength="10" required id="id_percentage" readonly value="{{percent}}%"></p>
-<p><label for="id_total">Total:</label> <input type="text" name="total" maxlength="10" required id="id_total" readonly value="{{total}}"></p>
-<p><label for="id_grade">Grade:</label> <input type="text" name="grade" maxlength="10" required id="id_grade" readonly value="{{grade}}"></p>
+{% comment %} {{ form.as_p }} {% endcomment %} {% comment %}
+<p>
+  <label for="id_correct">Correct Answer(s):</label>
+  <input
+    type="text"
+    name="correct"
+    maxlength="10"
+    required
+    id="id_correct"
+    readonly
+    value="{{correct}}"
+  />
+</p>
+<p>
+  <label for="id_wrong">Wrong Answer(s):</label>
+  <input
+    type="text"
+    name="wrong"
+    maxlength="10"
+    required
+    id="id_wrong"
+    readonly
+    value="{{wrong}}"
+  />
+</p>
+<p>
+  <label for="id_percentage">Percentage:</label>
+  <input
+    type="text"
+    name="percentage"
+    maxlength="10"
+    required
+    id="id_percentage"
+    readonly
+    value="{{percent}}%"
+  />
+</p>
+<p>
+  <label for="id_total">Total:</label>
+  <input
+    type="text"
+    name="total"
+    maxlength="10"
+    required
+    id="id_total"
+    readonly
+    value="{{total}}"
+  />
+</p>
+<p>
+  <label for="id_grade">Grade:</label>
+  <input
+    type="text"
+    name="grade"
+    maxlength="10"
+    required
+    id="id_grade"
+    readonly
+    value="{{grade}}"
+  />
+</p>
 {% endcomment %}
-

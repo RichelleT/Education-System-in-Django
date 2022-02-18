@@ -1,27 +1,30 @@
-{% load static %}
-{% include 'navbar.html' %}
-
+{% load static %} {% include 'navbar.html' %}
 
 <div class="p-5 m-5">
-    <div class="p-5 m-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <p>&nbsp;</p>
-                </div>
-                <div class="col-sm">
-                    <a class="btn btn-outline-primary w-100" href="/addTests/">Add Test Set</a>
-                    <p>&nbsp;</p>                    
-                    <a class="btn btn-outline-primary w-100" href="/addAssignment/">Add Assignment Set</a>
-                    <p>&nbsp;</p>                    
-                    <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
-                        <i class="fas fa-link"></i>
-                        Click Here to Add Later and Return To Module Page
-                    </a> </div>
-                <div class="col-sm">
-                    <p>&nbsp;</p>
-                </div>
-            </div>
+  <div class="p-5 m-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <p>&nbsp;</p>
         </div>
+        <div class="col-sm">
+          <a class="btn btn-outline-primary w-100" href="/addTests/"
+            >Add Test Set</a
+          >
+          <p>&nbsp;</p>
+          <a class="btn btn-outline-primary w-100" href="/addAssignment/"
+            >Add Assignment Set</a
+          >
+          <p>&nbsp;</p>
+          <a href="{% url 'selModule' %}" class="btn btn-outline-primary w-100">
+            <i class="fas fa-link"></i>
+            Click Here to Add Later and Return To Module Page
+          </a>
+        </div>
+        <div class="col-sm">
+          <p>&nbsp;</p>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

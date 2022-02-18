@@ -1,81 +1,141 @@
-{% load static %}
-{% include 'navbar.html' %}
-<link href="{% static 'css/formStyle.css'%}" rel="stylesheet">
-<link href="{% static 'css/selnoborder.css'%}" rel="stylesheet">
-<script src="{% static 'formStyle.js' %}"></script> 
+{% load static %} {% include 'navbar.html' %}
+<link href="{% static 'css/formStyle.css'%}" rel="stylesheet" />
+<link href="{% static 'css/selnoborder.css'%}" rel="stylesheet" />
+<script src="{% static 'formStyle.js' %}"></script>
 
 <div class="container mt-5 pt-5">
-    <div class="row d-flex justify-content-center">
-        <!-- left side; image  -->
-        <div class="col-md-6">
-            <img src="{% static 'images/Form.png' %}" width="700" height="450"/>                
-        </div>
-        <!-- right side; card -->
-        <div class="col-md-6">
-            <div class="card " id="form1">
-                <form class="form-style-7" method="post" autocomplete="off">
-                    {% csrf_token %}
-                    <ul>
-                        <li>
-                            <label for="id_username">Username</label> 
-                            <input type="text" name="username" maxlength="150" autofocus required id="id_username"> 
-                            <span>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span>
-                        </li>
-                        <li>
-                            <label for="id_first_name">First name</label> 
-                            <input type="text" name="first_name" maxlength="150" id="id_first_name">
-                        </li>
-                        <li>
-                            <label for="id_last_name">Last name</label> 
-                            <input type="text" name="last_name" maxlength="150" id="id_last_name">
-                        </li>
-                        <li>
-                            <label for="id_email">Email</label> 
-                            <input type="email" name="email" required id="id_email">
-                        </li>
-                        <li>
-                            <label for="id_password1">Password</label> <input type="password" name="password1" autocomplete="new-password" required id="id_password1"> 
-                            <span>- Your password can't be too similar to your other personal information.</span>
-                            <span>- Your password must contain at least 8 characters.</span>
-                            <span>- Your password can't be a commonly used password.</span>
-                            <span>- Your password can't be entirely numeric.</span>
-                        </li>
-                        <li>
-                            <label for="id_password2">Password Confirmation</label> 
-                            <input type="password" name="password2" autocomplete="new-password" required id="id_password2"> 
-                            <span class="helptext">Enter the same password as before, for verification.</span>
-                        </li>
-                        <li><label for="id_gender">Gender</label> 
-                            <select name="gender" id="id_gender">
-                                <option value="M" selected>Male</option>
-                                <option value="F">Female</option>
-                            </select>
-                        </li>
-                        <li>
-                            <label for="id_role">Role</label>
-                            <select name="role" id="id_role">
-                                <option value="A">Admin</option>
-                                <option value="E">Educator</option>
-                                <option value="S" selected>Student</option>
-                            </select>
-                        </li>
-                        <li>
-                            <label for="id_school_faculty">School/Faculty</label> 
-                            <textarea name="school_faculty" cols="40" rows="10" maxlength="150" id="id_school_faculty"></textarea>
-                            <span>Resize textbox by dragging bottom right corner icon, if needed</span>
-                        </li>
-                        <li>
-                            <label for="id_programme">Programme</label> 
-                            <textarea name="programme" cols="40" rows="10" maxlength="150" id="id_programme"></textarea>
-                            <span>Resize textbox by dragging bottom right corner icon, if needed</span>
-                        </li>
-                        <p></p>
-                    </ul>
-                    {% comment %} {{ user_form.as_p }}
-                    {{ profile_form.as_p }} {% endcomment %}
-                    <div class="mb-3"> <button class="btn btn-outline-primary w-100" type="submit">Add User</button> </div>
-                </form>
-            </div>
-        </div>
+  <div class="row d-flex justify-content-center">
+    <!-- left side; image  -->
+    <div class="col-md-6">
+      <img src="{% static 'images/Form.png' %}" width="700" height="450" />
     </div>
+    <!-- right side; card -->
+    <div class="col-md-6">
+      <div class="card" id="form1">
+        <form class="form-style-7" method="post" autocomplete="off">
+          {% csrf_token %}
+          <ul>
+            <li>
+              <label for="id_username">Username</label>
+              <input
+                type="text"
+                name="username"
+                maxlength="150"
+                autofocus
+                required
+                id="id_username"
+              />
+              <span
+                >Required. 150 characters or fewer. Letters, digits and
+                @/./+/-/_ only.</span
+              >
+            </li>
+            <li>
+              <label for="id_first_name">First name</label>
+              <input
+                type="text"
+                name="first_name"
+                maxlength="150"
+                id="id_first_name"
+              />
+            </li>
+            <li>
+              <label for="id_last_name">Last name</label>
+              <input
+                type="text"
+                name="last_name"
+                maxlength="150"
+                id="id_last_name"
+              />
+            </li>
+            <li>
+              <label for="id_email">Email</label>
+              <input type="email" name="email" required id="id_email" />
+            </li>
+            <li>
+              <label for="id_password1">Password</label>
+              <input
+                type="password"
+                name="password1"
+                autocomplete="new-password"
+                required
+                id="id_password1"
+              />
+              <span
+                >- Your password can't be too similar to your other personal
+                information.</span
+              >
+              <span>- Your password must contain at least 8 characters.</span>
+              <span>- Your password can't be a commonly used password.</span>
+              <span>- Your password can't be entirely numeric.</span>
+            </li>
+            <li>
+              <label for="id_password2">Password Confirmation</label>
+              <input
+                type="password"
+                name="password2"
+                autocomplete="new-password"
+                required
+                id="id_password2"
+              />
+              <span class="helptext"
+                >Enter the same password as before, for verification.</span
+              >
+            </li>
+            <li>
+              <label for="id_gender">Gender</label>
+              <select name="gender" id="id_gender">
+                <option value="M" selected>Male</option>
+                <option value="F">Female</option>
+              </select>
+            </li>
+            <li>
+              <label for="id_role">Role</label>
+              <select name="role" id="id_role">
+                <option value="A">Admin</option>
+                <option value="E">Educator</option>
+                <option value="S" selected>Student</option>
+              </select>
+            </li>
+            <li>
+              <label for="id_school_faculty">School/Faculty</label>
+              <textarea
+                name="school_faculty"
+                cols="40"
+                rows="10"
+                maxlength="150"
+                id="id_school_faculty"
+              ></textarea>
+              <span
+                >Resize textbox by dragging bottom right corner icon, if
+                needed</span
+              >
+            </li>
+            <li>
+              <label for="id_programme">Programme</label>
+              <textarea
+                name="programme"
+                cols="40"
+                rows="10"
+                maxlength="150"
+                id="id_programme"
+              ></textarea>
+              <span
+                >Resize textbox by dragging bottom right corner icon, if
+                needed</span
+              >
+            </li>
+            <p></p>
+          </ul>
+          {% comment %} {{ user_form.as_p }} {{ profile_form.as_p }} {%
+          endcomment %}
+          <div class="mb-3">
+            <button class="btn btn-outline-primary w-100" type="submit">
+              Add User
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>

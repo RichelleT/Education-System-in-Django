@@ -1,43 +1,88 @@
-{% load static %}
-{% include 'navbar.html' %}
-<link href="{% static 'css/login.css'%}" rel="stylesheet">
+{% load static %} {% include 'navbar.html' %}
+<link href="{% static 'css/login.css'%}" rel="stylesheet" />
 
 <div class="container mt-5 pt-5">
-    <div class="row d-flex justify-content-center">
-        <!-- left side; image  -->
-        <div class="col-md-6">
-            <img src="{% static 'images/profileImg.png' %}" width="700" height="450"/>                
-        </div>
-        <!-- right side; card -->
-        <div class="col-md-6">
-            <div class="card " id="form1">
-                <div class="form-data">
-                    {% for p in prof %}
-                    <p></p>
-                    <br/>
-                    <h3>User Profile</h3>
-                    <br/>
-                    <div class="forms-inputs mb-4"> <label>Name</label> 
-                        <input class="w-100" autocomplete="off" type="text" value="{{user.first_name}}&nbsp;{{user.last_name}}" readonly>
-                    </div>
-                    <div class="forms-inputs mb-4"> <label>Email</label> 
-                        <input class="w-100" autocomplete="off" type="text" value="{{user.email}}" readonly>
-                    </div>
-                    <div class="forms-inputs mb-4"> <label>Gender</label> 
-                        <input class="w-100" autocomplete="off" type="text" value={{p.get_gender_display}} readonly>
-                    </div>
-                    <div class="forms-inputs mb-4"> <label>School/Faculty</label> 
-                        <input class="w-100" autocomplete="off" type="text" value={{p.school_faculty}} readonly>
-                    </div>
-                    <div class="forms-inputs mb-4"> <label>Programme Name</label>
-                        <input class="w-100" autocomplete="off" type="text" value={{p.programme}} readonly>
-                    </div>
-                    <div class="forms-inputs mb-4"> <label>Role</label>
-                        <input class="w-100" autocomplete="off" type="text" value={{p.get_role_display}} readonly>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+  <div class="row d-flex justify-content-center">
+    <!-- left side; image  -->
+    <div class="col-md-6">
+      <img
+        src="{% static 'images/profileImg.png' %}"
+        width="700"
+        height="450"
+      />
     </div>
+    <!-- right side; card -->
+    <div class="col-md-6">
+      <div class="card" id="form1">
+        <div class="form-data">
+          {% for p in prof %}
+          <p></p>
+          <br />
+          <h3>User Profile</h3>
+          <br />
+          <div class="forms-inputs mb-4">
+            <label>Name</label>
+            <input
+              class="w-100"
+              autocomplete="off"
+              type="text"
+              value="{{user.first_name}}&nbsp;{{user.last_name}}"
+              readonly
+            />
+          </div>
+          <div class="forms-inputs mb-4">
+            <label>Email</label>
+            <input
+              class="w-100"
+              autocomplete="off"
+              type="text"
+              value="{{user.email}}"
+              readonly
+            />
+          </div>
+          <div class="forms-inputs mb-4">
+            <label>Gender</label>
+            <input
+              class="w-100"
+              autocomplete="off"
+              type="text"
+              value="{{p.get_gender_display}}"
+              readonly
+            />
+          </div>
+          <div class="forms-inputs mb-4">
+            <label>School/Faculty</label>
+            <input
+              class="w-100"
+              autocomplete="off"
+              type="text"
+              value="{{p.school_faculty}}"
+              readonly
+            />
+          </div>
+          <div class="forms-inputs mb-4">
+            <label>Programme Name</label>
+            <input
+              class="w-100"
+              autocomplete="off"
+              type="text"
+              value="{{p.programme}}"
+              readonly
+            />
+          </div>
+          <div class="forms-inputs mb-4">
+            <label>Role</label>
+            <input
+              class="w-100"
+              autocomplete="off"
+              type="text"
+              value="{{p.get_role_display}}"
+              readonly
+            />
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
