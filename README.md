@@ -1,9 +1,9 @@
 # Disclaimer
 
-### Written in HTML5, CSS3, Python and (a little)Javascript 
-### Used mySQL as Database
-### Used Django as Framework
-### Git for Version Control
+### > Written in HTML5, CSS3, Python and (a little)Javascript 
+### > Used mySQL as Database
+### > Used Django as Framework
+### > Git for Version Control
 
 
 #### "Add [Test Question Page](#add-test-question-page) components requested by client, everything else is written & designed by me (Richelle/Owner of repo)
