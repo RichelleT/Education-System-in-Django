@@ -12,7 +12,7 @@
 
 ## Disclaimer
 
-### { [Add Test Question Page](#add-test-question-page) components requested by client, <br/> everything else is written & designed by me (Richelle/Owner of repo) }
+#### { [Add Test Question Page](#add-test-question-page) components requested by client, <br/> everything else is written & designed by me (Richelle/Owner of repo) }
 
 # Table of Contents
 
