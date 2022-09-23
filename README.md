@@ -33,15 +33,15 @@
 ### User Profile Page
 ![userProf](/static/images/screens/userProf.png)<br/>
 
-#### End of Section; Click button to return to ToC
-- [Return to Table of Contents](#Table-of-Contents)
+#### End of Section; [Click Here to Return To Table of Contents](#Table-of-Contents)
+
 
 ## Admin Only Screens
 ### Register Users Page
 ![regisUser](/static/images/screens/regisUser.png)
 
-#### End of Section; Click button to return to ToC
-- [Return to Table of Contents](#Table-of-Contents)
+#### End of Section; [Click Here to Return To Table of Contents](#Table-of-Contents)
+
 
 ## Educator Only Screens
 ### Educator-view Module Page
@@ -61,8 +61,7 @@
 ### Assignment History Page - all records
 ![assignResPgEdu](/static/images/screens/assignResPgEdu.png)
 
-#### End of Section; Click button to return to ToC
-- [Return to Table of Contents](#Table-of-Contents)
+#### End of Section; [Click Here to Return To Table of Contents](#Table-of-Contents)
 
 
 ## Student Only Screens
@@ -81,8 +80,7 @@
 ### Student-view Assignment Result History Page
 ![assignResPg](/static/images/screens/assignResPg.png)
 
-#### End of Section; Click button to return to ToC
-- [Return to Table of Contents](#Table-of-Contents)
+#### End of Section; [Click Here to Return To Table of Contents](#Table-of-Contents)
 
 
 ## Student & Educator Shared Screens
@@ -92,5 +90,4 @@
 ![csv](/static/images/screens/csv.png)
 (Takes all data from any result history page and puts into downloaded CSV file.) <br/><br/>
 
-#### End of Section; Click button to return to ToC
-- [Return to Table of Contents](#Table-of-Contents)
+#### End of Section; [Click Here to Return To Table of Contents](#Table-of-Contents)
