@@ -6,7 +6,7 @@
 ### > Git for Version Control
 
 
-#### "Add [Test Question Page](#add-test-question-page) components requested by client, everything else is written & designed by me (Richelle/Owner of repo)
+#### [Add Test Question Page](#add-test-question-page) components requested by client, everything else is written & designed by me (Richelle/Owner of repo)
 
 #### First commit - 7th Jan 2022
 #### Final commit (exluding readme edits) - 20th Feb 2022
