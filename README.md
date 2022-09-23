@@ -1,5 +1,5 @@
 # Details
-#### This project is an assessment system for the educational system, which allows the educators to add modules, tests, and assignments for students to complete, and for students to take tests, which is automatically graded by this system created. <br/>
+#### This system allows the educators to add modules, tests, and assignments for students to complete, and for students to take tests, which is automatically graded by this system created. <br/>
 #### - Written in HTML5, CSS3, Python and (a little)Javascript - <br/>
 #### - Used mySQL as Database - <br/>
 #### - Used Django as Framework - <br/>
