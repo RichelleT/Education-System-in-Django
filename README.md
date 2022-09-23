@@ -5,7 +5,7 @@
 #### - Used Django as Framework <br/>
 #### - Git for Version Control <br/>
 #### - Special thanks to [Flexiple](https://flexiple.com/illustrations/) for the open-source illustrations -<br/>
-<br/><br/>
+<br/>
 ##### - First commit => 7th Jan 2022 -
 ##### - Final commit (exluding readme edits) => 20th Feb 2022 -
 
