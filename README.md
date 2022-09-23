@@ -1,4 +1,7 @@
-## Table of Contents
+# Disclaimer
+
+
+# Table of Contents
 
 - [Web-App Screens](#web-app-screens)
     - [Available to all users screens](#available-to-all-users-screens)
