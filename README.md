@@ -1,4 +1,4 @@
-# Details/Disclaimer
+# Details
 
 ### - Written in HTML5, CSS3, Python and (a little)Javascript -
 ### - Used mySQL as Database -
