@@ -1,13 +1,13 @@
 # Details
 #### This system allows the educators to add modules, tests, and assignments for students to complete, and for students to take tests, which will then be automatically graded by this system created. <br/><br/> This system also allows the students to view their own test/assignment result history, the educator to view every single record/history of result/attempt made for the test/assignment,  and both student and educator can download a CSV file with the data in the respective result history page. <br/><br/>
-#### - Written in HTML5, CSS3, Python and (a little)Javascript <br/>
+#### - Written in HTML5, CSS3, Python and Javascript <br/>
 #### - Used mySQL as Database <br/>
 #### - Used Django as Framework <br/>
 #### - Git for Version Control <br/>
 #### - Special thanks to [Flexiple](https://flexiple.com/illustrations/) for the open-source illustrations <br/><br/>
 
-##### - First commit => 7th Jan 2022 -
-##### - Final commit (exluding readme edits) => 20th Feb 2022 -
+##### - First commit => 7th Jan 2022 
+##### - Final commit (exluding readme edits) => 20th Feb 2022 
 
 ## Disclaimer
 
