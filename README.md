@@ -55,4 +55,5 @@
 ### Module List
 ![modList](/static/images/screens/modList.png)
 ### Result History CSV 
+Takes all data from any result history page and puts into downloaded CSV file
 ![csv](/static/images/screens/csv.png)
