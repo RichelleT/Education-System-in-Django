@@ -36,7 +36,7 @@
 ### Attempt Test Page 
 ![testPg](/static/images/screens/testPg.png)
 ### Test Result Page
-![resultPgAftTest](/static/images/screens/resultPgAftTest.png)
+![resPgAftTest](/static/images/screens/resPgAftTest.png)
 ### Student-view Test Result History Page
 ![studTstHist](/static/images/screens/studTstHist.png)
 ### Student-view Assignment Result History Page
