@@ -15,13 +15,21 @@
 
 
 ## Educator Only Screens
+### Educator-view Module Page
 ![modPg](/static/images/screens/modPg.png)
+### Add Module Page
 ![addMod](/static/images/screens/addMod.png)
+### Add Test Set Page
 ![addTest](/static/images/screens/addTest.png)
+### Add Test Question Page
 ![addQues](/static/images/screens/addQues.png)
+### Test History Page - all records
 ![testHistEdu](/static/images/screens/testHistEdu.png)
+### Add Assigment Set Page
 ![selMod](/static/images/screens/selMod.png)
+### Add Assignment Question Page
 ![AddAssignQ](/static/images/screens/addAssignQ.png)
+### Assignment History Page - all records
 ![assignResPgEdu](/static/images/screens/assignResPgEdu.png)
 
 
@@ -44,9 +52,7 @@
 
 
 ## Student & Educator Shared Screens
+### Module List
 ![modList](/static/images/screens/modList.png)
+### Result History CSV 
 ![csv](/static/images/screens/csv.png)
-
-
-
-# to be ordered
