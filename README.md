@@ -18,11 +18,11 @@
 ![modPg](/static/images/screens/modPg.png)
 ![addMod](/static/images/screens/addMod.png)
 ![addTest](/static/images/screens/addTest.png)
-![selMod](/static/images/screens/selMod.png)
 ![addQues](/static/images/screens/addQues.png)
+![testHistEdu](/static/images/screens/testHistEdu.png)
+![selMod](/static/images/screens/selMod.png)
 ![AddAssignQ](/static/images/screens/addAssignQ.png)
 ![assignResPgEdu](/static/images/screens/assignResPgEdu.png)
-![testHistEdu](/static/images/screens/testHistEdu.png)
 
 
 
