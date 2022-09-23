@@ -7,11 +7,12 @@
 
 ### - Special thanks to [Flexiple](https://flexiple.com/illustrations/) for the open-source illustrations -
 
+### { First commit - 7th Jan 2022 }
+### { Final commit (exluding readme edits) - 20th Feb 2022 }
 
-#### { [Add Test Question Page](#add-test-question-page) components requested by client, <br/> everything else is written & designed by me (Richelle/Owner of repo) }
+## Disclaimer
 
-#### { First commit - 7th Jan 2022 }
-#### { Final commit (exluding readme edits) - 20th Feb 2022 }
+### { [Add Test Question Page](#add-test-question-page) components requested by client, <br/> everything else is written & designed by me (Richelle/Owner of repo) }
 
 # Table of Contents
 
