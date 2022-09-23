@@ -1,14 +1,13 @@
 # Details
+#### This project is an assessment system for the educational system, which allows the educators to add modules, tests, and assignments for students to complete, and for students to take tests, which is automatically graded by this system created. <br/>
+#### - Written in HTML5, CSS3, Python and (a little)Javascript - <br/>
+#### - Used mySQL as Database - <br/>
+#### - Used Django as Framework - <br/>
+#### - Git for Version Control -<br/>
+#### - Special thanks to [Flexiple](https://flexiple.com/illustrations/) for the open-source illustrations -<br/>
 
-### - Written in HTML5, CSS3, Python and (a little)Javascript -
-### - Used mySQL as Database -
-### - Used Django as Framework -
-### - Git for Version Control -
-
-### - Special thanks to [Flexiple](https://flexiple.com/illustrations/) for the open-source illustrations -
-
-#### - First commit => 7th Jan 2022 -
-#### - Final commit (exluding readme edits) => 20th Feb 2022 -
+##### - First commit => 7th Jan 2022 -
+##### - Final commit (exluding readme edits) => 20th Feb 2022 -
 
 ## Disclaimer
 
